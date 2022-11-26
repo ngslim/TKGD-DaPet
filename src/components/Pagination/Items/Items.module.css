@@ -1,0 +1,16 @@
+.page__numbers {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.4rem;
+}
+
+.page__numbers:hover {
+  color: var(--primary);
+}
+
+.page__numbers.active {
+  color: #fff;
+  background: var(--primary);
+  font-weight: 600;
+  border: 1px solid var(--primary);
+}

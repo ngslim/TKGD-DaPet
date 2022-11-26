@@ -1,5 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* ===== Colors ===== */
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #707070;
+
+  --primary: #23adad;
+  --greyLight: #23adad e1;
+  --greyLight-2: #cbe0dd;
+  --greyDark: #2d4848;
+
+  /* ====== Transition ====== */
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
 .App {
   text-align: center;
+
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-y: scroll;
 }
 
 .App-logo {

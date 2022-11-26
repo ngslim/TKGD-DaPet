@@ -1,0 +1,23 @@
+.home {
+  position: absolute;
+  top: 0;
+  top: 0;
+  left: 300px;
+  width: calc(100% - 300px);
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+}
+
+.home .text {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 12px 60px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+}
