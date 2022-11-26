@@ -45,7 +45,7 @@ function Location() {
             </div>
           </div>
           <div
-            className="d-flex flex-column"
+            className="rounded d-flex flex-column"
             style={{
               backgroundColor: '#FFFFFF',
               width: '100%',

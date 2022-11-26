@@ -3,7 +3,6 @@ import Header from '../../../components/HeaderAlt';
 import Footer from '../../../components/Footer';
 import Menu from '../../../components/Menu';
 import { useNavigate } from 'react-router-dom';
-import { BsCalendar } from 'react-icons/bs';
 
 function Summary() {
   const navigate = useNavigate();
@@ -54,7 +53,7 @@ function Summary() {
             </div>
           </div>
           <div
-            className="d-flex flex-column"
+            className="rounded d-flex flex-column"
             style={{
               backgroundColor: '#FFFFFF',
               width: '100%',
