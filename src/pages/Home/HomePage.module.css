@@ -104,7 +104,7 @@ form.form-container::after {
   float: left;
   width: 33.33%;
   padding: 12px;
-  height: 100px;
+  height: 300px;
 }
 
 .my-service {
@@ -136,6 +136,7 @@ form.form-container::after {
 .create-profile-description {
   font-weight: thick;
   font-size: 15px;
+  width: 61.67%;
 }
 
 .row:after {
