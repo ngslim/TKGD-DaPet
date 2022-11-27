@@ -136,6 +136,7 @@ form.form-container::after {
 .create-profile-description {
   font-weight: thick;
   font-size: 15px;
+  width: 61.67%;
 }
 
 .row:after {
