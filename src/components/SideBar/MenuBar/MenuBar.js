@@ -36,14 +36,14 @@ const MenuBar = ({ className }) => {
         <ProfileCard />
       </div>
 
-      <div className="bottom-content">
+      {/* <div className="b">
         <li>
           <button className={classes["btn-navbar"]}>
             <i className={`bx bx-log-out ${className["icon"]}`}></i>
             <span className={`${className["text"]} nav-text`}>Logout</span>
           </button>
         </li>
-      </div>
+      </div> */}
     </div>
   );
 };
