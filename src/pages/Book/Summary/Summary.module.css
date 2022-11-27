@@ -1,0 +1,22 @@
+.summary-page {
+  background-color: #f3f3f3;
+}
+
+.summary-profile {
+  width: "30%";
+}
+
+.summary-profile .img-profile {
+  width: 250px;
+  height: 250px;
+  background-color: #d9d9d9;
+  border-radius: 125px;
+}
+
+.btn-confirm {
+  color: #06ba64;
+  border: none;
+  background-color: white;
+  height: 60px;
+  width: 250px;
+}

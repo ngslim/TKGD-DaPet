@@ -4,8 +4,8 @@ import Order from "./pages/Order/Order";
 import Book from "./pages/Book/Book";
 import Pet from "./pages/Pet";
 import AddPet from "./pages/Pet/AddPet";
-import Location from "./pages/Book/Location";
-import Summary from "./pages/Book/Summary";
+import Location from "./pages/Book/Location/Location";
+import Summary from "./pages/Book/Summary/Summary";
 import HomePage from "./pages/Home/HomePage";
 
 function App() {

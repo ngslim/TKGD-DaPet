@@ -1,0 +1,13 @@
+.location-page {
+  background-color: #f3f3f3;
+}
+
+.menu-sidebar {
+  min-width: 300px;
+}
+
+.icon-calendar {
+  position: relative;
+  left: -28px;
+  top: -4px;
+}

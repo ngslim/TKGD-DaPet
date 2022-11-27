@@ -1,0 +1,15 @@
+.content-card {
+  background-color: white;
+  height: auto;
+}
+
+.content-card .img-card {
+  min-width: 140px;
+  height: 140px;
+  background-color: #65a390;
+}
+
+.content-card .text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

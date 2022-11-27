@@ -18,13 +18,10 @@ const Breadcrumb = (props) => {
         ) : (
           <React.Fragment key={index}>
             <span className={`py-2 px-1`}>&#62;</span>
-            <BreadcrumbItem title={item.title} current="current" />
+            <BreadcrumbItem title={item.title} current={item.current} />
           </React.Fragment>
         );
       })}
-      {/* <BreadcrumbItem title="Quản lý đơn khám" />
-      <span className={`py-2 px-1`}>&#62;</span>
-      <BreadcrumbItem title="Thông tin đơn khám" current="current" /> */}
     </div>
   );
 };

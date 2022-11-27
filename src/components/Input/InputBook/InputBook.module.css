@@ -4,3 +4,11 @@
   outline: none;
   background-color: #f3f3f3;
 }
+
+.field-input.small {
+  width: 30%;
+}
+
+.field-input.medium {
+  width: 60%;
+}
