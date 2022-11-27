@@ -1,6 +1,6 @@
 .logout-status-header {
   border: none;
-  background-color: #00c288;
+  background-color: var(--user-color);
   height: 42px;
   width: 150px;
 }

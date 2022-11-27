@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import classes from "./OwnerInfo.module.css";
 
 const OwnerInfo = () => {
+  const navigate = useNavigate();
+
+  const gotoPageNotFoundHandler = () => {
+    navigate("/page-not-found");
+  };
+
   return (
     <div
       className={`${classes["owner-info"]} py-2 px-3 text-white rounded d-flex flex-column gap-3`}
@@ -23,7 +30,10 @@ const OwnerInfo = () => {
         Thời gian đặt lịch: <b className="fw-bold">16:00 13/11/2022</b>
       </div>
       <div className="d-flex justify-content-end gap-4 mb-2">
-        <button className={`${classes["btn-contact"]} btn btn-light`}>
+        <button
+          className={`${classes["btn-contact"]} btn btn-light`}
+          onClick={gotoPageNotFoundHandler}
+        >
           Liên hệ
         </button>
       </div>

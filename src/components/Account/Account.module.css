@@ -6,5 +6,9 @@
 }
 
 .profile-account .selected {
-  color: #098963;
+  color: var(--user-color);
+}
+
+.profile-account .item:hover {
+  cursor: pointer;
 }

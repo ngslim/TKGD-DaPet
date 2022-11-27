@@ -32,10 +32,11 @@
   background: #cda45e;
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
 }
 
 .box:hover span,
 .box:hover h4,
 .box:hover p {
-  color: #fff;
+  color: var(--white-color);
 }

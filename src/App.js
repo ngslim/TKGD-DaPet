@@ -3,11 +3,11 @@ import { Route, Routes } from "react-router-dom";
 import Order from "./pages/Order/Order";
 import Book from "./pages/Book/Book";
 import Pet from "./pages/Pet/Pet";
-import AddPet from "./pages/Pet/AddPet";
+import AddPet from "./pages/Pet/AddPet/AddPet";
 import Location from "./pages/Book/Location/Location";
 import Summary from "./pages/Book/Summary/Summary";
-import HomePage from "./pages/Home/HomePage";
 import Home from "./pages/Home/Home";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -19,7 +19,8 @@ function App() {
       <Route path="/book/summary" element={<Summary />} />
       <Route path="/pet" element={<Pet />} />
       <Route path="/pet/add" element={<AddPet />} />
-      <Route path="/" element={<Home />} />
+      <Route exact path="/" element={<Home />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

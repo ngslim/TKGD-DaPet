@@ -7,11 +7,11 @@
 }
 
 .title-schedule {
-  color: #9a02b2;
+  color: var(--dark-doctor-color);
 }
 
 .done-order {
-  background-color: #ffffff;
+  background-color: var(--white-color);
   width: 100%;
   padding: 8px;
 }

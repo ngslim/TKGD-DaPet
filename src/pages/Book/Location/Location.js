@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../../components/Header/Header";
 import Footer from "../../../components/Footer";
 import Menu from "../../../components/Menu/Menu";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { BsCalendar } from "react-icons/bs";
 import classes from "./Location.module.css";
 import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb/Breadcrumb";
@@ -12,15 +12,15 @@ import ClinicAround from "./ClinicAround/ClinicAround";
 import ButtonBook from "../../../components/Button/ButtonBook/ButtonBook";
 
 function Location() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // const handleOnClickBook = () => {
   //   navigate("/book");
   // };
 
-  // const handleOnClickSubmit = () => {
-  //   navigate("/book/summary");
-  // };
+  const handleOnClickSubmit = () => {
+    navigate("/book/summary");
+  };
 
   const dataBread = [
     {
@@ -54,7 +54,7 @@ function Location() {
               <BsCalendar className={classes["icon-calendar"]} />
             </InputBook>
             <ClinicAround />
-            <ButtonBook>Đăng ký khám</ButtonBook>
+            <ButtonBook onClick={handleOnClickSubmit}>Đăng ký khám</ButtonBook>
           </>
         </FormBook>
       </div>

@@ -12,7 +12,7 @@ const Order = () => {
   const { id } = useParams();
   return (
     <div className={classes["page-order"]}>
-      <Header />
+      <Header role="doctor" />
       <SideBar />
       <main className={classes["main-content"]}>
         {id ? (

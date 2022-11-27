@@ -1,5 +1,5 @@
 .pet-page {
-  background-color: #f3f3f3;
+  background-color: var(--bg-grey-color);
 }
 
 .menu-sidebar {
@@ -15,15 +15,15 @@
 }
 
 .breadcrumb-inline {
-  color: #098963;
+  color: var(--user-color);
 }
 
 .content-pet-page {
-  background-color: #ffffff;
+  background-color: var(--white-color);
   width: 100%;
 }
 
 .main-pet-page {
   width: 100%;
-  background-color: white;
+  background-color: var(--white-color);
 }

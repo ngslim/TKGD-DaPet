@@ -6,7 +6,7 @@
   margin: 0 0 2rem 0;
   overflow: hidden;
   position: relative;
-  color: #fff;
+  color: var(--white-color);
   width: 900px;
 }
 
@@ -22,7 +22,7 @@
   font-size: 1.75rem;
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: var(--white-color);
 }
 
 .postcard .postcard-title:hover {

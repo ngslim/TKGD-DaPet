@@ -7,13 +7,13 @@
 }
 
 .order-info {
-  background-color: #ffffff;
+  background-color: var(--white-color);
   width: 100%;
   padding: 16px;
 }
 
 .btn-status {
-  background-color: #9a02b2 !important;
+  background-color: var(--dark-doctor-color) !important;
 }
 
 .btn-status:hover {

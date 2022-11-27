@@ -13,7 +13,7 @@ import FieldTextArea from "../Pet/AddPet/FieldTextArea/FieldTextArea";
 function Book() {
   const navigate = useNavigate();
 
-  const handleOnClick = () => {
+  const gotoBookLocation = () => {
     navigate("/book/location");
   };
 
@@ -74,7 +74,7 @@ function Book() {
             <FieldTextArea title="Mô tả triệu chứng" />
 
             <InputBook label="Khác" />
-            <ButtonBook onClick={handleOnClick}>Đăng ký khám</ButtonBook>
+            <ButtonBook onClick={gotoBookLocation}>Đăng ký khám</ButtonBook>
           </>
         </FormBook>
       </div>

@@ -1,0 +1,8 @@
+.selected {
+  color: var(--user-color);
+  font-weight: 700;
+}
+
+.item:hover {
+  cursor: pointer;
+}

@@ -7,9 +7,12 @@ import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb/Breadcrumb";
 
 function OrderControl(props) {
   const navigate = useNavigate();
-  const { onClick } = props;
 
-  const handleOnClickOrderList = () => {
+  const gotoHomePageHandler = () => {
+    navigate("/");
+  };
+
+  const gotoOrderHandler = () => {
     navigate("/order");
   };
 
@@ -19,11 +22,12 @@ function OrderControl(props) {
     },
     {
       title: "Thông tin đơn khám",
+      current: "current",
     },
   ];
   return (
     <div className={classes["container-order-control"]}>
-      <Breadcrumb onClick={handleOnClickOrderList} dataBread={dataBread} />
+      <Breadcrumb dataBread={dataBread} role="doctor" />
 
       <div className={`${classes["order-info"]} rounded`}>
         <div className="d-flex gap-3 mb-2 align-items-center">
@@ -39,11 +43,14 @@ function OrderControl(props) {
         <div className="d-flex justify-content-end gap-4 mt-2">
           <button
             className={`${classes["btn-confirm"]} btn btn-secondary`}
-            onClick={onClick}
+            onClick={gotoHomePageHandler}
           >
             Nhận đơn
           </button>
-          <button className={`${classes["btn-confirm"]} btn btn-secondary`}>
+          <button
+            className={`${classes["btn-confirm"]} btn btn-secondary`}
+            onClick={gotoOrderHandler}
+          >
             Huỷ đơn
           </button>
         </div>

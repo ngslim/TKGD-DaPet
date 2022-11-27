@@ -1,5 +1,5 @@
 .container-clinic-around {
-  background-color: #00c288;
+  background-color: var(--user-color);
   height: auto;
 }
 

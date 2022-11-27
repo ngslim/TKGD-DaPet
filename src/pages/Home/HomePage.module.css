@@ -1,24 +1,7 @@
 .container-fluid {
-  background-color: #06ba64;
+  background-color: var(--user-color);
   text-align: center;
 }
-
-/* .title-head {
-  position: relative;
-  left: 300px;
-  padding: 20px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 38px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  width: fit-content;
-
-  color: #ffffff;
-} */
 
 .form-container {
   margin: auto;
@@ -35,7 +18,7 @@
   width: 90%;
   height: 30px;
   padding-left: 10px;
-  background: #f1f1f1;
+  background: var(--bg-grey-color);
   border-radius: 0%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -48,7 +31,7 @@ form.form-container button {
   width: 10%;
   height: 30px;
   padding: 3px;
-  background: #f1f1f1;
+  background: var(--bg-grey-color);
   color: #a0a0a0;
   font-size: 10px;
   border: 0px;
@@ -75,16 +58,16 @@ form.form-container::after {
   font-size: 32px;
   line-height: 78px;
   align-items: center;
-  color: #06ba64;
+  color: var(--user-color);
 }
 .background2 {
-  background-color: #ffffff;
+  background-color: var(--white-color);
   text-align: center;
 }
 .button {
-  background-color: #06ba64;
+  background-color: var(--user-color);
   border: none;
-  color: white;
+  color: var(--white-color);
   padding: 5px 40px;
   text-align: center;
   text-decoration: none;
@@ -95,9 +78,9 @@ form.form-container::after {
   border-radius: 4px;
 }
 .button:hover {
-  background-color: white;
-  color: #06ba64;
-  border: 1px solid #06ba64;
+  background-color: var(--white-color);
+  color: var(--user-color);
+  border: 1px solid var(--user-color);
 }
 
 .column {
@@ -108,7 +91,7 @@ form.form-container::after {
 }
 
 .my-service {
-  background-color: 06BA64;
+  background-color: var(--user-color);
   font-size: 30px;
   line-break: normal;
   font-weight: 500;
@@ -123,7 +106,7 @@ form.form-container::after {
 }
 
 .container-create-profile {
-  background-color: 06BA64;
+  background-color: var(--user-color);
   text-align: left;
   width: 61.67%;
 }
@@ -150,8 +133,8 @@ form.form-container::after {
   }
 }
 .btn {
-  background-color: white;
-  color: #06ba64;
+  background-color: var(--white-color);
+  color: var(--user-color);
   padding: 5px 8px;
   border-radius: 50%;
   font-size: 8px;
@@ -163,17 +146,17 @@ form.form-container::after {
 
 /* Darker background on mouse-over */
 .btn:hover {
-  color: white;
-  background-color: #06ba64;
-  border: 1px solid white;
+  color: var(--white-color);
+  background-color: var(--user-color);
+  border: 1px solid var(--white-color);
 }
 
 .btn-link {
-  color: white;
+  color: var(--white-color);
   line-height: 14px;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--white-color);
   margin-left: 4px;
   padding-bottom: 0;
 }

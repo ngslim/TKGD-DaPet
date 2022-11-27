@@ -1,5 +1,5 @@
 .summary-page {
-  background-color: #f3f3f3;
+  background-color: var(--bg-grey-color);
 }
 
 .summary-profile {
@@ -14,9 +14,9 @@
 }
 
 .btn-confirm {
-  color: #06ba64;
+  color: var(--user-color);
   border: none;
-  background-color: white;
+  background-color: var(--white-color);
   height: 50px;
   width: fit-content;
   padding: 6px 20px;

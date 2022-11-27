@@ -1,8 +1,11 @@
 import classes from "./ButtonBanner.module.css";
 
-const ButtonBanner = ({ children }) => {
+const ButtonBanner = ({ onClick, children }) => {
   return (
-    <button className={`${classes["btn-banner"]} animated fadeInUp scrollto`}>
+    <button
+      className={`${classes["btn-banner"]} animated fadeInUp scrollto`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

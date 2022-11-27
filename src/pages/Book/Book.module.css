@@ -1,5 +1,5 @@
 .book-page {
-  background-color: #f3f3f3;
+  background-color: var(--bg-grey-color);
 }
 
 .menu-sidebar {
@@ -18,7 +18,7 @@
   width: 100%;
   height: 50px;
   outline: none;
-  background-color: #f3f3f3;
+  background-color: var(--bg-grey-color);
 }
 .field-input.high {
   height: 100px;
@@ -29,5 +29,5 @@
   height: 50px;
   outline: none;
   border: none !important;
-  background-color: #f3f3f3 !important;
+  background-color: var(--bg-grey-color) !important;
 }

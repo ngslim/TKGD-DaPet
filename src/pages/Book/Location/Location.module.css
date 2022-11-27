@@ -1,5 +1,5 @@
 .location-page {
-  background-color: #f3f3f3;
+  background-color: var(--bg-grey-color);
 }
 
 .menu-sidebar {

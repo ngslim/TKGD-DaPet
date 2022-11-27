@@ -1,9 +1,10 @@
 import classes from "./MedicalCardItem.module.css";
 
-const MedicalCardItem = ({ item }) => {
+const MedicalCardItem = ({ item, onClick }) => {
   return (
     <article
       className={`${classes["postcard"]} ${classes["dark"]} ${classes["blue"]}`}
+      onClick={onClick}
     >
       <button className={classes["postcard-img-link"]}>
         <img

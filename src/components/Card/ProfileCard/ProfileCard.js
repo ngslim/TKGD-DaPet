@@ -1,7 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import classes from "./ProfileCard.module.css";
 import TechniqueItem from "./TechniqueItem/TechniqueItem";
 
 const ProfileCard = () => {
+  const navigate = useNavigate();
+
+  const gotoPageNotFoundHandler = () => {
+    navigate("/page-not-found");
+  };
+
   return (
     <section className={classes["main"]}>
       <div className={classes["profile-card"]}>
@@ -17,13 +24,20 @@ const ProfileCard = () => {
           <span className={classes["clinic"]}>Developer & Designer</span>
         </div>
         <div className={classes["technique"]}>
-          <TechniqueItem title="Following" text="120" />
-          <TechniqueItem title="Followers" text="5000" />
-          <TechniqueItem title="Posts" text="209" />
+          <TechniqueItem title="Experience" text="2" />
+          <TechniqueItem title="Followers" text="209" />
+          <TechniqueItem title="Like" text="5000" />
         </div>
         <div className={classes["buttons"]}>
-          <button className={classes["btn"]}>Message</button>
-          <button className={classes["btn"]}>Follow Me</button>
+          <button className={classes["btn"]} onClick={gotoPageNotFoundHandler}>
+            Message
+          </button>
+          <button
+            className={classes["btn"]}
+            onClick={(e) => alert("You liked this person!")}
+          >
+            Like
+          </button>
         </div>
       </div>
     </section>

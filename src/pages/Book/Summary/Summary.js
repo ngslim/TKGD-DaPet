@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../../components/Header/Header";
 import Footer from "../../../components/Footer";
 import Menu from "../../../components/Menu/Menu";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import classes from "./Summary.module.css";
 import FormBook from "../../../components/Form/FormBook/FormBook";
 import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb/Breadcrumb";
@@ -10,7 +10,11 @@ import ProfileBook from "./ProfileBook/ProfileBook";
 import Description from "./Description/Description";
 
 function Summary() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
+
+  const gotoHomePageHandler = () => {
+    navigate("/");
+  };
 
   // const handleOnClickBook = () => {
   //   navigate("/book");
@@ -63,6 +67,7 @@ function Summary() {
           <div className="d-flex justify-content-end p-3">
             <button
               className={`${classes["btn-confirm"]} rounded fs-5 fw-semibold`}
+              onClick={gotoHomePageHandler}
             >
               Xác nhận
             </button>

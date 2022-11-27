@@ -1,24 +1,23 @@
 // import classes from "./Breadcrumb.module.css";
 import React from "react";
 import BreadcrumbItem from "../BreadcrumbItem/BreadcrumbItem";
-// import { useNavigate } from "react-router-dom";
 
 const Breadcrumb = (props) => {
-  // const navigate = useNavigate();
-  const { dataBread } = props;
+  const { dataBread, role } = props;
 
-  // const handleOnClickOrderList = () => {
-  //   navigate("/order");
-  // };
   return (
-    <div className="d-flex mt-2">
+    <div className="d-flex mt-1">
       {dataBread.map((item, index) => {
         return index === 0 ? (
-          <BreadcrumbItem title={item.title} key={index} />
+          <BreadcrumbItem key={index} title={item.title} role={role} />
         ) : (
           <React.Fragment key={index}>
             <span className={`py-2 px-1`}>&#62;</span>
-            <BreadcrumbItem title={item.title} current={item.current} />
+            <BreadcrumbItem
+              title={item.title}
+              current={item.current}
+              role={role}
+            />
           </React.Fragment>
         );
       })}

@@ -13,7 +13,15 @@ import ButtonBook from "../../../components/Button/ButtonBook/ButtonBook";
 function AddPet() {
   const navigate = useNavigate();
 
-  const handleOnClick = () => {
+  const gotoPageNotFoundHandler = () => {
+    navigate("/page-not-found");
+  };
+
+  const gotoHomePageHandler = () => {
+    navigate("/");
+  };
+
+  const gotoPetHandler = () => {
     navigate("/pet");
   };
 
@@ -42,7 +50,7 @@ function AddPet() {
             <HeaderContentPet
               title="HỒ SƠ THÚ CƯNG"
               labelButton="Theo dõi hàng ngày"
-              onClickButton={handleOnClick}
+              onClickButton={gotoPageNotFoundHandler}
             />
             <div
               className={`${classes["input-group-addpet"]} rounded-bottom px-3 py-2`}
@@ -66,11 +74,17 @@ function AddPet() {
               <div className="d-flex justify-content-between align-items-center">
                 <div className="d-flex gap-3">
                   <div className="mt-1 fs-5">Hình ảnh</div>
-                  <button className="btn btn-secondary">Thêm</button>
+                  <button
+                    className={`${classes["btn-add-img"]} btn btn-secondary`}
+                  >
+                    Thêm
+                  </button>
                 </div>
                 <div className="d-flex gap-3">
-                  <ButtonBook onClick={handleOnClick}>Xác nhận</ButtonBook>
-                  <ButtonBook onClick={handleOnClick}>Hủy</ButtonBook>
+                  <ButtonBook onClick={gotoHomePageHandler}>
+                    Xác nhận
+                  </ButtonBook>
+                  <ButtonBook onClick={gotoPetHandler}>Hủy</ButtonBook>
                 </div>
               </div>
             </div>

@@ -1,11 +1,16 @@
 .breadcrumb-item {
   color: #a0a0a0;
-  cursor: pointer;
+  /* cursor: pointer; */
+  cursor: default;
 }
 
 .breadcrumb-item.current {
   font-weight: 700 !important;
-  color: #9a02b2;
+  color: var(--user-color);
+}
+
+.breadcrumb-item.current.doctor {
+  color: var(--dark-doctor-color);
 }
 
 .breadcrumb-item.current:hover {

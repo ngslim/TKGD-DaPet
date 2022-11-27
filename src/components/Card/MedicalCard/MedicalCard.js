@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import classes from "./MedicalCard.module.css";
 import MedicalCardItem from "./MedicalCardItem/MedicalCardItem";
 
@@ -46,10 +47,23 @@ const MedicalCard = () => {
       date: "16:00 13/11/2022",
     },
   ];
+
+  const navigate = useNavigate();
+
+  const gotoOrderDetailHandler = () => {
+    navigate("/order/id");
+  };
+
   return (
     <section className={classes["container"]}>
       {orderList.map((item, index) => {
-        return <MedicalCardItem key={index} item={item} />;
+        return (
+          <MedicalCardItem
+            key={index}
+            item={item}
+            onClick={gotoOrderDetailHandler}
+          />
+        );
       })}
     </section>
   );

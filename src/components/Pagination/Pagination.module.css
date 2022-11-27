@@ -18,7 +18,7 @@ ul {
   height: 2.4rem;
   margin: 3rem;
   border-radius: 0.6rem;
-  background: #fff;
+  background: var(--white-color);
   box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
 }
 .page__items {
@@ -47,5 +47,5 @@ ul {
   pointer-events: initial;
 }
 .page__btn.active:hover {
-  color: var(--primary);
+  color: var(--doctor-color);
 }

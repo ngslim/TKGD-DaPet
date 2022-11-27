@@ -1,6 +1,5 @@
 import CalendarDay from "./CalendarDay/CalendarDay";
 import classes from "./CalendarOrder.module.css";
-import CheckedOrder from "./CheckedOrder/CheckedOrder";
 
 const CalendarOrder = () => {
   return (
@@ -12,13 +11,6 @@ const CalendarOrder = () => {
           November
         </span>
       </div>
-      {/* <div className={classes["day-title"]}>
-        <div className={`${classes["day-column"]} p-2`}>
-          <div className="fs-5 fw-bold">13</div>
-          <div>Sun</div>
-        </div>
-        <CheckedOrder />
-      </div> */}
       <CalendarDay weekday="Sun" day={13} checked={true} />
       <CalendarDay weekday="Mon" day={14} />
       <CalendarDay weekday="Tue" day={15} />

@@ -4,21 +4,11 @@
 }
 
 .month {
-  background-color: #9a02b2;
+  background-color: var(--doctor-color);
   height: 350px;
 }
 
 .month-text {
   transform: rotate(-90deg);
   font-size: 30px;
-}
-
-.day-title {
-  background-color: #e6e6e6;
-  position: relative;
-  border-right: 2px solid #ababab;
-}
-
-.day-column {
-  background-color: #cfcfcf;
 }

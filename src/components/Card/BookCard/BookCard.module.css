@@ -1,6 +1,7 @@
 .content-card {
   background-color: white;
   height: auto;
+  cursor: pointer;
 }
 
 .content-card .img-card {

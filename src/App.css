@@ -12,14 +12,15 @@
   --sidebar-color: #fff;
   --primary-color: #695cfe;
   --primary-color-light: #f6f5ff;
+  --white-color: white;
+  --black-color: black;
   --toggle-color: #ddd;
   --text-color: #707070;
-  --doctor-color: #9a02b2;
+  --doctor-color: #e6a9e0;
   --user-color: #00c288;
+  --dark-doctor-color: #c400e2;
+  --bg-grey-color: #f3f3f3;
 
-  --best-doctor-color: #e6a9e0;
-
-  --primary: #23adad;
   --greyLight: #23adad e1;
   --greyLight-2: #cbe0dd;
   --greyDark: #2d4848;

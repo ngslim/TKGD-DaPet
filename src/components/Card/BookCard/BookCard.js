@@ -1,8 +1,8 @@
 import classes from "./BookCard.module.css";
 
-const BookCard = ({ name, text }) => {
+const BookCard = ({ name, text, onClick }) => {
   return (
-    <div className={`${classes["content-card"]} rounded p-3`}>
+    <div className={`${classes["content-card"]} rounded p-3`} onClick={onClick}>
       <div className="d-flex">
         <div className={classes["img-card"]}></div>
         <div className="d-flex flex-column gap-2 px-3">

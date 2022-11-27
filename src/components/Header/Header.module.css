@@ -2,12 +2,22 @@
   position: fixed;
   padding: 13px;
   box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
-  background-image: linear-gradient(90deg, var(--user-color), white);
-  /* background-position: center;
-  background-size: cover;
-  background-image: url(/public/images/back.jpg); */
+  background-image: linear-gradient(
+    90deg,
+    var(--user-color),
+    var(--white-color)
+  );
   z-index: 100;
+  width: 100%;
   height: var(--heigth-header);
+}
+
+.main-header.doctor {
+  background-image: linear-gradient(
+    90deg,
+    var(--doctor-color),
+    var(--white-color)
+  );
 }
 
 .search-header {
@@ -18,4 +28,8 @@
 .input-header {
   outline: none;
   background-color: transparent;
+}
+
+.main-header .item:hover {
+  cursor: pointer;
 }
