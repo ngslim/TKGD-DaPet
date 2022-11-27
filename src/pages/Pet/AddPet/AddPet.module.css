@@ -1,0 +1,33 @@
+.addpet-page {
+  background-color: #f3f3f3;
+}
+
+.menu-sidebar {
+  min-width: 300px;
+}
+
+.container-addpet-page {
+  width: 100%;
+  position: relative;
+  top: calc(var(--height-header) + 4px);
+  left: 0;
+  height: 100%;
+}
+
+.content-addpet-page {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.input-group-addpet {
+  width: 100%;
+  background-color: white;
+}
+
+.field-select {
+  width: 200px !important;
+  height: 50px;
+  outline: none;
+  border: none !important;
+  background-color: #f3f3f3 !important;
+}

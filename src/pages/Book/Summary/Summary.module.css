@@ -17,6 +17,7 @@
   color: #06ba64;
   border: none;
   background-color: white;
-  height: 60px;
-  width: 250px;
+  height: 50px;
+  width: fit-content;
+  padding: 6px 20px;
 }

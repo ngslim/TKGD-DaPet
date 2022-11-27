@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../../components/Header/Header";
 import Footer from "../../../components/Footer";
-import Menu from "../../../components/Menu";
+import Menu from "../../../components/Menu/Menu";
 // import { useNavigate } from "react-router-dom";
 import classes from "./Summary.module.css";
 import FormBook from "../../../components/Form/FormBook/FormBook";

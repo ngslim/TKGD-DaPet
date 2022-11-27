@@ -1,0 +1,29 @@
+.pet-page {
+  background-color: #f3f3f3;
+}
+
+.menu-sidebar {
+  min-width: 300px;
+}
+
+.container-pet-page {
+  width: 100%;
+  position: relative;
+  top: calc(var(--height-header) + 4px);
+  left: 0;
+  height: 100%;
+}
+
+.breadcrumb-inline {
+  color: #098963;
+}
+
+.content-pet-page {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.main-pet-page {
+  width: 100%;
+  background-color: white;
+}

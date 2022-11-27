@@ -2,5 +2,6 @@
   border: none;
   background-color: #00c288;
   height: 50px;
-  width: 250px;
+  width: fit-content;
+  padding: 6px 20px;
 }

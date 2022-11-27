@@ -6,6 +6,7 @@ import {
   BsShopWindow,
   BsQuestionSquare,
 } from "react-icons/bs";
+import Account from "../Account/Account";
 
 function Menu() {
   return (
@@ -28,6 +29,7 @@ function Menu() {
         <BsQuestionSquare />
         <div className="px-2">Hỏi đáp</div>
       </div>
+      <Account />
     </div>
   );
 }

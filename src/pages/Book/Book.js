@@ -1,20 +1,21 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer";
-import Menu from "../../components/Menu";
-// import { useNavigate } from "react-router-dom";
+import Menu from "../../components/Menu/Menu";
+import { useNavigate } from "react-router-dom";
 import classes from "./Book.module.css";
 import Breadcrumb from "../../components/Breadcrumb/Breadcrumb/Breadcrumb";
 import InputBook from "../../components/Input/InputBook/InputBook";
 import FormBook from "../../components/Form/FormBook/FormBook";
 import ButtonBook from "../../components/Button/ButtonBook/ButtonBook";
+import FieldTextArea from "../Pet/AddPet/FieldTextArea/FieldTextArea";
 
 function Book() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // const handleOnClick = () => {
-  //   navigate("/book/location");
-  // };
+  const handleOnClick = () => {
+    navigate("/book/location");
+  };
 
   const dataBread = [
     {
@@ -41,7 +42,7 @@ function Book() {
             <InputBook label="Tên thú cưng" />
 
             <div className="mt-3">
-              <label className="fs-5">Loại thú cưng:</label>
+              <label className="fs-5">Loại thú cưng</label>
               <select
                 className={`${classes["field-select"]} form-select fs-5" id="floatingSelect`}
               >
@@ -54,7 +55,7 @@ function Book() {
 
             <div className="mt-3 d-flex gap-3">
               <div>
-                <label className="fs-5">SĐT:</label>
+                <label className="fs-5">SĐT</label>
                 <input
                   className={`${classes["field-input"]} border-0 rounded mt-1 px-3 fs-5`}
                   type="text"
@@ -62,7 +63,7 @@ function Book() {
               </div>
 
               <div className="flex-fill">
-                <label className="fs-5">Địa chỉ:</label>
+                <label className="fs-5">Địa chỉ</label>
                 <input
                   className={`${classes["field-input"]} border-0 rounded mt-1 px-3 fs-5`}
                   type="text"
@@ -70,21 +71,10 @@ function Book() {
               </div>
             </div>
 
-            <div className="mt-2">
-              <label className="fs-5">Mô tả triệu chứng:</label>
-              <textarea
-                className={`${classes["field-input"]} ${classes["high"]} border-0 rounded mt-1 p-3 fs-5`}
-                type="text"
-              />
-            </div>
-            <div className="mt-2">
-              <label className="fs-5">Khác:</label>
-              <input
-                className={`${classes["field-input"]} border-0 rounded mt-1 px-3 fs-5`}
-                type="text"
-              />
-            </div>
-            <ButtonBook>Đăng ký khám</ButtonBook>
+            <FieldTextArea title="Mô tả triệu chứng" />
+
+            <InputBook label="Khác" />
+            <ButtonBook onClick={handleOnClick}>Đăng ký khám</ButtonBook>
           </>
         </FormBook>
       </div>

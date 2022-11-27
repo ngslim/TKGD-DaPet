@@ -1,0 +1,15 @@
+.pet-item .img-pet-card {
+  width: 100%;
+  min-height: 220px;
+  background-color: #bce1d6;
+}
+
+.pet-item .body-pet-card {
+  width: 100%;
+  min-height: 64px;
+  background-color: #00c288;
+}
+
+.btn-pet-card {
+  width: 140px;
+}
