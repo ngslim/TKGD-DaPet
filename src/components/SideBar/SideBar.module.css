@@ -1,6 +1,6 @@
 .sidebar {
   position: fixed;
-  top: 0;
+  top: calc(var(--height-header) - 5px);
   left: 0;
   height: 100%;
   width: 300px;
@@ -8,8 +8,9 @@
   background-position: center;
   background-size: cover;
   background-image: url(/public/images/back.jpg);
+  border-radius: 20px;
   transition: var(--tran-05);
-  z-index: 100;
+  z-index: 1;
 }
 
 .sidebar ul {

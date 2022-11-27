@@ -1,7 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-// import Order from './pages/Order';
-import Order from "./components/OrderTemp/Order";
+import Order from "./pages/Order/Order";
 import Book from "./pages/Book";
 import Pet from "./pages/Pet";
 import AddPet from "./pages/Pet/AddPet";
@@ -13,7 +12,7 @@ function App() {
   return (
     <Routes>
       <Route path="/order" element={<Order />} />
-      {/* <Route path="/order/:id" element={<Order />} /> */}
+      <Route path="/order/:id" element={<Order />} />
       <Route path="/book" element={<Book />} />
       <Route path="/book/location" element={<Location />} />
       <Route path="/book/summary" element={<Summary />} />

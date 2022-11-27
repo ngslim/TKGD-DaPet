@@ -1,0 +1,25 @@
+.container-order-control {
+  position: absolute;
+  top: calc(var(--height-header) - 5px);
+  left: calc(var(--width-sidebar) + 10px);
+  width: calc(100% - var(--width-sidebar) - 10px);
+  transition: var(--tran-05);
+}
+
+.order-info {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 16px;
+}
+
+.btn-status {
+  background-color: #9a02b2 !important;
+}
+
+.btn-status:hover {
+  cursor: default;
+}
+
+.btn-confirm {
+  width: 120px;
+}

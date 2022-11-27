@@ -1,0 +1,9 @@
+.day-title {
+  background-color: #e6e6e6;
+  position: relative;
+  border-right: 2px solid #ababab;
+}
+
+.day-column {
+  background-color: #cfcfcf;
+}

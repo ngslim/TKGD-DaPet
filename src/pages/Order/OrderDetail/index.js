@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import PropTypes from "prop-types";
-import Order from "../Order";
-import DoneOrder from "../DoneOrder";
+import DoneOrder from "../DoneOrder/DoneOrder";
+import OrderControl from "../OrderControl/OrderControl";
 
 function OrderDetail() {
   // const { order } = props;
@@ -12,7 +12,7 @@ function OrderDetail() {
   };
 
   if (!status) {
-    return <Order onClick={handleOnclick} />;
+    return <OrderControl onClick={handleOnclick} />;
   }
 
   return <DoneOrder />;

@@ -1,0 +1,17 @@
+.container-done-order {
+  position: absolute;
+  top: calc(var(--height-header) - 5px);
+  left: calc(var(--width-sidebar) + 10px);
+  width: calc(100% - var(--width-sidebar) - 10px);
+  transition: var(--tran-05);
+}
+
+.title-schedule {
+  color: #9a02b2;
+}
+
+.done-order {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 8px;
+}

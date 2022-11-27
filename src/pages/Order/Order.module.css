@@ -1,9 +1,17 @@
+.page-order {
+  display: flex;
+}
+
+.main-content {
+  margin-top: var(--height-header);
+  width: 100%;
+}
+
 .home {
   position: absolute;
-  top: 0;
-  top: 0;
-  left: 300px;
-  width: calc(100% - 300px);
+  top: calc(var(--height-header) - 5px);
+  left: var(--width-sidebar);
+  width: calc(100% - var(--width-sidebar));
   background-color: var(--body-color);
   transition: var(--tran-05);
 }

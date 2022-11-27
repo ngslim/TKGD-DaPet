@@ -1,6 +1,6 @@
 import classes from "./MedicalCardItem.module.css";
 
-const MedicalCardItem = () => {
+const MedicalCardItem = ({ item }) => {
   return (
     <article
       className={`${classes["postcard"]} ${classes["dark"]} ${classes["blue"]}`}
@@ -14,7 +14,7 @@ const MedicalCardItem = () => {
       </button>
       <div className={classes["postcard-text"]}>
         <button className={`${classes["postcard-title"]} ${classes["blue"]}`}>
-          Tieu de
+          {item.title}
         </button>
         <div className={classes["small"]}>
           <time dateTime="2020-05-25 12:00:00">
@@ -25,10 +25,11 @@ const MedicalCardItem = () => {
         <div
           className={`${classes["postcard-bar"]} ${classes["postcard-bar-blue"]}`}
         ></div>
-        <div className={classes["postcard-preview-txt"]}>Mo ta benh tat</div>
+        <div className={classes["postcard-preview-txt"]}>{item.content}</div>
         <ul className={classes["postcard-tagbox"]}>
           <li className={classes["tag-item"]}>
-            <i className={`fas fa-tag mr-2 ${classes["icon"]}`}></i>Meo
+            <i className={`fas fa-tag mr-2 ${classes["icon"]}`}></i>
+            {item.name}
           </li>
           <li className={classes["tag-item"]}>
             <i className={`fas fa-clock mr-2 ${classes["icon"]}`}></i>

@@ -5,7 +5,7 @@ import HeaderLogout from "./StatusHeader/HeaderLogout/HeaderLogout";
 import HeaderLogin from "./StatusHeader/HeaderLogin/HeaderLogin";
 
 function Header() {
-  const [status, setStatus] = useState(false);
+  const [status, setStatus] = useState(true);
 
   const changeStatusHandler = () => {
     setStatus((prev) => !prev);

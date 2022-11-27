@@ -20,6 +20,10 @@
   --greyLight-2: #cbe0dd;
   --greyDark: #2d4848;
 
+  /* ====== Measure ====== */
+  --height-header: 90px;
+  --width-sidebar: 300px;
+
   /* ====== Transition ====== */
   --tran-03: all 0.2s ease;
   --tran-03: all 0.3s ease;
