@@ -3,7 +3,7 @@
   text-align: center;
 }
 
-.title-head {
+/* .title-head {
   position: relative;
   left: 300px;
   padding: 20px;
@@ -18,7 +18,7 @@
   width: fit-content;
 
   color: #ffffff;
-}
+} */
 
 .form-container {
   margin: auto;

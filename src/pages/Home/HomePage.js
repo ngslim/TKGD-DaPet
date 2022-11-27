@@ -8,9 +8,7 @@ const HomePage = () => {
       <div
         className={`${classes["container-fluid"]} p-4 text-white text-center`}
       >
-        <h1 className={classes["title-head text-center"]}>
-          Thú cưng của bạn đang gặp vấn đề gì?
-        </h1>
+        <h1>Thú cưng của bạn đang gặp vấn đề gì?</h1>
         <form className={classes["form-container"]}>
           <input
             className={classes["form-input-styling"]}
