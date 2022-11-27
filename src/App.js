@@ -1,7 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Order from "./pages/Order/Order";
-import Book from "./pages/Book";
+import Book from "./pages/Book/Book";
 import Pet from "./pages/Pet";
 import AddPet from "./pages/Pet/AddPet";
 import Location from "./pages/Book/Location";

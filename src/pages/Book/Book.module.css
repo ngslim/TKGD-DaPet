@@ -1,0 +1,56 @@
+.book-page {
+  background-color: #f3f3f3;
+}
+
+.menu-sidebar {
+  min-width: 300px;
+}
+
+.container-book {
+  width: 100%;
+  position: relative;
+  top: calc(var(--height-header) + 4px);
+  left: 0;
+  height: 100%;
+}
+
+.content-book {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.title-head {
+  width: 100%;
+  height: 65px;
+  background-color: #00c288;
+}
+
+.container-input {
+  width: 100%;
+  background-color: white;
+}
+
+.field-input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  background-color: #f3f3f3;
+}
+.field-input.high {
+  height: 100px;
+}
+
+.field-select {
+  width: 200px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: #f3f3f3;
+}
+
+.btn-add {
+  border: none;
+  background-color: #00c288;
+  height: 50px;
+  width: 250px;
+}

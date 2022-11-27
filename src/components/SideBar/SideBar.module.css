@@ -3,7 +3,7 @@
   top: calc(var(--height-header) - 5px);
   left: 0;
   height: 100%;
-  width: 300px;
+  min-width: 300px;
   padding: 10px 14px;
   background-position: center;
   background-size: cover;

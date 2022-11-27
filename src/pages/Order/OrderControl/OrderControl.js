@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import OwnerInfo from "./OwnerInfo/OwnerInfo";
 import PetInfo from "./PetInfo/PetInfo";
-import Breadcrumb from "../../../components/Breadcrumb/BreadcrumbOrder/BreadcrumbOrder";
+import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb/Breadcrumb";
 
 function OrderControl(props) {
   const navigate = useNavigate();
@@ -12,9 +12,18 @@ function OrderControl(props) {
   const handleOnClickOrderList = () => {
     navigate("/order");
   };
+
+  const dataBread = [
+    {
+      title: "Quản lý đơn khám",
+    },
+    {
+      title: "Thông tin đơn khám",
+    },
+  ];
   return (
     <div className={classes["container-order-control"]}>
-      <Breadcrumb onClick={handleOnClickOrderList} />
+      <Breadcrumb onClick={handleOnClickOrderList} dataBread={dataBread} />
 
       <div className={`${classes["order-info"]} rounded`}>
         <div className="d-flex gap-3 mb-2 align-items-center">

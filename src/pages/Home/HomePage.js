@@ -30,7 +30,7 @@ const HomePage = () => {
         <button className={classes["button"]}>Đăng Ký</button>
       </div>
       <div className={`${classes["container-fluid"]} p-5 text-white`}>
-        <div className="row">
+        <div className={classes["row"]}>
           <div className={`${classes["column"]} ${classes["my-service"]}`}>
             Dịch vụ của <br />
             chúng tôi

@@ -1,0 +1,13 @@
+.breadcrumb-item {
+  color: #a0a0a0;
+  cursor: pointer;
+}
+
+.breadcrumb-item.current {
+  font-weight: 700 !important;
+  color: #9a02b2;
+}
+
+.breadcrumb-item.current:hover {
+  cursor: default;
+}

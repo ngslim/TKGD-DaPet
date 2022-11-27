@@ -4,6 +4,7 @@ import Footer from "../../../components/Footer";
 import Menu from "../../../components/Menu";
 import { useNavigate } from "react-router-dom";
 import { BsCalendar } from "react-icons/bs";
+import classes from "./Location.module.css";
 
 function Location() {
   const navigate = useNavigate();
