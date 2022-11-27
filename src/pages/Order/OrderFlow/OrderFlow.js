@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import DoneOrder from "../DoneOrder/DoneOrder";
 import OrderControl from "../OrderControl/OrderControl";
 
-function OrderDetail() {
+function OrderFlow() {
   // const { order } = props;
   const [status, setStatus] = useState(false);
 
@@ -18,4 +18,4 @@ function OrderDetail() {
   return <DoneOrder />;
 }
 
-export default OrderDetail;
+export default OrderFlow;

@@ -4,7 +4,7 @@ import MedicalCard from "../../components/Card/MedicalCard/MedicalCard";
 import Pagination from "../../components/Pagination/Pagination";
 import Header from "../../components/Header/Header";
 
-import OrderDetail from "./OrderDetail";
+import OrderFlow from "./OrderFlow/OrderFlow";
 
 import { useParams } from "react-router-dom";
 
@@ -16,7 +16,7 @@ const Order = () => {
       <SideBar />
       <main className={classes["main-content"]}>
         {id ? (
-          <OrderDetail />
+          <OrderFlow />
         ) : (
           <section className={classes["home"]}>
             <div className={classes["text"]}>PET CARE</div>
