@@ -14,10 +14,10 @@ const Pagination = () => {
         <Items currentItems={1} className={classes} />
         <Items currentItems={2} className={classes} />
         <Items currentItems={3} className={classes} />
-        <Items currentItems={4} className={classes} />
         <li className={`${classes["page__items"]} ${classes["page__dots"]}`}>
           ...
         </li>
+        <Items currentItems={9} className={classes} />
         <Items currentItems={10} className={classes} />
 
         <li className={`${classes["page__items"]} ${classes["page__btn"]}`}>

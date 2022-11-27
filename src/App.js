@@ -7,6 +7,7 @@ import AddPet from "./pages/Pet/AddPet";
 import Location from "./pages/Book/Location/Location";
 import Summary from "./pages/Book/Summary/Summary";
 import HomePage from "./pages/Home/HomePage";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <Route path="/book/summary" element={<Summary />} />
       <Route path="/pet" element={<Pet />} />
       <Route path="/pet/add" element={<AddPet />} />
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<Home />} />
     </Routes>
   );
 }

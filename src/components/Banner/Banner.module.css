@@ -1,0 +1,106 @@
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: url("/public/images/back-up.jpg") top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+}
+
+.banner:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.banner .container {
+  padding-top: 110px;
+}
+
+@media (max-width: 992px) {
+  .banner .container {
+    padding-top: 98px;
+  }
+}
+
+.banner h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.banner h1 span {
+  color: #cda45e;
+}
+
+.banner h2 {
+  color: #eee;
+  font-size: 22px;
+  margin-top: 8px;
+}
+
+.banner .btns {
+  margin-top: 30px;
+}
+
+.banner .btn-menu,
+.banner .btn-book {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: white;
+  border: 2px solid #cda45e;
+  background-color: transparent;
+}
+
+.banner .btn-menu:hover,
+.banner .btn-book:hover {
+  background: #cda45e;
+  color: #fff;
+}
+
+.banner .btn-book {
+  margin-left: 15px;
+}
+
+@media (min-width: 1024px) {
+  .banner {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-height: 500px) {
+  .banner {
+    height: auto;
+  }
+
+  .banner .container {
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .banner h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
