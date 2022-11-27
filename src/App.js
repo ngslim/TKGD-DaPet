@@ -7,6 +7,7 @@ import Pet from "./pages/Pet";
 import AddPet from "./pages/Pet/AddPet";
 import Location from "./pages/Book/Location";
 import Summary from "./pages/Book/Summary";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/book/summary" element={<Summary />} />
       <Route path="/pet" element={<Pet />} />
       <Route path="/pet/add" element={<AddPet />} />
+      <Route path="/" element={<Header />} />
     </Routes>
   );
 }
