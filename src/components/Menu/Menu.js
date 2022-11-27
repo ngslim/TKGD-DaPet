@@ -17,7 +17,7 @@ function Menu() {
       </div>
       <div className="d-flex gap-3 align-items-center py-2 px-3">
         <BsPencil color="#098963" />
-        <div className="fw-semibold px-2" style={{ color: "#098963" }}>
+        <div className={`${classes["selected"]} fw-semibold px-2`}>
           Đăng ký khám
         </div>
       </div>

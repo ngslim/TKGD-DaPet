@@ -4,16 +4,8 @@ import classes from "./Account.module.css";
 
 function Account() {
   return (
-    <div className={`bg-white p-3 rounded`}>
-      <div
-        className="mx-auto mb-4 mt-4"
-        style={{
-          width: "150px",
-          height: "150px",
-          backgroundColor: "#D9D9D9",
-          borderRadius: "75px",
-        }}
-      ></div>
+    <div className={`${classes["profile-account"]} bg-white p-3 rounded`}>
+      <div className={`${classes["img-account"]} mx-auto mb-4 mt-4`}></div>
       <div>
         <div className="d-flex gap-5 py-2 justify-content-center">
           <div className="fw-bold">username</div>
@@ -23,7 +15,7 @@ function Account() {
         </div>
         <div className="d-flex gap-3 align-items-center py-2 px-3">
           <BsClipboard color="#098963" />
-          <div className="fw-bold px-2" style={{ color: "#098963" }}>
+          <div className={`${classes["selected"]} fw-bold px-2`}>
             Danh sách thú cưng
           </div>
         </div>

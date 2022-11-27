@@ -1,1 +1,10 @@
+.profile-account .img-account {
+  width: 150px;
+  height: 150px;
+  background-color: #d9d9d9;
+  border-radius: 75px;
+}
 
+.profile-account .selected {
+  color: #098963;
+}
