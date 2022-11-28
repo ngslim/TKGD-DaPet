@@ -31,7 +31,7 @@ const MenuBar = ({ className }) => {
             onClick={gotoPageNotFoundHandler}
           />
           <NavBarItem
-            icon="fa-regular fa-messages-question"
+            icon="fa-sharp fa-solid fa-clipboard-question"
             text="Tu van"
             className={{ ...className, ...classes }}
             onClick={gotoPageNotFoundHandler}
