@@ -8,10 +8,6 @@ import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb/Breadcrumb";
 function OrderControl(props) {
   const navigate = useNavigate();
 
-  const gotoHomePageHandler = () => {
-    navigate("/");
-  };
-
   const gotoOrderHandler = () => {
     navigate("/order");
   };
@@ -43,7 +39,7 @@ function OrderControl(props) {
         <div className="d-flex justify-content-end gap-4 mt-2">
           <button
             className={`${classes["btn-confirm"]} btn btn-secondary`}
-            onClick={gotoHomePageHandler}
+            onClick={props.onClick}
           >
             Nhận đơn
           </button>

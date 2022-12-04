@@ -14,7 +14,10 @@ const Banner = () => {
   };
 
   return (
-    <section className={`${classes["banner"]} d-flex align-items-center`}>
+    <section
+      id="banner"
+      className={`${classes["banner"]} d-flex align-items-center`}
+    >
       <div className="container position-relative text-center text-lg-start">
         <div className="row">
           <div className="col-lg-8">
