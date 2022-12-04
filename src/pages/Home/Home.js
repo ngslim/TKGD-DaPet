@@ -4,6 +4,7 @@ import Banner from "../../components/Banner/Banner";
 import Whyus from "../../components/Whyus/Whyus";
 import SwiperClinic from "../../components/SwiperCustom/SwiperClinic/SwiperClinic";
 import SwiperEvaluation from "../../components/SwiperCustom/SwiperEvaluation/SwiperEvaluation";
+import Gallery from "../../components/Gallery/Gallery";
 
 const Home = () => {
   const dataClinic = [
@@ -81,6 +82,7 @@ const Home = () => {
         <Whyus />
         <SwiperClinic data={dataClinic} />
         <SwiperEvaluation data={dataEvaluation} />
+        <Gallery />
       </main>
     </div>
   );
