@@ -6,6 +6,7 @@ import SwiperClinic from "../../components/SwiperCustom/SwiperClinic/SwiperClini
 import SwiperEvaluation from "../../components/SwiperCustom/SwiperEvaluation/SwiperEvaluation";
 import Gallery from "../../components/Gallery/Gallery";
 import GoogleMaps from "../../components/GoogleMaps/GoogleMaps";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   const dataClinic = [
@@ -86,6 +87,7 @@ const Home = () => {
         <Gallery />
         <GoogleMaps />
       </main>
+      <Footer />
     </div>
   );
 };
