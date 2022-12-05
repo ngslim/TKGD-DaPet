@@ -67,7 +67,10 @@ const GoogleMaps = () => {
   }
 
   return (
-    <section id="contact" className={classes["google-map"]}>
+    <section
+      id="contact"
+      className={`${classes["google-map"]} ${classes["section-bg"]}`}
+    >
       <div className="container">
         <div className={classes["section-title"]}>
           <h2>Maps</h2>

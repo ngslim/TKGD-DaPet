@@ -37,22 +37,22 @@ function Header({ role }) {
         className={`${classes["item"]} px-3 fw-light`}
         onClick={gotoHomePageHandler}
       >
-        Trang chủ
+        Home
       </div>
       <div
         className={`${classes["item"]} px-3 fw-light`}
         onClick={gotoPageNotFoundHandler}
       >
-        Khám bệnh
+        Clinics
       </div>
       <div
         className={`${classes["item"]} px-3 fw-light`}
         onClick={gotoPageNotFoundHandler}
       >
-        Bài viết
+        Questions
       </div>
       <div
-        className={`${classes["search-header"]} border border-0 rounded fs-6 py-2 d-flex align-items-center justify-content-between px-4 me-3 ms-auto`}
+        className={`${classes["search-header"]} border border-0 rounded fs-6 py-2 d-flex align-items-center justify-content-between px-4 me-3 ms-5`}
       >
         <input
           className={`${classes["input-header"]} border-0`}

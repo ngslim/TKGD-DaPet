@@ -9,10 +9,6 @@ const Banner = () => {
     navigate("/book");
   };
 
-  const gotoPageNotFoundHandler = () => {
-    navigate("/page-not-found");
-  };
-
   return (
     <section
       id="banner"
@@ -27,9 +23,6 @@ const Banner = () => {
             <h2>Good choice to take care of your pet!</h2>
 
             <div className={classes["btns"]}>
-              <ButtonBanner onClick={gotoPageNotFoundHandler}>
-                Our Service
-              </ButtonBanner>
               <ButtonBanner onClick={gotoBookHandler}>
                 Book an Appointment
               </ButtonBanner>

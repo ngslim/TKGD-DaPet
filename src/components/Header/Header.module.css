@@ -1,6 +1,6 @@
 .main-header {
   position: fixed;
-  padding: 13px;
+  padding: 10px;
   box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
   background-image: linear-gradient(
     90deg,
@@ -9,7 +9,7 @@
   );
   z-index: 100;
   width: 100%;
-  height: var(--heigth-header);
+  max-height: var(--heigth-header);
 }
 
 .main-header.doctor {
@@ -21,7 +21,7 @@
 }
 
 .search-header {
-  width: 800px;
+  width: 30%;
   background-color: var(--primary-color-light);
 }
 
