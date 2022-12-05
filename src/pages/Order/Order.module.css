@@ -1,9 +1,13 @@
 .page-order {
+  width: 100%;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
 }
 
 .main-content {
   margin-top: var(--height-header);
+  margin-bottom: var(--height-footer);
   width: 100%;
 }
 

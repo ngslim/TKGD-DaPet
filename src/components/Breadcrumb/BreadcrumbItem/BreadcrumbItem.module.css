@@ -1,12 +1,11 @@
 .breadcrumb-item {
-  color: #a0a0a0;
   /* cursor: pointer; */
   cursor: default;
 }
 
 .breadcrumb-item.current {
   font-weight: 700 !important;
-  color: var(--user-color);
+  color: var(--white-color);
 }
 
 .breadcrumb-item.current.doctor {

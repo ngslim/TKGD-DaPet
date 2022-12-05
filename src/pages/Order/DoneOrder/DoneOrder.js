@@ -7,9 +7,6 @@ import CalendarOrder from "./CalendarOrder/CalendarOrder";
 function DoneOrder() {
   return (
     <div className={classes["container-done-order"]}>
-      <div className={`${classes["title-schedule"]} py-2 px-1 fw-bold`}>
-        <div>Lịch trình</div>
-      </div>
       <div className={`${classes["done-order"]} rounded`}>
         <ScheduleInfo />
 

@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Montserrat', 'Oswald', sans-serif !important;
+  position: relative;
+  font-family: "Montserrat", "Oswald", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

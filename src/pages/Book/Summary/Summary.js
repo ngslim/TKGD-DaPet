@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../../components/Header/Header";
-import Footer from "../../../components/Footer/Footer";
+// import Footer from "../../../components/Footer/Footer";
 import Menu from "../../../components/Menu/Menu";
 import { useNavigate } from "react-router-dom";
 import classes from "./Summary.module.css";
@@ -48,8 +48,7 @@ function Summary() {
           <Menu />
         </div>
         <FormBook
-          breadcrumb={<Breadcrumb dataBread={dataBread} />}
-          title="THÔNG TIN LỊCH KHÁM"
+          title={<Breadcrumb dataBread={dataBread} />}
           summaryBackground="background-summary-book"
         >
           <div className="d-flex gap-3 px-3 pb-3">
@@ -74,7 +73,7 @@ function Summary() {
           </div>
         </FormBook>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

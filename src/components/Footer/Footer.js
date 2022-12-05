@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import classes from "./Footer.module.css";
 
 function Footer() {
+  const navigate = useNavigate();
+
   return (
     <footer className={classes["footer"]}>
       <div className={classes["footer-top"]}>
@@ -43,19 +46,19 @@ function Footer() {
             <div className={`col-lg-2 col-md-6 ${classes["footer-links"]}`}>
               <h4>Useful Links</h4>
               <ul>
-                <li>
+                <li onClick={(event) => navigate("/")}>
                   <i className="fa-solid fa-chevron-right"></i>{" "}
                   <button>Home</button>
                 </li>
-                <li>
+                <li onClick={(event) => navigate("/order")}>
                   <i className="fa-solid fa-chevron-right"></i>{" "}
                   <button>Order</button>
                 </li>
-                <li>
+                <li onClick={(event) => navigate("/book")}>
                   <i className="fa-solid fa-chevron-right"></i>{" "}
                   <button>Book</button>
                 </li>
-                <li>
+                <li onClick={(event) => navigate("/pet")}>
                   <i className="fa-solid fa-chevron-right"></i>{" "}
                   <button>Pet</button>
                 </li>

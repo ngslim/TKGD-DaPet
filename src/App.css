@@ -28,6 +28,7 @@
   /* ====== Measure ====== */
   --height-header: 60px;
   --width-sidebar: 300px;
+  --height-footer: 300px
 
   /* ====== Transition ====== */
   --tran-03: all 0.2s ease;

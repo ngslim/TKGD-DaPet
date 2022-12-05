@@ -9,7 +9,7 @@
 .container-pet-page {
   width: 100%;
   position: relative;
-  top: calc(var(--height-header) + 4px);
+  top: var(--height-header);
   left: 0;
   height: 100%;
 }

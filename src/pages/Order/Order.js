@@ -3,6 +3,7 @@ import SideBar from "../../components/SideBar/SideBar";
 import MedicalCard from "../../components/Card/MedicalCard/MedicalCard";
 import Pagination from "../../components/Pagination/Pagination";
 import Header from "../../components/Header/Header";
+// import Footer from "../../components/Footer/Footer";
 
 import OrderFlow from "./OrderFlow/OrderFlow";
 
@@ -27,6 +28,7 @@ const Order = () => {
           </section>
         )}
       </main>
+      {/* <Footer /> */}
     </div>
   );
 };

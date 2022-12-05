@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
+// import Footer from "../../components/Footer/Footer";
 import Menu from "../../components/Menu/Menu";
 import { useNavigate } from "react-router-dom";
 import classes from "./Pet.module.css";
@@ -23,13 +23,7 @@ function Pet() {
           <Menu />
         </div>
         <div className={classes["container-pet-page"]}>
-          <div className="d-flex">
-            <div
-              className={`${classes["breadcrumb-inline"]} py-2 px-1 fw-bold`}
-            >
-              <div>Danh sách thú cưng</div>
-            </div>
-          </div>
+          <div className="d-flex"></div>
           <div className={`${classes["content-pet-page"]} rounded flex-column`}>
             <HeaderContentPet
               title="DANH SÁCH THÚ CƯNG"
@@ -44,7 +38,7 @@ function Pet() {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

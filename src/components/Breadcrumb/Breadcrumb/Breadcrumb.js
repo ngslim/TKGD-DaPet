@@ -6,7 +6,7 @@ const Breadcrumb = (props) => {
   const { dataBread, role } = props;
 
   return (
-    <div className="d-flex mt-1">
+    <div className="d-flex">
       {dataBread.map((item, index) => {
         return index === 0 ? (
           <BreadcrumbItem key={index} title={item.title} role={role} />

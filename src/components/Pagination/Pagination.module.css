@@ -1,5 +1,5 @@
 .pagination {
-  min-height: 30vh;
+  min-height: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,7 +16,7 @@ ul {
   justify-content: center;
   align-items: center;
   height: 2.4rem;
-  margin: 3rem;
+  margin: 0.4rem 3rem;
   border-radius: 0.6rem;
   background: var(--white-color);
   box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);

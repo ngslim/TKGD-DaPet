@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../../components/Header/Header";
-import Footer from "../../../components/Footer/Footer";
+// import Footer from "../../../components/Footer/Footer";
 import Menu from "../../../components/Menu/Menu";
 import { useNavigate } from "react-router-dom";
 import { BsCalendar } from "react-icons/bs";
@@ -42,10 +42,7 @@ function Location() {
         <div className={`${classes["menu-sidebar"]} d-flex flex-column gap-2`}>
           <Menu />
         </div>
-        <FormBook
-          breadcrumb={<Breadcrumb dataBread={dataBread} />}
-          title="LỰA CHỌN PHÒNG KHÁM"
-        >
+        <FormBook title={<Breadcrumb dataBread={dataBread} />}>
           <>
             <InputBook label="Tên thú cưng" />
             <InputBook label="Tên phòng khám" />
@@ -58,7 +55,7 @@ function Location() {
           </>
         </FormBook>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

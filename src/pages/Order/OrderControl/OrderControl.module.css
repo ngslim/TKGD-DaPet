@@ -1,6 +1,6 @@
 .container-order-control {
   position: absolute;
-  top: calc(var(--height-header) - 5px);
+  top: calc(var(--height-header) + 15px);
   left: calc(var(--width-sidebar) + 10px);
   width: calc(100% - var(--width-sidebar) - 10px);
   transition: var(--tran-05);

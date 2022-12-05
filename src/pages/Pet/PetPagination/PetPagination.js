@@ -3,7 +3,7 @@ import classes from "./PetPagination.module.css";
 const PetPagination = () => {
   const pages = [1, 2, 3, 4, 5];
   return (
-    <div class="d-flex gap-1 justify-content-center mt-4">
+    <div className="d-flex gap-1 justify-content-center mt-4">
       {pages.map((item, index) => {
         return (
           <button

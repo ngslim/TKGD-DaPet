@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../../components/Header/Header";
-import Footer from "../../../components/Footer/Footer";
+// import Footer from "../../../components/Footer/Footer";
 import Menu from "../../../components/Menu/Menu";
 import { useNavigate } from "react-router-dom";
 import classes from "./AddPet.module.css";
@@ -43,12 +43,11 @@ function AddPet() {
           <Menu />
         </div>
         <div className={classes["container-addpet-page"]}>
-          <BreadCrumb dataBread={dataBread} />
           <div
             className={`${classes["content-addpet-page"]} rounded flex-column`}
           >
             <HeaderContentPet
-              title="HỒ SƠ THÚ CƯNG"
+              title={<BreadCrumb dataBread={dataBread} />}
               labelButton="Theo dõi hàng ngày"
               onClickButton={gotoPageNotFoundHandler}
             />
@@ -91,7 +90,7 @@ function AddPet() {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
