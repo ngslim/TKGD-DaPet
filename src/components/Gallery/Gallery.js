@@ -30,14 +30,14 @@ const Gallery = () => {
   ];
   return (
     <section>
-      <div className="container" data-aos="fade-up">
+      <div className="container">
         <div className={classes["section-title"]}>
           <h2>Gallery</h2>
-          <p>Some photos from Our Restaurant</p>
+          <p>Some photos from Our Website</p>
         </div>
       </div>
 
-      <div className="container-fluid" data-aos="fade-up" data-aos-delay="100">
+      <div className="container-fluid">
         <div className="row g-0">
           {data.map((item, index) => {
             return <GalleryItem key={index} item={item} />;

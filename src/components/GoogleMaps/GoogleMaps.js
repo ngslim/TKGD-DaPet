@@ -48,11 +48,17 @@ const GoogleMaps = () => {
     setDuration(results.routes[0].legs[0].duration.text);
   };
 
-  const clearRoute = () => {
+  const clearOriginRoute = () => {
     setDirectionsResponse(null);
     setDistance("");
     setDuration("");
     originRef.current.value = "";
+  };
+
+  const clearDestinationRoute = () => {
+    setDirectionsResponse(null);
+    setDistance("");
+    setDuration("");
     destiantionRef.current.value = "";
   };
 
@@ -64,8 +70,8 @@ const GoogleMaps = () => {
     <section id="contact" className={classes["google-map"]}>
       <div className="container">
         <div className={classes["section-title"]}>
-          <h2>Contact</h2>
-          <p>Contact Us</p>
+          <h2>Maps</h2>
+          <p>Find way</p>
         </div>
 
         <div className="row justify-content-around">
@@ -90,6 +96,26 @@ const GoogleMaps = () => {
           </div>
           <div className="col-lg-5 pt-4 pt-lg-0 float-end">
             <div className={classes["form-location"]}>
+              <div className={`${classes["info"]} row`}>
+                <div className={classes["distance"]}>
+                  <i className="fa-solid fa-location-pin"></i>
+                  <h4>Distance:</h4>
+                  <p>{distance}</p>
+                </div>
+
+                <div className={classes["duration"]}>
+                  <i className="fa-solid fa-clock"></i>
+                  <h4>Duration:</h4>
+                  <p>{duration}</p>
+                </div>
+
+                <div
+                  className={classes["location-center"]}
+                  onClick={(event) => map.panTo(center)}
+                >
+                  <i className="fa-solid fa-location-arrow"></i>
+                </div>
+              </div>
               <div className="row">
                 <div className="col-md-6 form-group">
                   <Autocomplete>
@@ -98,10 +124,14 @@ const GoogleMaps = () => {
                       name="name"
                       className="form-control"
                       id="name"
-                      placeholder="Your Name"
+                      placeholder="Origin"
                       ref={originRef}
                     />
                   </Autocomplete>
+                  <i
+                    className={`fa-solid fa-xmark ${classes["icon-cancel"]}`}
+                    onClick={clearOriginRoute}
+                  ></i>
                 </div>
                 <div className="col-md-6 form-group mt-3 mt-md-0">
                   <Autocomplete>
@@ -110,39 +140,25 @@ const GoogleMaps = () => {
                       className="form-control"
                       name="email"
                       id="email"
-                      placeholder="Your Email"
+                      placeholder="Destination"
                       ref={destiantionRef}
                     />
                   </Autocomplete>
+                  <i
+                    className={`fa-solid fa-xmark ${classes["icon-cancel"]}`}
+                    onClick={clearDestinationRoute}
+                  ></i>
                 </div>
               </div>
-              <div className={`${classes["info"]} row`}>
-                <div className={classes["distance"]}>
-                  <i className="bi bi-geo-alt"></i>
-                  <h4>Distance:</h4>
-                  <p>{distance}</p>
-                </div>
 
-                <div className={classes["duration"]}>
-                  <i className="bi bi-clock"></i>
-                  <h4>Duration:</h4>
-                  <p>{duration}</p>
-                </div>
-              </div>
-              <div className="row">
+              <div className={`${classes["info"]} row`}>
                 <div className="col-lg-6">
                   <button
                     type="submit"
                     className="btn btn-primary"
                     onClick={calculateRoute}
                   >
-                    Submit
-                  </button>
-                  <button onClick={(event) => map.panTo(center)}>
-                    <i className="fa-solid fa-location-arrow"></i>
-                  </button>
-                  <button onClick={clearRoute}>
-                    <i className="fa-solid fa-eraser"></i>
+                    Direct
                   </button>
                 </div>
               </div>

@@ -9,9 +9,13 @@ const SwiperEvaluationItem = ({ item }) => {
   return (
     <div className={classes["evaluation-item"]}>
       <p>
-        <i className="bx bxs-quote-alt-left quote-icon-left"></i>
+        <i
+          className={`fa-solid fa-quote-left ${classes["quote-icon-left"]}`}
+        ></i>
         {item.comment}
-        <i className="bx bxs-quote-alt-right quote-icon-right"></i>
+        <i
+          className={`fa-solid fa-quote-right ${classes["quote-icon-right"]}`}
+        ></i>
       </p>
       <img src={item.image} className={classes["evaluation-img"]} alt="" />
       <h3>{item.name}</h3>
@@ -23,17 +27,10 @@ const SwiperEvaluationItem = ({ item }) => {
 const SwiperEvaluation = ({ data }) => {
   return (
     <section className={`${classes["swiper-custom"]} ${classes["section-bg"]}`}>
-      <div
-        className={`${classes["swiper-container"]} container`}
-        data-aos="fade-up"
-      >
-        <div
-          className={classes["section-title"]}
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <h2>Events</h2>
-          <p>Organize Your Events in our Restaurant</p>
+      <div className={`${classes["swiper-container"]} container`}>
+        <div className={classes["section-title"]}>
+          <h2>Evaluations</h2>
+          <p>Some comment from customers</p>
         </div>
         <Swiper
           modules={[Pagination, Autoplay]}

@@ -4,7 +4,7 @@ const GalleryItem = ({ item }) => {
   return (
     <div className="col-lg-3 col-md-4">
       <div className={classes["gallery-item"]}>
-        <a href={item.image} data-gall="gallery-item">
+        <a href={item.image}>
           <img src={item.image} alt="" className="img-fluid" />
         </a>
       </div>

@@ -42,6 +42,16 @@ section {
   color: #fff;
 }
 
+.icon-cancel {
+  position: relative;
+  top: -50%;
+  left: 92%;
+}
+
+.icon-cancel:hover {
+  cursor: pointer;
+}
+
 .google-map .info {
   width: 100%;
 }
@@ -79,6 +89,15 @@ section {
   margin-top: 40px;
 }
 
+.google-map .info .location-center {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.google-map .info .location-center:hover {
+  cursor: pointer;
+}
+
 .google-map input {
   border-radius: 0;
   box-shadow: none;
@@ -102,10 +121,6 @@ section {
 
 .google-map input {
   height: 44px;
-}
-
-.google-map textarea {
-  padding: 10px 12px;
 }
 
 .google-map button[type="submit"] {

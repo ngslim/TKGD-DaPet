@@ -23,8 +23,7 @@ const SwiperClinicItem = ({ item }) => {
           {item.feature.map((item, index) => {
             return (
               <li key={index}>
-                <i className="bi bi-check-circled"></i>
-                {item}
+                <i className="fa-regular fa-circle-check"></i> {item}
               </li>
             );
           })}
@@ -38,17 +37,10 @@ const SwiperClinicItem = ({ item }) => {
 const SwiperClinic = ({ data }) => {
   return (
     <section className={`${classes["swiper-custom"]}`}>
-      <div
-        className={`${classes["swiper-container"]} container`}
-        data-aos="fade-up"
-      >
-        <div
-          className={classes["section-title"]}
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <h2>Events</h2>
-          <p>Organize Your Events in our Restaurant</p>
+      <div className={`${classes["swiper-container"]} container`}>
+        <div className={classes["section-title"]}>
+          <h2>Clinics</h2>
+          <p>Explore best clinic in our website</p>
         </div>
         <Swiper
           modules={[Pagination, Autoplay]}
