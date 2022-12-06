@@ -12,7 +12,7 @@ const FormBook = ({ title, summaryBackground, children }) => {
           <div className="px-4 py-1 fs-4 text-white">{title}</div>
         </div>
         <div
-          className={`${classes["container-input"]} ${classes[summaryBackground]} rounded-bottom p-4`}
+          className={`${classes["container-input"]} ${classes[summaryBackground]} rounded-bottom p-4 px-5`}
         >
           {children}
         </div>
