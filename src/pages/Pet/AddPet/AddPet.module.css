@@ -36,6 +36,13 @@
   background-color: rgb(175, 171, 171);
   border: none;
   color: var(--black-color);
+  width: 100px;
+}
+
+.btn-add-img::before {
+  content: "Them";
+  margin-right: 50px;
+  padding: 10px;
 }
 
 .btn-add-img:hover {

@@ -6,7 +6,6 @@ const HeaderContentPet = ({ title, labelButton, onClickButton }) => {
       className={`${classes["title-head"]} d-flex justify-content-between rounded-top align-items-center`}
     >
       <div className="px-4 py-1 fs-4 text-white">{title}</div>
-      {console.log(title)}
       <button
         onClick={onClickButton}
         className="btn btn-light border-0 fw-bold fs-5 px-4 mx-3"

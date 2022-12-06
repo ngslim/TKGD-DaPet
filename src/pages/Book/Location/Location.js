@@ -129,10 +129,6 @@ function Location() {
                     background: "#f3f3f3",
                     height: "50px",
                   }),
-                  multiValue: (baseStyles) => ({
-                    ...baseStyles,
-                    background: "#00c288",
-                  }),
                 }}
               />
             </div>
