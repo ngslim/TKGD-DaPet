@@ -25,6 +25,20 @@ function AddPet() {
     navigate("/pet");
   };
 
+  const onClickBreadcrumbHandler = (index) => {
+    switch (index) {
+      case 0:
+        navigate("/pet");
+        break;
+      case 1:
+        navigate("/pet/add");
+        break;
+      default:
+        navigate("/pet");
+        break;
+    }
+  };
+
   const dataBread = [
     {
       title: "Danh sách thú cưng",
@@ -47,7 +61,12 @@ function AddPet() {
             className={`${classes["content-addpet-page"]} rounded flex-column`}
           >
             <HeaderContentPet
-              title={<BreadCrumb dataBread={dataBread} />}
+              title={
+                <BreadCrumb
+                  dataBread={dataBread}
+                  onClick={onClickBreadcrumbHandler}
+                />
+              }
               labelButton="Theo dõi hàng ngày"
               onClickButton={gotoPageNotFoundHandler}
             />
