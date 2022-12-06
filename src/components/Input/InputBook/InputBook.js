@@ -7,6 +7,7 @@ const InputBook = ({ label, small, medium, children }) => {
       <input
         className={`${classes["field-input"]} ${classes[small]} ${classes[medium]} border-0 rounded mt-1 px-3 fs-5`}
         type="text"
+        placeholder=""
       />
       {children}
     </div>

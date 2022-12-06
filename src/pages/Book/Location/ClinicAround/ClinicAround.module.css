@@ -6,5 +6,4 @@
 .grid-clinic {
   display: grid !important;
   grid-template-columns: repeat(3, calc(95% / 3));
-  gap: 16px;
 }
