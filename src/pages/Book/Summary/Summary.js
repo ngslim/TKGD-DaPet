@@ -16,13 +16,25 @@ function Summary() {
     navigate("/");
   };
 
-  // const handleOnClickBook = () => {
-  //   navigate("/book");
-  // };
-
-  // const handleOnClickLocation = () => {
-  //   navigate("/book/location");
-  // };
+  const onClickBreadcrumbHandler = (index) => {
+    switch (index) {
+      case 0:
+        navigate("/book");
+        break;
+      case 1:
+        navigate("/book");
+        break;
+      case 2:
+        navigate("/book/location");
+        break;
+      case 3:
+        navigate("/book/summary");
+        break;
+      default:
+        navigate("/book");
+        break;
+    }
+  };
 
   const dataBread = [
     {
@@ -48,7 +60,12 @@ function Summary() {
           <Menu />
         </div>
         <FormBook
-          title={<Breadcrumb dataBread={dataBread} />}
+          title={
+            <Breadcrumb
+              dataBread={dataBread}
+              onClick={onClickBreadcrumbHandler}
+            />
+          }
           summaryBackground="background-summary-book"
         >
           <div className="d-flex gap-3 px-3 pb-3">

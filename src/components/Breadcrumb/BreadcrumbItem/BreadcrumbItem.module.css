@@ -1,6 +1,5 @@
 .breadcrumb-item {
-  /* cursor: pointer; */
-  cursor: default;
+  cursor: pointer;
 }
 
 .breadcrumb-item.current {
@@ -10,8 +9,4 @@
 
 .breadcrumb-item.current.doctor {
   color: var(--dark-doctor-color);
-}
-
-.breadcrumb-item.current:hover {
-  cursor: default;
 }

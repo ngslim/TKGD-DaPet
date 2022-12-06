@@ -17,6 +17,26 @@ function Book() {
     navigate("/book/location");
   };
 
+  const onClickBreadcrumbHandler = (index) => {
+    switch (index) {
+      case 0:
+        navigate("/book");
+        break;
+      case 1:
+        navigate("/book");
+        break;
+      case 2:
+        navigate("/book/location");
+        break;
+      case 3:
+        navigate("/book/summary");
+        break;
+      default:
+        navigate("/book");
+        break;
+    }
+  };
+
   const dataBread = [
     {
       title: "Đăng ký khám",
@@ -34,7 +54,14 @@ function Book() {
         <div className={`${classes["menu-sidebar"]} d-flex flex-column gap-2`}>
           <Menu />
         </div>
-        <FormBook title={<Breadcrumb dataBread={dataBread} />}>
+        <FormBook
+          title={
+            <Breadcrumb
+              dataBread={dataBread}
+              onClick={onClickBreadcrumbHandler}
+            />
+          }
+        >
           <>
             <InputBook label="Tên thú cưng" />
 
