@@ -16,6 +16,10 @@ function Summary() {
     navigate("/");
   };
 
+  const gotoBookHandler = () => {
+    navigate("/book");
+  };
+
   const onClickBreadcrumbHandler = (index) => {
     switch (index) {
       case 0:
@@ -81,6 +85,12 @@ function Summary() {
             <Description />
           </div>
           <div className="d-flex justify-content-end p-3">
+            <button
+              className={`${classes["btn-confirm"]} rounded fs-5 fw-semibold`}
+              onClick={gotoBookHandler}
+            >
+              Hủy
+            </button>
             <button
               className={`${classes["btn-confirm"]} rounded fs-5 fw-semibold`}
               onClick={gotoHomePageHandler}
