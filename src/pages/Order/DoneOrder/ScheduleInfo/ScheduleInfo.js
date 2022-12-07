@@ -21,29 +21,24 @@ const ScheduleInfo = () => {
         Tên chủ: <b className="fw-bold">Nguyễn Văn A</b>
       </div>
       <div className="fw-light d-flex gap-3">
-        SĐT: <b className="fw-bold">0123456789</b>
+        SĐT: <b className="fw-bold">012 345 67 89</b>
       </div>
       <div className="fw-light d-flex gap-3">
         Địa chỉ:{" "}
         <b className="fw-bold">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor.
+          227 Nguyễn Văn Cừ, P.4, Q.5, Tp. HCM
         </b>
       </div>
       <div>
         <div>Triệu chứng</div>
         <div className="fw-bold">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus.
+            Lông rụng, bụng phình to bất thường, biếng ăn.
         </div>
       </div>
       <div>
         <div>Chú thích</div>
         <div className="fw-bold">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus.
+            Bé hay uống nước trong chậu cây, không thích ăn đồ ăn nhà làm, chỉ thích ăn lung tung.
         </div>
       </div>
     </div>
