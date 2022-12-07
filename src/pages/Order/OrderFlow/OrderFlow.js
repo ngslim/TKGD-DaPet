@@ -20,7 +20,7 @@ const dataPet = {
     { id: 1, value: "Nôn mửa", label: "Non mua" },
     { id: 2, value: "Tiêu chảy", label: "Tieu chay" },
   ],
-  comment: "Tình trạng nguy cấp!!!!",
+  comment: "Nôn mửa, tiêu chảy, bụng phình to bất thường kèm biếng ăn. Tình trạng nguy cấp!!!!",
 };
 
 function OrderFlow() {
