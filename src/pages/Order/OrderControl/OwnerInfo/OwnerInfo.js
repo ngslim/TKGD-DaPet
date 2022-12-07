@@ -14,13 +14,12 @@ const OwnerInfo = () => {
     >
       <div className="py-2 fs-5 fw-bolder">Thông tin liên hệ</div>
       <div className="fw-light">
-        SĐT: <b className="fw-bold">0123456789</b>
+        SĐT: <b className="fw-bold">012 345 67 89</b>
       </div>
       <div className="fw-light">
         Địa chỉ:{" "}
         <b className="fw-bold">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor.
+          227 Nguyễn Văn Cừ, P.4, Q.5, Tp. HCM.
         </b>
       </div>
       <div className="fw-light">
