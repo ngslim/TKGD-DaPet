@@ -15,7 +15,7 @@ function OrderControl(props) {
     <div className={classes["container-order-control"]}>
       <div className={`${classes["order-info"]} rounded`}>
         <div className="d-flex gap-3 mb-2 align-items-center">
-          <div className="fs-4 fw-bolder">Tiêu đề</div>
+          <div className="fs-4 fw-bolder">Bé Mèo Bánh Bao Cần Điều Trị!!!</div>
           <button className={`${classes["btn-status"]} btn text-white fw-bold`}>
             Chưa được nhận
           </button>
