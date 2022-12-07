@@ -20,23 +20,22 @@ const ProfileCard = () => {
           />
         </div>
         <div className={classes["profile"]}>
-          <h3>Olivia Gomez</h3>
-          <span className={classes["clinic"]}>Doctor</span>
+          <h3>Dr. Nhi</h3>
+          <span className={classes["clinic"]}>Family Bean Clinic</span>
         </div>
         <div className={classes["technique"]}>
-          <TechniqueItem title="Experience" text="2" />
-          <TechniqueItem title="Followers" text="209" />
-          <TechniqueItem title="Like" text="5000" />
+          <TechniqueItem title="Experience" text="275" />
+          <TechniqueItem title="Liked" text="250" />
         </div>
         <div className={classes["buttons"]}>
           <button className={classes["btn"]} onClick={gotoPageNotFoundHandler}>
-            Message
+            Thông Tin
           </button>
           <button
             className={classes["btn"]}
-            onClick={(e) => alert("You liked this person!")}
+            onClick={(e) => alert("Danh sách thú cưng đã nhận!")}
           >
-            Like
+            Danh sách
           </button>
         </div>
       </div>
