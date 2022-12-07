@@ -10,22 +10,18 @@ const PetInfo = () => {
       </div>
       <div>
         <div>Giới tính:</div>
-        <div className="fw-bold">Nam</div>
+        <div className="fw-bold">Đực</div>
       </div>
       <div>
         <div>Triệu chứng</div>
         <div className="fw-bold">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus.
+          Lông rụng, bụng phình to bất thường, biếng ăn.
         </div>
       </div>
       <div>
         <div>Chú thích</div>
         <div className="fw-bold">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus.
+          Bé hay uống nước trong chậu cây, không thích ăn đồ ăn nhà làm, chỉ thích ăn lung tung.
         </div>
       </div>
     </div>
