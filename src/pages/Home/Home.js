@@ -11,69 +11,69 @@ import Footer from "../../components/Footer/Footer";
 const Home = () => {
   const dataClinic = [
     {
-      title: "Birthday Parties",
+      title: "Phòng khám Pet Joy",
       image: "./images/event-birthday.jpg",
-      address: "$189",
+      address: "53 Đặng Dung, Tân Định, Quận 1, Tp. HCM",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      feature: ["feature1", "feature2", "feature3"],
-      contact: "Ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Bệnh viện thú y với trang thiết bị hiện đại, cấp cứu 24/24 với kỹ thuật liên tục cập nhật",
+      feature: ["Mở cả ngày", "Giá bình dân", "Phòng khám chất lượng cao"],
+      contact: "Conact info: 096 669 48 39",
     },
     {
-      title: "Birthday Parties",
+      title: "Phòng khám Pet Farm",
       image: "./images/event-custom.jpg",
-      address: "$189",
+      address: "366 Đường Cây Trâm, Phường 8, Q. Gò Vấp, Tp. HCM",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      feature: ["feature1", "feature2", "feature3"],
-      contact: "Ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Phòng khám sạch sẽ, dịch vụ tốt, bác sĩ tận tâm",
+      feature: ["Phòng khám sạch sẽ", "Điều trị phẫu thuật", "Trông nom thú cưng"],
+      contact: "Contact info: 090 983 67 77",
     },
     {
-      title: "Birthday Parties",
+      title: "Phòng khám Family Bean",
       image: "./images/event-private.jpg",
-      address: "$189",
+      address: "46C Lê Hồng Phong, Phường 2, Quận 5, Tp. HCM",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      feature: ["feature1", "feature2", "feature3"],
-      contact: "Ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Bệnh viện thú y Family Bean chuyên phẫu thuật, điều trị và dịch vụ tại nhà đi kèm (bao gồm: chích ngừa, tẩy giun, triệt sản,...)",
+      feature: ["Dịch vụ tại nhà", "Điều trị phẫu thuật", "Siêu âm, xét nghiệm"],
+      contact: "Contact info: 0844 951 951",
     },
   ];
 
   const dataEvaluation = [
     {
       comment:
-        "Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.",
-      name: "Saul Goodman",
+        "Website đưa đến trải nghiệm rất tuyệt vời. Nhờ có chức năng quản lí hồ sơ thú cưng mà mỗi khi cần khám chữa bệnh, tôi không cần phải báo cáo về các bệnh tình của bé khi gặp bác sĩ",
+      name: "Ngoc Nguyen",
       image: "./images/testimonials/testimonials-1.jpg",
-      position: "Ceo &amp; Founder",
+      position: "Sinh Viên",
     },
     {
       comment:
-        "Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.",
-      name: "Saul Goodman",
+        "Đặt lịch hẹn khám rất tiện, cơ sở khám tiếp nhận rất nhanh. Tôi sẽ còn sử dụng dịch vụ này dài dài.",
+      name: "Do Hoang Quan",
       image: "./images/testimonials/testimonials-1.jpg",
-      position: "Ceo &amp; Founder",
+      position: "Nhân viên văn phòng",
     },
     {
       comment:
-        "Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.",
-      name: "Saul Goodman",
+        "Tuy quá trình đăng ký và tạo hồ sơ có hơi bất tiện và mất thời gian. Nhưng khi hồ sơ đã được lưu lại thì quá trình đặt lịch khám những lần tiếp theo diễn ra rất nhanh chóng. Khi đến khám bệnh vì đã đặt lịch khám trước và bác sĩ cũng đã nắm được tình trạng sức khoẻ của bé cưng nên quán trình khám và chữa bệnh diễn ra rất nhanh mà không phải chờ đợi",
+      name: "Minh Phu Do",
       image: "./images/testimonials/testimonials-1.jpg",
-      position: "Ceo &amp; Founder",
+      position: "Graphic Designer",
     },
     {
       comment:
-        "Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.",
-      name: "Saul Goodman",
+        "Khách ruột của website. Nhà tôi nuôi 20 bé mèo và 10 bé chó. Mỗi lần đứa nào có bệnh thì rất mệt mõi. Nhiều khi hồ sơ khám bệnh của các bé cứ rối tung lên nên rất mất thời gian khi đi khám bệnh. Nhờ có website mà tôi theo dõi sức khoẻ cũng như đặt lịch khám dễ dàng hơn rất nhiều.",
+      name: "Hanh Dung Dinh",
       image: "./images/testimonials/testimonials-1.jpg",
-      position: "Ceo &amp; Founder",
+      position: "Youtuber",
     },
     {
       comment:
-        "Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.",
-      name: "Saul Goodman",
+        "<3 <3 <3 DaPet",
+      name: "Minh Tu Doan",
       image: "./images/testimonials/testimonials-1.jpg",
-      position: "Ceo &amp; Founder",
+      position: "Hoc Sinh",
     },
   ];
   return (
