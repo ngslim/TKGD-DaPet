@@ -12,6 +12,10 @@ const MenuBar = ({ className }) => {
     navigate("/page-not-found");
   };
 
+  const gotoOrderHandler = () => {
+    navigate("/order");
+  };
+
   return (
     <div className={classes["menu-bar"]}>
       <div className={classes["menu"]}>
@@ -22,7 +26,7 @@ const MenuBar = ({ className }) => {
             icon="fa-solid fa-people-roof"
             text="Quan ly don"
             className={{ ...className, ...classes }}
-            onClick={gotoPageNotFoundHandler}
+            onClick={gotoOrderHandler}
           />
           <NavBarItem
             icon="fa-sharp fa-solid fa-calendar-week"

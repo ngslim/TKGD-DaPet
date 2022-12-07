@@ -28,10 +28,6 @@ const dataBread = [
 function Summary() {
   const navigate = useNavigate();
 
-  const gotoHomePageHandler = () => {
-    navigate("/");
-  };
-
   const gotoBookHandler = () => {
     navigate("/book");
   };
@@ -95,7 +91,7 @@ function Summary() {
             </button>
             <button
               className={`${classes["btn-confirm"]} rounded fs-5 fw-semibold`}
-              onClick={gotoHomePageHandler}
+              onClick={gotoBookHandler}
             >
               Xác nhận
             </button>
