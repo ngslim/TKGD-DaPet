@@ -5,8 +5,8 @@ import MedicalCardItem from "./MedicalCardItem/MedicalCardItem";
 const dataOrderList = [
   {
     typePet: "Mèo",
-    name: "Pet name 1",
-    content: "Aenean lectus. Pellentesque eget nunc.",
+    name: "Bánh Bao",
+    content: "Nôn mửa, tiêu chảy, bụng phình to bất thường, biếng ăn.",
     date: "2022/12/07",
     time: "14:00",
     description: [
@@ -16,9 +16,9 @@ const dataOrderList = [
   },
   {
     typePet: "Chó",
-    name: "Pet name 2",
+    name: "Lulu",
     content:
-      "In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.",
+      "Bé bị rụng lông, hay khò khè",
     date: "2022/12/07",
     time: "14:00",
     description: [
@@ -28,8 +28,8 @@ const dataOrderList = [
   },
   {
     typePet: "Chim",
-    name: "Pet name 3",
-    content: "Cras non velit nec nisi vulputate nonummy.",
+    name: "Vàng",
+    content: "Con Vàng của tôi cảm giác thở rất khó khăn, khi chạm vào thì cảm giác lạnh hơn mọi ngày",
     date: "2022/12/07",
     time: "14:00",
     description: [
@@ -39,9 +39,9 @@ const dataOrderList = [
   },
   {
     typePet: "Cá",
-    name: "Pet name 4",
+    name: "Nemo",
     content:
-      "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim.",
+      "Da cá nhăn và có những tia máu lộ rõ ra ngoài.",
     date: "2022/12/07",
     time: "14:00",
     description: [
