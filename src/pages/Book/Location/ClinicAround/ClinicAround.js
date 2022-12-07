@@ -4,18 +4,18 @@ import { Space } from "antd";
 
 const dataClinic = [
   {
-    name: "Clinic A",
-    text: "Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+    name: "Phòng Khám Pet Joy",
+    text: "Bệnh viện thú y với trang thiết bị hiện đại, cấp cứu 24/24.",
     image: "/images/clinic/clinic-1.jpg",
   },
   {
-    name: "Clinic B",
-    text: "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh.",
+    name: "Phòng Khám Family Bean",
+    text: "Bệnh viện thú y chuyên phẫu thuật, điều trị và dịch vụ tại nhà đi kèm (bao gồm chích ngừa, triệt sản).",
     image: "/images/clinic/clinic-2.jpg",
   },
   {
-    name: "Clinic C",
-    text: "Etiam vel augue. Vestibulum rutrum rutrum neque.",
+    name: "Clinic Pet Farm",
+    text: "Phòng khám sạch sẽ, dịch vụ tốt, giá hợp lí.",
     image: "/images/clinic/clinic-3.jpg",
   },
 ];
