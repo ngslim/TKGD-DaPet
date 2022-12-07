@@ -24,25 +24,25 @@ const MenuBar = ({ className }) => {
         <ul>
           <NavBarItem
             icon="fa-solid fa-people-roof"
-            text="Quan ly don"
+            text="Quản lý đơn"
             className={{ ...className, ...classes }}
             onClick={gotoOrderHandler}
           />
           <NavBarItem
             icon="fa-sharp fa-solid fa-calendar-week"
-            text="Lich trinh"
+            text="Lịch trình"
             className={{ ...className, ...classes }}
             onClick={gotoPageNotFoundHandler}
           />
           <NavBarItem
             icon="fa-sharp fa-solid fa-clipboard-question"
-            text="Tu van"
+            text="Tư vấn"
             className={{ ...className, ...classes }}
             onClick={gotoPageNotFoundHandler}
           />
           <NavBarItem
             icon="fa-sharp fa-solid fa-clock-rotate-left"
-            text="Lich su"
+            text="Lịch sử"
             className={{ ...className, ...classes }}
             onClick={gotoPageNotFoundHandler}
           />
