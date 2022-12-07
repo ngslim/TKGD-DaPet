@@ -12,15 +12,13 @@ const PetList = () => {
   return (
     <div className={classes["grid-pet-list"]}>
       <PetItem
-        name="Tên thú cưng"
-        text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa."
+        name="Bánh bao"
+        text="Mèo Anh Lông Ngắn, 5kg, Đực, Hay bệnh vặt, Đã triệt sản."
         onClick={gotoPageNotFound}
       />
       <PetItem
-        name="Tên thú cưng"
-        text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa."
+        name="Sủi cảo"
+        text="Mèo mướp, 3kg, Đực, Đã từng bị kí sinh trùng máu, Chưa triệt sản.."
         onClick={gotoPageNotFound}
       />
     </div>
