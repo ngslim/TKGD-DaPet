@@ -21,7 +21,7 @@ const ProfileCard = () => {
         </div>
         <div className={classes["profile"]}>
           <h3>Olivia Gomez</h3>
-          <span className={classes["clinic"]}>Developer & Designer</span>
+          <span className={classes["clinic"]}>Doctor</span>
         </div>
         <div className={classes["technique"]}>
           <TechniqueItem title="Experience" text="2" />

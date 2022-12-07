@@ -30,7 +30,7 @@ function Pet() {
               labelButton="Tạo hồ sơ"
               onClickButton={handleOnClick}
             />
-            <div className={`${classes["main-pet-page"]} rounded-bottom p-4`}>
+            <div className={`${classes["main-pet-page"]} rounded-bottom px-5`}>
               <PetList />
 
               <PetPagination />

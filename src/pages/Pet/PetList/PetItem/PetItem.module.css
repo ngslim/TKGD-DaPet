@@ -1,6 +1,10 @@
+.pet-item {
+  height: fit-content;
+  margin-top: 3rem;
+}
+
 .pet-item .img-pet-card {
-  width: 100%;
-  min-height: 220px;
+  height: auto;
   background-color: #bce1d6;
 }
 

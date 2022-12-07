@@ -1,12 +1,14 @@
 import classes from "./PetItem.module.css";
 
-const PetItem = ({ name, text, onClick }) => {
+const PetItem = ({ name, text, image, onClick }) => {
   return (
     <div className={classes["pet-item"]}>
       <div
         className={`${classes["img-pet-card"]} rounded-top`}
         onClick={onClick}
-      ></div>
+      >
+        <img src={image} className="img-fluid" alt="" />
+      </div>
       <div
         className={`${classes["body-pet-card"]} px-3 gap-3 d-flex rounded-bottom justify-content-around align-items-center`}
       >

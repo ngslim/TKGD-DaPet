@@ -15,12 +15,12 @@ const MedicalCardItem = ({ item, onClick }) => {
       </button>
       <div className={classes["postcard-text"]}>
         <button className={`${classes["postcard-title"]} ${classes["blue"]}`}>
-          {item.title}
+          {item.name}
         </button>
         <div className={classes["small"]}>
           <time dateTime="2020-05-25 12:00:00">
             <i className={`fas fa-calendar-alt mr-2 ${classes["icon"]}`}></i>
-            <span>Mon, May 25th 2020</span>
+            <span>{item.time + " " + item.date}</span>
           </time>
         </div>
         <div
@@ -30,15 +30,16 @@ const MedicalCardItem = ({ item, onClick }) => {
         <ul className={classes["postcard-tagbox"]}>
           <li className={classes["tag-item"]}>
             <i className={`fas fa-tag mr-2 ${classes["icon"]}`}></i>
-            {item.name}
+            {item.typePet}
           </li>
-          <li className={classes["tag-item"]}>
-            <i className={`fas fa-clock mr-2 ${classes["icon"]}`}></i>
-            <span>Ngoai da</span>
-          </li>
-          <li className={classes["tag-item"]}>
-            <i className={`fas fa-play mr-2 ${classes["icon"]}`}></i>Chi tiet
-          </li>
+          {item.description.map((element, index) => {
+            return (
+              <li key={index} className={classes["tag-item"]}>
+                <i className={`fas fa-play mr-2 ${classes["icon"]}`}></i>
+                {element.value}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </article>

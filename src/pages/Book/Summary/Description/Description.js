@@ -2,25 +2,36 @@
 
 import DescriptionItem from "../DescriptionItem/DescriptionItem";
 
+const data = {
+  typePet: "Meo",
+  description: [
+    { id: 1, value: "Nôn mửa", label: "Non mua" },
+    { id: 2, value: "Tiêu chảy", label: "Tieu chay" },
+  ],
+  clinic: "Clinic A",
+  doctor: "Wandar Switch",
+  date: "2022/12/07",
+  time: "14:00",
+  comment: "Tinh trang nguy cap",
+};
+
 const Description = () => {
   return (
     <div className="bg-white p-3 rounded flex-fill">
-      <DescriptionItem title="Vật nuôi" text="Mèo" />
+      <DescriptionItem title="Vật nuôi" description={data.typePet} />
       <DescriptionItem
         title="Triệu chứng"
-        text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus."
+        description={data.description.reduce(
+          (result, current) => result.value + ", " + current.value
+        )}
       />
-      <DescriptionItem title="Phòng khám" text="Lorem ipsum dolor" />
-      <DescriptionItem title="Bác sĩ" text="Trần Văn B" />
-      <DescriptionItem title="Thời gian" text="16:00 13/11/2022" />
+      <DescriptionItem title="Phòng khám" description={data.clinic} />
+      <DescriptionItem title="Bác sĩ" description={data.doctor} />
       <DescriptionItem
-        title="Chú thích"
-        text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus."
+        title="Thời gian"
+        description={data.date + " at " + data.time}
       />
+      <DescriptionItem title="Chú thích" description={data.comment} />
     </div>
   );
 };

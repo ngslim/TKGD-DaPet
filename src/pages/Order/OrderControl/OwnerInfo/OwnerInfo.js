@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import classes from "./OwnerInfo.module.css";
 
-const OwnerInfo = () => {
+const OwnerInfo = ({ dataUser }) => {
   const navigate = useNavigate();
 
   const gotoPageNotFoundHandler = () => {
@@ -14,20 +14,17 @@ const OwnerInfo = () => {
     >
       <div className="py-2 fs-5 fw-bolder">Thông tin liên hệ</div>
       <div className="fw-light">
-        SĐT: <b className="fw-bold">0123456789</b>
+        SĐT: <b className="fw-bold">{dataUser.telephone}</b>
       </div>
       <div className="fw-light">
-        Địa chỉ:{" "}
-        <b className="fw-bold">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor.
-        </b>
+        Địa chỉ: <b className="fw-bold">{dataUser.address}</b>
       </div>
       <div className="fw-light">
-        E-mail: <b className="fw-bold">petowner@gmail.com</b>
+        E-mail: <b className="fw-bold">{dataUser.email}</b>
       </div>
       <div className="fw-light">
-        Thời gian đặt lịch: <b className="fw-bold">16:00 13/11/2022</b>
+        Thời gian đặt lịch:{" "}
+        <b className="fw-bold">{dataUser.date + " at " + dataUser.time}</b>
       </div>
       <div className="d-flex justify-content-end gap-4 mb-2">
         <button

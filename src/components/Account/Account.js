@@ -11,7 +11,9 @@ function Account() {
   };
   return (
     <div className={`${classes["profile-account"]} bg-white p-3 rounded`}>
-      <div className={`${classes["img-account"]} mx-auto mb-4 mt-4`}></div>
+      <div className={`${classes["img-account"]} mx-auto mb-4 mt-4`}>
+        <img src="/images/profile.jpg" className="img-fluid" alt="" />
+      </div>
       <div>
         <div className="d-flex gap-5 py-2 justify-content-center">
           <div className="fw-bold">username</div>

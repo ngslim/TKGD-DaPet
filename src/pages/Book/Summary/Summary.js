@@ -73,9 +73,9 @@ function Summary() {
               <div
                 className={`${classes["summary-profile"]} bg-white p-3 rounded`}
               >
-                <div
-                  className={`${classes["img-profile"]} mx-auto mb-4 mt-4`}
-                ></div>
+                <div className={`${classes["img-profile"]} mx-auto mb-4 mt-4`}>
+                  <img src="/images/profile.jpg" className="img-fluid" alt="" />
+                </div>
 
                 <ProfileBook />
               </div>

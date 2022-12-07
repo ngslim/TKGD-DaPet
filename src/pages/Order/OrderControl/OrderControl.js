@@ -21,8 +21,8 @@ function OrderControl(props) {
           </button>
         </div>
 
-        <OwnerInfo />
-        <PetInfo />
+        <OwnerInfo dataUser={props.dataUser} />
+        <PetInfo dataPet={props.dataPet} />
 
         <div className="d-flex justify-content-end gap-4 mt-2">
           <button

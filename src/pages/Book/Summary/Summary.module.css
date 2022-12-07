@@ -8,7 +8,7 @@
 
 .summary-profile .img-profile {
   width: 250px;
-  height: 250px;
+  height: auto;
   background-color: #d9d9d9;
   border-radius: 125px;
 }

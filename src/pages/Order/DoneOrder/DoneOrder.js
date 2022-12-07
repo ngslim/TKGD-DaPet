@@ -4,11 +4,11 @@ import ScheduleInfo from "./ScheduleInfo/ScheduleInfo";
 import CalendarOrder from "./CalendarOrder/CalendarOrder";
 // import PropTypes from "prop-types";
 
-function DoneOrder() {
+function DoneOrder({ dataPet, dataUser }) {
   return (
     <div className={classes["container-done-order"]}>
       <div className={`${classes["done-order"]} rounded`}>
-        <ScheduleInfo />
+        <ScheduleInfo dataPet={dataPet} dataUser={dataUser} />
 
         <CalendarOrder />
       </div>
