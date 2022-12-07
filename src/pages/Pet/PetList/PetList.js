@@ -51,18 +51,6 @@ const PetList = () => {
           />
         );
       })}
-      {/* <PetItem
-        name="Tên thú cưng"
-        text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa."
-        onClick={gotoPageNotFound}
-      />
-      <PetItem
-        name="Tên thú cưng"
-        text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa."
-        onClick={gotoPageNotFound}
-      /> */}
     </div>
   );
 };
