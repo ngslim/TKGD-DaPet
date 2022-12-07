@@ -5,7 +5,7 @@ import MedicalCardItem from "./MedicalCardItem/MedicalCardItem";
 const dataOrderList = [
   {
     typePet: "Mèo",
-    name: "Bánh Bao",
+    name: "Bánh Bao Cần Điều Trị Gấp",
     content: "Nôn mửa, tiêu chảy, bụng phình to bất thường, biếng ăn.",
     date: "2022/12/07",
     time: "14:00",
@@ -16,7 +16,7 @@ const dataOrderList = [
   },
   {
     typePet: "Chó",
-    name: "Lulu",
+    name: "Lulu Hay Khò Khè",
     content:
       "Bé bị rụng lông, hay khò khè",
     date: "2022/12/07",
@@ -28,7 +28,7 @@ const dataOrderList = [
   },
   {
     typePet: "Chim",
-    name: "Vàng",
+    name: "Chim Vàng Bị Hạ Thân Nhiệt",
     content: "Con Vàng của tôi cảm giác thở rất khó khăn, khi chạm vào thì cảm giác lạnh hơn mọi ngày",
     date: "2022/12/07",
     time: "14:00",
@@ -39,7 +39,7 @@ const dataOrderList = [
   },
   {
     typePet: "Cá",
-    name: "Nemo",
+    name: "Nemo Cần Tìm Sự Giúp Đỡ",
     content:
       "Da cá nhăn và có những tia máu lộ rõ ra ngoài.",
     date: "2022/12/07",
