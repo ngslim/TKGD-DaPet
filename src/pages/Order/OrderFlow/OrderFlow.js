@@ -20,7 +20,7 @@ const dataPet = {
     { id: 1, value: "Nôn mửa", label: "Non mua" },
     { id: 2, value: "Tiêu chảy", label: "Tieu chay" },
   ],
-  comment: "Tinh trang nguy cap",
+  comment: "Tình trạng nguy cấp!!!!",
 };
 
 function OrderFlow() {
