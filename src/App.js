@@ -8,7 +8,7 @@ import Location from "./pages/Book/Location/Location";
 import Summary from "./pages/Book/Summary/Summary";
 import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
-import SearchTemp from "./pages/Search/SearchTemp";
+// import SearchTemp from "./pages/Search/SearchTemp";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <Route path="/book/summary" element={<Summary />} />
       <Route path="/pet" element={<Pet />} />
       <Route path="/pet/add" element={<AddPet />} />
-      <Route path="/book/search" element={<SearchTemp />} />
+      {/* <Route path="/book/search" element={<SearchTemp />} /> */}
       <Route exact path="/" element={<Home />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
