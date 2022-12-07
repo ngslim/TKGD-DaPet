@@ -40,7 +40,7 @@
 }
 
 .btn-add-img::before {
-  content: "Them";
+  content: "Thêm";
   margin-right: 50px;
   padding: 10px;
 }

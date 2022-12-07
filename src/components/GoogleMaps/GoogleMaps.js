@@ -8,6 +8,7 @@ import {
   DirectionsRenderer,
 } from "@react-google-maps/api";
 import Loading from "../../pages/Loading/Loading";
+import constant from "../../constant";
 
 const containerStyle = {
   width: "100%",
@@ -18,7 +19,7 @@ const center = { lat: 48.8584, lng: 2.2945 };
 
 const GoogleMaps = () => {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyDO8rWBm94mFbSeGx2_XydkVMQmDgRjUjM",
+    googleMapsApiKey: constant.API_KEY,
     libraries: ["places"],
   });
   const [map, setMap] = useState(/** @type google.maps.Map */ (null));
@@ -120,7 +121,7 @@ const GoogleMaps = () => {
                 </div>
               </div>
               <div className="row">
-                <div className="col-md-6 form-group">
+                <div className="col-md-12 form-group">
                   <Autocomplete>
                     <input
                       type="text"
@@ -136,7 +137,7 @@ const GoogleMaps = () => {
                     onClick={clearOriginRoute}
                   ></i>
                 </div>
-                <div className="col-md-6 form-group mt-3 mt-md-0">
+                <div className="col-md-12 form-group mt-3 mt-md-0">
                   <Autocomplete>
                     <input
                       type="email"

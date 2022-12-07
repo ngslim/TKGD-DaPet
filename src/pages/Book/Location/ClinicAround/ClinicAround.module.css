@@ -7,3 +7,20 @@
   display: grid !important;
   grid-template-columns: repeat(3, calc(95% / 3));
 }
+
+.head-view-more {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.view-more {
+  color: var(--white-color);
+  font-size: large;
+  margin-right: 2rem;
+  text-decoration: underline;
+}
+
+.view-more:hover {
+  cursor: pointer;
+}

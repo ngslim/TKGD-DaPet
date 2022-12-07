@@ -1,44 +1,26 @@
-section {
-  padding: 60px 0;
-  overflow: hidden;
+.summary-page {
+  background-color: var(--bg-grey-color);
 }
 
-.section-bg {
-  background-color: #1a1814;
+.summary-profile {
+  width: "30%";
 }
 
-.section-title {
-  padding-bottom: 40px;
+.summary-profile .img-profile {
+  width: 250px;
+  height: 250px;
+  background-color: #d9d9d9;
+  border-radius: 125px;
 }
 
-.section-title h2 {
-  font-size: 14px;
-  font-weight: 500;
-  padding: 0;
-  line-height: 1px;
-  margin: 0 0 5px 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #aaaaaa;
-  font-family: "Poppins", sans-serif;
-}
-
-.section-title h2::after {
-  content: "";
-  width: 120px;
-  height: 1px;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 4px 10px;
-}
-
-.section-title p {
-  margin: 0;
-  margin: 0;
-  font-size: 36px;
-  font-weight: 700;
-  font-family: "Playfair Display", serif;
-  color: #cda45e;
+.btn-confirm {
+  color: var(--user-color);
+  border: none;
+  background-color: var(--white-color);
+  height: 50px;
+  width: fit-content;
+  padding: 6px 20px;
+  margin-right: 8px;
 }
 
 .form-location {
@@ -49,7 +31,8 @@ section {
 .icon-cancel {
   position: relative;
   top: -50%;
-  left: 94%;
+  left: 90%;
+  color: var(--black-color);
 }
 
 .icon-cancel:hover {
@@ -106,9 +89,9 @@ section {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
-  background: #0c0b09;
+  border-radius: 10px;
   border-color: #625b4b;
-  color: white;
+  color: black;
 }
 
 .google-map input::-moz-placeholder {

@@ -1,13 +1,9 @@
-import React from "react";
-import Header from "../../../components/Header/Header";
-// import Footer from "../../../components/Footer/Footer";
-import Menu from "../../../components/Menu/Menu";
+import classes from "./SearchTemp.module.css";
+import Header from "../../components/Header/Header";
+import FormBook from "../../components/Form/FormBook/FormBook";
+import Menu from "../../components/Menu/Menu";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb/Breadcrumb";
 import { useNavigate } from "react-router-dom";
-import classes from "./Summary.module.css";
-import FormBook from "../../../components/Form/FormBook/FormBook";
-import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb/Breadcrumb";
-import ProfileBook from "./ProfileBook/ProfileBook";
-import Description from "./Description/Description";
 
 const dataBread = [
   {
@@ -18,15 +14,12 @@ const dataBread = [
   },
   {
     title: "Chọn phòng khám",
-  },
-  {
-    title: "Thông tin lịch khám",
     current: "current",
   },
 ];
 
-function Summary() {
-  const navigate = useNavigate();
+const SearchTemp = () => {
+  const navigate = useNavigate("/");
 
   const gotoHomePageHandler = () => {
     navigate("/");
@@ -72,20 +65,6 @@ function Summary() {
           }
           summaryBackground="background-summary-book"
         >
-          <div className="row">
-            <div className="d-flex gap-3 px-3 pb-3">
-              <div
-                className={`${classes["summary-profile"]} bg-white p-3 rounded`}
-              >
-                <div
-                  className={`${classes["img-profile"]} mx-auto mb-4 mt-4`}
-                ></div>
-
-                <ProfileBook />
-              </div>
-              <Description />
-            </div>
-          </div>
           <div className="d-flex justify-content-end p-3">
             <button
               className={`${classes["btn-confirm"]} rounded fs-5 fw-semibold`}
@@ -102,10 +81,9 @@ function Summary() {
           </div>
         </FormBook>
       </div>
-
       {/* <Footer /> */}
     </div>
   );
-}
+};
 
-export default Summary;
+export default SearchTemp;

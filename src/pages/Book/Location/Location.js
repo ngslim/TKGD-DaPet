@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Header from "../../../components/Header/Header";
 // import Footer from "../../../components/Footer/Footer";
 import Menu from "../../../components/Menu/Menu";
@@ -13,6 +13,7 @@ import AsyncSelect from "react-select";
 import { Autocomplete, useJsApiLoader } from "@react-google-maps/api";
 import { DatePicker, Space, TimePicker } from "antd";
 import Loading from "../../Loading/Loading";
+import constant from "../../../constant";
 
 const dataBread = [
   {
@@ -55,9 +56,10 @@ const promiseOptions = (inputValue) =>
 function Location() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
+  const clinicName = useRef();
   const navigate = useNavigate();
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyDO8rWBm94mFbSeGx2_XydkVMQmDgRjUjM",
+    googleMapsApiKey: constant.API_KEY,
     libraries: ["places"],
   });
 
@@ -89,6 +91,10 @@ function Location() {
     }
   };
 
+  const onSelectClinicHandler = (value) => {
+    clinicName.current.value = value;
+  };
+
   console.log("Date + time", date, time);
   if (!isLoaded) {
     return <Loading />;
@@ -111,9 +117,9 @@ function Location() {
         >
           <>
             <Autocomplete>
-              <InputBook label="Tên phòng khám" />
+              <InputBook label="Tên phòng khám" ref={clinicName} />
             </Autocomplete>
-            <ClinicAround />
+            <ClinicAround onClickClinic={onSelectClinicHandler} />
             <div className="mt-3">
               <div className="fs-5">Tên bác sĩ</div>
               <AsyncSelect

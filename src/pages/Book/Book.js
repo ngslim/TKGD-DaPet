@@ -1,4 +1,5 @@
 import React from "react";
+import constant from "../../constant/";
 import Header from "../../components/Header/Header";
 // import Footer from "../../components/Footer/Footer";
 import Menu from "../../components/Menu/Menu";
@@ -11,6 +12,16 @@ import ButtonBook from "../../components/Button/ButtonBook/ButtonBook";
 import { Autocomplete, useJsApiLoader } from "@react-google-maps/api";
 import Loading from "../Loading/Loading";
 import AsyncSelect from "react-select";
+
+const dataBread = [
+  {
+    title: "Đăng ký khám",
+  },
+  {
+    title: "Nhập thông tin",
+    current: "current",
+  },
+];
 
 const dataSickness = [
   { id: 1, value: "Nôn mửa", label: "Non mua" },
@@ -39,7 +50,7 @@ const promiseOptions = (inputValue) =>
 
 function Book() {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyDO8rWBm94mFbSeGx2_XydkVMQmDgRjUjM",
+    googleMapsApiKey: constant.API_KEY,
     libraries: ["places"],
   });
   const navigate = useNavigate();
@@ -67,16 +78,6 @@ function Book() {
         break;
     }
   };
-
-  const dataBread = [
-    {
-      title: "Đăng ký khám",
-    },
-    {
-      title: "Nhập thông tin",
-      current: "current",
-    },
-  ];
 
   if (!isLoaded) {
     return <Loading />;
