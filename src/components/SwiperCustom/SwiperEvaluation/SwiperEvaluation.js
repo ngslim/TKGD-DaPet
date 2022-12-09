@@ -30,7 +30,7 @@ const SwiperEvaluation = ({ data }) => {
       <div className={`${classes["swiper-container"]} container`}>
         <div className={classes["section-title"]}>
           <h2>Evaluations</h2>
-          <p>Some comment from customers</p>
+          <p>Một số trải nghiệm từ khách hàng của DaPet</p>
         </div>
         <Swiper
           modules={[Pagination, Autoplay]}
