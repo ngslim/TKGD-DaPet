@@ -40,7 +40,7 @@ const SwiperClinic = ({ data }) => {
       <div className={`${classes["swiper-container"]} container`}>
         <div className={classes["section-title"]}>
           <h2>Clinics</h2>
-          <p>Explore best clinic in our website</p>
+          <p>Trung tâm và phòng khám uy tín</p>
         </div>
         <Swiper
           modules={[Pagination, Autoplay]}
