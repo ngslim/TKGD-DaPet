@@ -18,13 +18,13 @@ const Banner = () => {
         <div className="row">
           <div className="col-lg-8">
             <h1>
-              Welcome to <span>DaPet</span>
+              Chào mừng đến với <span>DaPet</span>
             </h1>
-            <h2>Good choice to take care of your pet!</h2>
+            <h2>Giải pháp chăm sóc thú cưng toàn diện nhất!</h2>
 
             <div className={classes["btns"]}>
               <ButtonBanner onClick={gotoBookHandler}>
-                Book an Appointment
+                Đặt Lịch Khám Ngay Tại Đây!
               </ButtonBanner>
             </div>
           </div>
