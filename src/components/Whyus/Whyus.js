@@ -3,10 +3,16 @@ import SpecialItem from "./SpecialItem/SpecialItem";
 import classes from "./Whyus.module.css";
 
 const Whyus = () => {
-  const simpleText =
-    "Facts are stubborn things; and whatever may be our wishes, our inclinations, or the dictates of our passion. They cannot alter the state of facts and evidence.";
+  const bockAppointment =
+    "Không cần mất nhiều thời gian để tìm kiếm địa chỉ phòng khám thú cưng từ nhiều nguồn khác nhau vì đã có DaPet đề xuất và đánh giá.";
 
   const navigate = useNavigate();
+
+  const reciveOrder =
+  "Đơn khám sẽ được gửi ngay đến phòng khám và được lên lịch hẹn cho người dùng một cách nhanh chóng"
+
+  const petManager =
+  "Thú cưng sẽ được lập hồ sơ riêng để người dùng thuận tiện theo dõi"
 
   const gotoBookHandler = () => {
     navigate("/book");
@@ -25,26 +31,26 @@ const Whyus = () => {
       <div className="container">
         <div className={classes["section-title"]}>
           <h2>Why Us</h2>
-          <p>Why Choose Our Website</p>
+          <p>Vì sao nên sử dụng DaPet</p>
         </div>
 
         <div className="row">
           <SpecialItem
             number={1}
-            title="Book an Appointment"
-            text={simpleText}
+            title="Đặt Lịch Khám"
+            text={bockAppointment}
             onClick={gotoBookHandler}
           />
           <SpecialItem
             number={2}
-            title="Receive order"
-            text={simpleText}
+            title="Nhận Đơn Khám"
+            text={reciveOrder}
             onClick={gotoOrderHandler}
           />
           <SpecialItem
             number={3}
-            title="Manage your pets"
-            text={simpleText}
+            title="Quản Lý Thú Cưng"
+            text={petManager}
             onClick={gotoPetHandler}
           />
         </div>
