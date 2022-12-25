@@ -1,5 +1,5 @@
 .selected {
-  color: var(--user-color);
+  color: var(--primary-color);
   font-weight: 700;
 }
 

@@ -14,11 +14,16 @@
 }
 
 .btn-confirm {
-  color: var(--user-color);
+  color: var(--primary-color);
   border: none;
   background-color: var(--white-color);
   height: 50px;
   width: fit-content;
   padding: 6px 20px;
   margin-right: 8px;
+}
+
+.btn-confirm:hover {
+  color: var(--white-color);
+  background-color: var(--primary-color-hover);
 }

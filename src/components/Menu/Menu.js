@@ -25,7 +25,7 @@ function Menu() {
         onClick={gotoPageNotFoundHandler}
       />
       <MenuItem
-        icon={<BsPencil color="#098963" />}
+        icon={<BsPencil color="#7D5A50" />}
         title="Đăng ký khám"
         selected="selected"
         onClick={gotoPageNotFoundHandler}

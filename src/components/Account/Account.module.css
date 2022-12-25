@@ -6,7 +6,7 @@
 }
 
 .profile-account .selected {
-  color: var(--user-color);
+  color: var(--primary-color);
 }
 
 .profile-account .item:hover {

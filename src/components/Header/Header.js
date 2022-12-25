@@ -5,7 +5,7 @@ import HeaderLogout from "./StatusHeader/HeaderLogout/HeaderLogout";
 import HeaderLogin from "./StatusHeader/HeaderLogin/HeaderLogin";
 import { useNavigate } from "react-router-dom";
 
-function Header({ role }) {
+function Header() {
   const [status, setStatus] = useState(true);
   const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ function Header({ role }) {
 
   return (
     <div
-      className={`d-flex fs-5 text-center align-items-center ${classes["main-header"]} ${classes[role]}`}
+      className={`d-flex fs-5 text-center align-items-center ${classes["main-header"]}`}
     >
       <div
         className={`${classes["item"]} fw-bold fs-4 px-4`}

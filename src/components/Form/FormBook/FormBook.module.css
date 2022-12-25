@@ -14,7 +14,7 @@
 .title-head {
   width: 100%;
   height: 65px;
-  background-color: var(--user-color);
+  background-color: var(--primary-color-light);
 }
 
 .container-input {
@@ -23,5 +23,5 @@
 }
 
 .background-summary-book {
-  background-color: var(--user-color);
+  background-color: var(--primary-color-light);
 }

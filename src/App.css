@@ -10,8 +10,9 @@
   /* ===== Colors ===== */
   --body-color: #e4e9f7;
   --sidebar-color: #fff;
-  --primary-color: #695cfe;
-  --primary-color-light: #f6f5ff;
+  --primary-color: #B4846C;
+  --primary-color-light: #E5B299;
+  --primary-color-hover: #7D5A50;
   --white-color: white;
   --black-color: black;
   --toggle-color: #ddd;

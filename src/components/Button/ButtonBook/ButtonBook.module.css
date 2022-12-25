@@ -1,11 +1,11 @@
 .btn-book {
   border: none;
-  background-color: var(--user-color);
+  background-color: var(--primary-color-light);
   height: 50px;
   width: fit-content;
   padding: 6px 20px;
 }
 
 .btn-book:hover {
-  background-color: #026346;
+  background-color: var(--primary-color-hover);
 }
