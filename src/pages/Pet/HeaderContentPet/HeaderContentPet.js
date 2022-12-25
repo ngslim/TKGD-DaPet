@@ -8,7 +8,7 @@ const HeaderContentPet = ({ title, labelButton, onClickButton }) => {
       <div className="px-4 py-1 fs-4 text-white">{title}</div>
       <button
         onClick={onClickButton}
-        className="btn btn-light border-0 fw-bold fs-5 px-4 mx-3"
+        className={`${classes["btn-create"]} btn btn-light border-0 fw-bold fs-5 px-4 mx-3`}
       >
         {labelButton}
       </button>

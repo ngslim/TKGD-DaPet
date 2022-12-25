@@ -1,6 +1,6 @@
 .search-box {
   border-radius: 6px;
-  background-color: var(--primary-color-light);
+  background-color: var(--white-color);
   cursor: pointer;
   transition: var(--tran-05);
 }
@@ -10,7 +10,7 @@
   width: 100%;
   outline: none;
   border: none;
-  background-color: var(--primary-color-light);
+  background-color: var(--white-color);
   color: var(--text-color);
   border-radius: 6px;
   font-size: 17px;

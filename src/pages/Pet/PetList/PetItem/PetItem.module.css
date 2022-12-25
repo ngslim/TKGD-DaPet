@@ -19,9 +19,14 @@
 .pet-item .body-pet-card {
   width: 100%;
   min-height: 64px;
-  background-color: var(--user-color);
+  background-color: var(--primary-color);
 }
 
 .btn-pet-card {
   width: 140px;
+}
+
+.btn-pet-card:hover {
+  color: var(--white-color);
+  background-color: var(--primary-color-hover);
 }

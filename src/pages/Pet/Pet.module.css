@@ -14,10 +14,6 @@
   height: 100%;
 }
 
-.breadcrumb-inline {
-  color: var(--user-color);
-}
-
 .content-pet-page {
   background-color: var(--white-color);
   width: 100%;
