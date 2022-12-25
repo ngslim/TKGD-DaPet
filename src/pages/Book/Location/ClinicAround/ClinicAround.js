@@ -1,24 +1,7 @@
 import classes from "./ClinicAround.module.css";
 import BookCard from "../../../../components/Card/BookCard/BookCard";
 import { Space } from "antd";
-
-const dataClinic = [
-  {
-    name: "Phòng Khám Pet Joy",
-    text: "Bệnh viện thú y với trang thiết bị hiện đại, cấp cứu 24/24.",
-    image: "/images/clinic/clinic-1.jpg",
-  },
-  {
-    name: "Phòng Khám Family Bean",
-    text: "Bệnh viện thú y chuyên phẫu thuật, điều trị và dịch vụ tại nhà đi kèm (bao gồm chích ngừa, triệt sản).",
-    image: "/images/clinic/clinic-2.jpg",
-  },
-  {
-    name: "Clinic Pet Farm",
-    text: "Phòng khám sạch sẽ, dịch vụ tốt, giá hợp lí.",
-    image: "/images/clinic/clinic-3.jpg",
-  },
-];
+import { dataClinic } from "../../../../mock/book-data";
 
 const ClinicAround = ({ onClickClinic }) => {
   return (

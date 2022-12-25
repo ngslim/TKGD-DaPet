@@ -4,9 +4,7 @@ import MedicalCard from "../../components/Card/MedicalCard/MedicalCard";
 import Pagination from "../../components/Pagination/Pagination";
 import Header from "../../components/Header/Header";
 // import Footer from "../../components/Footer/Footer";
-
 import OrderFlow from "./OrderFlow/OrderFlow";
-
 import { useParams } from "react-router-dom";
 
 const Order = () => {

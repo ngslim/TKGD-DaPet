@@ -11,38 +11,8 @@ import FieldTextArea from "./FieldTextArea/FieldTextArea";
 import ButtonBook from "../../../components/Button/ButtonBook/ButtonBook";
 import CreatableSelect from "react-select/creatable";
 import AsyncSelect from "react-select";
-
-const dataBread = [
-  {
-    title: "Danh sách thú cưng",
-  },
-  {
-    title: "Tạo hồ sơ mới",
-    current: "current",
-  },
-];
-
-const dataTypePet = [
-  { id: 1, value: "Meo", label: "Meo" },
-  { id: 2, value: "Cho", label: "Cho" },
-  { id: 3, value: "Chim", label: "Chim" },
-  { id: 4, value: "Ca", label: "Ca" },
-];
-
-const dataHealth = [
-  { id: 1, value: "Tốt", label: "Tot" },
-  { id: 2, value: "Bình thường", label: "Binh thuong" },
-  { id: 3, value: "Đã tiem vacxin", label: "Da tiem vacxin" },
-  { id: 4, value: "Béo phì", label: "Beo phi" },
-  { id: 5, value: "Tiêu chảy", label: "Tieu chay" },
-  { id: 6, value: "Chảy máu", label: "Chay mau" },
-  { id: 7, value: "Da nhăn nheo", label: "Da nhan nheo" },
-  { id: 8, value: "Hạ thân nhiệt", label: "Ha than nhiet" },
-  { id: 9, value: "Thở khó khăn", label: "Tho kho khan" },
-  { id: 10, value: "Tiếng khò khè", label: "Tieng kho khe" },
-  { id: 11, value: "Rụng lông", label: "Rung long" },
-  { id: 12, value: "Khó ăn", label: "Kho an" },
-];
+import { breadAddPet } from "../../../mock/breadcrumb-data";
+import { dataHealth, dataTypePet } from "../../../mock/pet-data";
 
 const filterHealth = (inputValue) => {
   return dataHealth.filter((item) =>
@@ -63,10 +33,6 @@ function AddPet() {
   const gotoPageNotFoundHandler = () => {
     navigate("/page-not-found");
   };
-
-  // const gotoHomePageHandler = () => {
-  //   navigate("/");
-  // };
 
   const gotoPetHandler = () => {
     navigate("/pet");
@@ -102,7 +68,7 @@ function AddPet() {
             <HeaderContentPet
               title={
                 <BreadCrumb
-                  dataBread={dataBread}
+                  dataBread={breadAddPet}
                   onClick={onClickBreadcrumbHandler}
                 />
               }

@@ -8,22 +8,7 @@ import FormBook from "../../../components/Form/FormBook/FormBook";
 import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb/Breadcrumb";
 import ProfileBook from "./ProfileBook/ProfileBook";
 import Description from "./Description/Description";
-
-const dataBread = [
-  {
-    title: "Đăng ký khám",
-  },
-  {
-    title: "Nhập thông tin",
-  },
-  {
-    title: "Chọn phòng khám",
-  },
-  {
-    title: "Thông tin lịch khám",
-    current: "current",
-  },
-];
+import { breadSummary } from "../../../mock/breadcrumb-data";
 
 function Summary() {
   const navigate = useNavigate();
@@ -62,7 +47,7 @@ function Summary() {
         <FormBook
           title={
             <Breadcrumb
-              dataBread={dataBread}
+              dataBread={breadSummary}
               onClick={onClickBreadcrumbHandler}
             />
           }

@@ -1,11 +1,5 @@
 // import classes from "./ProfileBook.module.css";
-
-const dataCustomer = [
-  {
-    name: "Nguyễn Văn A",
-    telephone: "0123456789",
-  },
-];
+import { dataCustomer } from "../../../../mock/book-data";
 
 const ProfileBook = ({ user }) => {
   return (

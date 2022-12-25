@@ -14,31 +14,8 @@ import { Autocomplete, useJsApiLoader } from "@react-google-maps/api";
 import { DatePicker, Space, TimePicker } from "antd";
 import Loading from "../../Loading/Loading";
 import constant from "../../../constant";
-
-const dataBread = [
-  {
-    title: "Đăng ký khám",
-  },
-  {
-    title: "Nhập thông tin",
-  },
-  {
-    title: "Chọn phòng khám",
-    current: "current",
-  },
-];
-
-const dataDoctor = [
-  { id: 1, value: "Cob Liversedge", label: "Cob Liversedge" },
-  { id: 2, value: "Allix Itzhak", label: "Allix Itzhak" },
-  { id: 3, value: "Jeremiah Duer", label: "Jeremiah Duer" },
-  { id: 4, value: "Clemens Finnis", label: "Clemens Finnis" },
-  { id: 5, value: "Fayette Lawey", label: "Fayette Lawey" },
-  { id: 6, value: "Larine Merrisson", label: "Larine Merrisson" },
-  { id: 7, value: "Horten Ilieve", label: "Horten Ilieve" },
-  { id: 8, value: "Rodrigo Spellsworth", label: "Rodrigo Spellsworth" },
-  { id: 9, value: "Crichton O'Scollee", label: "Crichton O'Scollee" },
-];
+import { breadLocation } from "../../../mock/breadcrumb-data";
+import { dataDoctor } from "../../../mock/book-data";
 
 const filterDoctor = (inputValue) => {
   return dataDoctor.filter((item) =>
@@ -110,7 +87,7 @@ function Location() {
         <FormBook
           title={
             <Breadcrumb
-              dataBread={dataBread}
+              dataBread={breadLocation}
               onClick={onClickBreadcrumbHandler}
             />
           }

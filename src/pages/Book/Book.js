@@ -12,28 +12,8 @@ import ButtonBook from "../../components/Button/ButtonBook/ButtonBook";
 import { Autocomplete, useJsApiLoader } from "@react-google-maps/api";
 import Loading from "../Loading/Loading";
 import AsyncSelect from "react-select";
-
-const dataBread = [
-  {
-    title: "Đăng ký khám",
-  },
-  {
-    title: "Nhập thông tin",
-    current: "current",
-  },
-];
-
-const dataSickness = [
-  { id: 1, value: "Nôn mửa", label: "Non mua" },
-  { id: 2, value: "Tiêu chảy", label: "Tieu chay" },
-  { id: 3, value: "Chảy máu", label: "Chay mau" },
-  { id: 4, value: "Da nhăn nheo", label: "Da nhan nheo" },
-  { id: 5, value: "Hạ thân nhiệt", label: "Ha than nhiet" },
-  { id: 6, value: "Thở khó khăn", label: "Tho kho khan" },
-  { id: 7, value: "Tiếng khò khè", label: "Tieng kho khe" },
-  { id: 8, value: "Rụng lông", label: "Rung long" },
-  { id: 9, value: "Khó ăn", label: "Kho an" },
-];
+import { breadBook } from "../../mock/breadcrumb-data";
+import { dataSickness } from "../../mock/book-data";
 
 const filterSickness = (inputValue) => {
   return dataSickness.filter((item) =>
@@ -93,7 +73,7 @@ function Book() {
         <FormBook
           title={
             <Breadcrumb
-              dataBread={dataBread}
+              dataBread={breadBook}
               onClick={onClickBreadcrumbHandler}
             />
           }
