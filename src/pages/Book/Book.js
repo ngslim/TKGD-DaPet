@@ -1,5 +1,5 @@
 import React from "react";
-import constant from "../../constant/";
+import constant from "../../config/constant";
 import Header from "../../components/Header/Header";
 // import Footer from "../../components/Footer/Footer";
 import Menu from "../../components/Menu/Menu";
@@ -14,6 +14,8 @@ import Loading from "../Loading/Loading";
 import AsyncSelect from "react-select";
 import { breadBook } from "../../mock/breadcrumb-data";
 import { dataSickness } from "../../mock/book-data";
+import { dataTypePet } from "../../mock/pet-data";
+import CreatableSelect from "react-select/creatable";
 
 const filterSickness = (inputValue) => {
   return dataSickness.filter((item) =>
@@ -83,14 +85,21 @@ function Book() {
 
             <div className="mt-3">
               <label className="fs-5">Loại thú cưng</label>
-              <select
-                className={`${classes["field-select"]} form-select fs-5" id="floatingSelect`}
-              >
-                <option value="1">Mèo</option>
-                <option value="2">Chó</option>
-                <option value="3">Chim</option>
-                <option value="4">Cá</option>
-              </select>
+              <CreatableSelect
+                isClearable
+                options={dataTypePet}
+                placeholder=""
+                styles={{
+                  control: (baseStyle) => ({
+                    ...baseStyle,
+                    width: "200px",
+                    height: "50px",
+                    outline: "none",
+                    border: "none",
+                    backgroundColor: "#f3f3f3",
+                  }),
+                }}
+              />
             </div>
 
             <InputBook label="Chủ thú cưng" />

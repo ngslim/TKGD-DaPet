@@ -5,7 +5,8 @@
 
 .grid-clinic {
   display: grid !important;
-  grid-template-columns: repeat(3, calc(95% / 3));
+  grid-template-columns: repeat(1);
+  row-gap: 20px;
 }
 
 .head-view-more {

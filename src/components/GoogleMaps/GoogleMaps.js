@@ -8,7 +8,7 @@ import {
   DirectionsRenderer,
 } from "@react-google-maps/api";
 import Loading from "../../pages/Loading/Loading";
-import constant from "../../constant";
+import constant from "../../config/constant";
 
 const containerStyle = {
   width: "100%",

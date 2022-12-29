@@ -13,7 +13,7 @@ import AsyncSelect from "react-select";
 import { Autocomplete, useJsApiLoader } from "@react-google-maps/api";
 import { DatePicker, Space, TimePicker } from "antd";
 import Loading from "../../Loading/Loading";
-import constant from "../../../constant";
+import constant from "../../../config/constant";
 import { breadLocation } from "../../../mock/breadcrumb-data";
 import { dataDoctor } from "../../../mock/book-data";
 

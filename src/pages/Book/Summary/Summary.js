@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import classes from "./Summary.module.css";
 import FormBook from "../../../components/Form/FormBook/FormBook";
 import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb/Breadcrumb";
-import ProfileBook from "./ProfileBook/ProfileBook";
+// import ProfileBook from "./ProfileBook/ProfileBook";
 import Description from "./Description/Description";
 import { breadSummary } from "../../../mock/breadcrumb-data";
 
@@ -55,7 +55,7 @@ function Summary() {
         >
           <div className="row">
             <div className="d-flex gap-3 px-3 pb-3">
-              <div
+              {/* <div
                 className={`${classes["summary-profile"]} bg-white p-3 rounded`}
               >
                 <div className={`${classes["img-profile"]} mx-auto mb-4 mt-4`}>
@@ -63,7 +63,7 @@ function Summary() {
                 </div>
 
                 <ProfileBook />
-              </div>
+              </div> */}
               <Description />
             </div>
           </div>
