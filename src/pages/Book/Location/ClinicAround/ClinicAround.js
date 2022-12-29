@@ -1,7 +1,7 @@
 import classes from "./ClinicAround.module.css";
 import BookCard from "../../../../components/Card/BookCard/BookCard";
 import { Space } from "antd";
-import { dataClinic } from "../../../../mock/book-data";
+import { dataClinics } from "../../../../mock/clinic/clinic";
 
 const ClinicAround = ({ onClickClinic }) => {
   return (
@@ -15,16 +15,8 @@ const ClinicAround = ({ onClickClinic }) => {
       <div
         className={`${classes["grid-clinic"]} px-4 row justify-content-around`}
       >
-        {dataClinic.map((item, index) => {
-          return (
-            <BookCard
-              key={index}
-              name={item.name}
-              text={item.text}
-              image={item.image}
-              onClick={onClickClinic}
-            />
-          );
+        {dataClinics.map((item) => {
+          return <BookCard key={item.id} item={item} onClick={onClickClinic} />;
         })}
       </div>
     </div>

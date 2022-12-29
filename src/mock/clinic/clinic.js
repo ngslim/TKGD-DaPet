@@ -1,0 +1,36 @@
+export const dataClinics = [
+  {
+    id: "1",
+    name: "Phòng Khám Pet Joy",
+    description: "Bệnh viện thú y với trang thiết bị hiện đại, cấp cứu 24/24.",
+    image: "/images/clinic/clinic-1.jpg",
+    address: "Khu phố 4, Linh Xuân, Thủ Đức",
+    email: "testemail@gmail.com",
+    phone: "0123456789",
+    timeline: "8:00AM",
+    date: "30/12/2022",
+  },
+  {
+    id: "2",
+    name: "Phòng Khám Family Bean",
+    description:
+      "Bệnh viện thú y chuyên phẫu thuật, điều trị và dịch vụ tại nhà đi kèm (bao gồm chích ngừa, triệt sản).",
+    image: "/images/clinic/clinic-2.jpg",
+    address: "Khu phố 4, Linh Xuân, Thủ Đức",
+    email: "testemail@gmail.com",
+    phone: "0123456789",
+    timeline: "8:00AM",
+    date: "30/12/2022",
+  },
+  {
+    id: "3",
+    name: "Clinic Pet Farm",
+    description: "Bệnh viện thú y với trang thiết bị hiện đại, cấp cứu 24/24.",
+    image: "/images/clinic/clinic-3.jpg",
+    address: "Khu phố 4, Linh Xuân, Thủ Đức",
+    email: "testemail@gmail.com",
+    phone: "0123456789",
+    timeline: "8:00AM",
+    date: "30/12/2022",
+  },
+];

@@ -69,7 +69,7 @@ function Location() {
   };
 
   const onSelectClinicHandler = (value) => {
-    clinicName.current.value = value;
+    clinicName.current.value = value.name + ", " + value.address;
   };
 
   console.log("Date + time", date, time);
@@ -94,10 +94,10 @@ function Location() {
         >
           <>
             <Autocomplete>
-              <InputBook label="Tên phòng khám" ref={clinicName} />
+              <InputBook label="Phòng khám" ref={clinicName} />
             </Autocomplete>
             <ClinicAround onClickClinic={onSelectClinicHandler} />
-            <div className="mt-3">
+            {/* <div className="mt-3">
               <div className="fs-5">Tên bác sĩ</div>
               <AsyncSelect
                 cacheOptions
@@ -114,9 +114,9 @@ function Location() {
                   }),
                 }}
               />
-            </div>
+            </div> */}
 
-            <div className="mt-3">
+            {/* <div className="mt-3">
               <div className="fs-5">Lịch khám</div>
               <Space direction="horizontal">
                 <DatePicker
@@ -136,7 +136,7 @@ function Location() {
                   }}
                 />
               </Space>
-            </div>
+            </div> */}
             <Space direction="horizontal" className={classes["btn-container"]}>
               <ButtonBook onClick={handleOnClickCancel}>Hủy</ButtonBook>
               <ButtonBook onClick={handleOnClickSubmit}>

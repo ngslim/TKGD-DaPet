@@ -9,7 +9,39 @@
   height: 140px;
 }
 
+.container-information {
+  position: relative;
+  width: 100%;
+}
+
 .content-card .text {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.heading-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.address {
+  position: absolute;
+  bottom: 1.4rem;
+}
+
+.date-timeline {
+  font-size: 1.2rem;
+  float: right;
+  line-height: 1.8rem;
+  margin-top: 10px;
+}
+
+.contact {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 1.4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
