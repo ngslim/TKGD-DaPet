@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Header from "../../../components/Header/Header";
 // import Footer from "../../../components/Footer/Footer";
 import Menu from "../../../components/Menu/Menu";
@@ -9,30 +9,31 @@ import FormBook from "../../../components/Form/FormBook/FormBook";
 import InputBook from "../../../components/Input/InputBook/InputBook";
 import ClinicAround from "./ClinicAround/ClinicAround";
 import ButtonBook from "../../../components/Button/ButtonBook/ButtonBook";
-import AsyncSelect from "react-select";
+// import AsyncSelect from "react-select";
 import { Autocomplete, useJsApiLoader } from "@react-google-maps/api";
-import { DatePicker, Space, TimePicker } from "antd";
+// import { DatePicker, TimePicker } from "antd";
+import { Space } from "antd";
 import Loading from "../../Loading/Loading";
 import constant from "../../../config/constant";
 import { breadLocation } from "../../../mock/breadcrumb-data";
-import { dataDoctor } from "../../../mock/book-data";
+// import { dataDoctor } from "../../../mock/book-data";
 
-const filterDoctor = (inputValue) => {
-  return dataDoctor.filter((item) =>
-    item.label.toLowerCase().includes(inputValue.toLowerCase())
-  );
-};
+// const filterDoctor = (inputValue) => {
+//   return dataDoctor.filter((item) =>
+//     item.label.toLowerCase().includes(inputValue.toLowerCase())
+//   );
+// };
 
-const promiseOptions = (inputValue) =>
-  new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(filterDoctor(inputValue));
-    }, 1000);
-  });
+// const promiseOptions = (inputValue) =>
+//   new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve(filterDoctor(inputValue));
+//     }, 1000);
+//   });
 
 function Location() {
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
+  // const [date, setDate] = useState("");
+  // const [time, setTime] = useState("");
   const clinicName = useRef();
   const navigate = useNavigate();
   const { isLoaded } = useJsApiLoader({
@@ -72,7 +73,6 @@ function Location() {
     clinicName.current.value = value.name + ", " + value.address;
   };
 
-  console.log("Date + time", date, time);
   if (!isLoaded) {
     return <Loading />;
   }
