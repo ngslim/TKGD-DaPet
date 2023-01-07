@@ -36,13 +36,13 @@ function OrderControl(props) {
         <div className="d-flex justify-content-end gap-4 mt-2">
           <button
             className={`${classes["btn-confirm"]} btn btn-secondary`}
-            onClick={props.onClick}
+            onClick={gotoOrderHandler}
           >
             Hủy đơn
           </button>
           <button
             className={`${classes["btn-confirm"]} btn btn-secondary`}
-            onClick={gotoOrderHandler}
+            onClick={props.onClick}
           >
             Nhận đơn
           </button>

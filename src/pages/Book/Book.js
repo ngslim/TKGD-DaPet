@@ -16,7 +16,6 @@ import { breadBook } from "../../mock/breadcrumb-data";
 import { dataSickness } from "../../mock/book-data";
 import { dataTypePet } from "../../mock/pet-data";
 import CreatableSelect from "react-select/creatable";
-import { medicalApp } from "../../mock/medical-application/medical-application";
 
 const filterSickness = (inputValue) => {
   return dataSickness.filter((item) =>
@@ -41,7 +40,6 @@ function Book({ onSubmitForm }) {
   // const [image, setImage] = useState([]);
 
   const nameRef = useRef();
-  console.log("medical app", medicalApp);
   // useEffect(() => {
   //   function getBase64Image(img) {
   //     if (img) {
@@ -68,6 +66,59 @@ function Book({ onSubmitForm }) {
   });
   const navigate = useNavigate();
 
+  const checkValidationInput = (formInformation) => {
+    let message = document.getElementById("message");
+    const subHandler = (field) => {
+      message.style.display = "block";
+      message.innerHTML = `Please enter your ${field}`;
+    };
+
+    if (formInformation.name === "") {
+      subHandler("pet name");
+      document.getElementById("name").focus();
+      return false;
+    }
+    if (formInformation.type === "" || formInformation.type === undefined) {
+      subHandler("pet type");
+      return false;
+    }
+    if (formInformation.owner === "") {
+      subHandler("owner");
+      document.getElementById("owner").focus();
+      return false;
+    }
+
+    var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+    if (!re.test(formInformation.phone)) {
+      message.style.display = "block";
+      message.innerHTML = `Please enter your valid phone number (10 numbers)`;
+      document.getElementById("phone").focus();
+      return false;
+    }
+    if (formInformation.phone === "") {
+      subHandler("telephone");
+      document.getElementById("phone").focus();
+      return false;
+    }
+
+    if (formInformation.symptom.length === 0) {
+      subHandler("symptoms");
+      return false;
+    } else if (
+      formInformation.symptom[formInformation.symptom.length - 1].length === 0
+    ) {
+      subHandler("symptoms");
+      return false;
+    }
+    if (formInformation.other === "") {
+      subHandler("details");
+      document.getElementById("other").focus();
+      return false;
+    }
+
+    return true;
+  };
+
   const submitFormHandler = () => {
     // setAddress(address.current.value);
     const formInformation = {
@@ -78,9 +129,11 @@ function Book({ onSubmitForm }) {
       symptom,
       other,
     };
-    onSubmitForm(formInformation);
+    if (checkValidationInput(formInformation)) {
+      onSubmitForm(formInformation);
+      navigate("/book/location");
+    }
     //onFileUpload();
-    navigate("/book/location");
   };
 
   const onFileChange = (e) => {
@@ -139,8 +192,10 @@ function Book({ onSubmitForm }) {
             />
           }
         >
+          <span className={classes["error"]} id="message"></span>
           <>
             <InputBook
+              id="name"
               label="Tên thú cưng"
               ref={nameRef}
               value={name}
@@ -148,9 +203,12 @@ function Book({ onSubmitForm }) {
             />
 
             <div className="mt-3">
-              <label className="fs-5">Loại thú cưng</label>
+              <label className="fs-5">
+                Loại thú cưng<span style={{ color: "red" }}>*</span>
+              </label>
               <CreatableSelect
                 isClearable
+                id="type"
                 options={dataTypePet}
                 placeholder=""
                 styles={{
@@ -169,16 +227,20 @@ function Book({ onSubmitForm }) {
 
             <InputBook
               label="Chủ thú cưng"
+              id="owner"
               value={owner}
               onChange={(value) => setOwner(value)}
             />
 
             <div className="mt-3 d-flex gap-3">
               <div>
-                <label className="fs-5">SĐT</label>
+                <label className="fs-5">
+                  SĐT<span style={{ color: "red" }}>*</span>
+                </label>
                 <input
                   className={`${classes["field-input"]} border-0 rounded mt-1 px-3 fs-5`}
                   type="text"
+                  id="phone"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
@@ -186,7 +248,9 @@ function Book({ onSubmitForm }) {
             </div>
 
             <div className="mt-2">
-              <label className="fs-5 py-2">Mô tả triệu chứng</label>
+              <label className="fs-5 py-2">
+                Triệu chứng<span style={{ color: "red" }}>*</span>
+              </label>
               <AsyncSelect
                 isMulti
                 options={dataSickness}
@@ -211,8 +275,9 @@ function Book({ onSubmitForm }) {
             </div>
 
             <InputBook
-              label="Khác"
+              label="Chi tiết triệu chứng"
               value={other}
+              id="other"
               onChange={(value) => setOther(value)}
             />
             <div className="d-flex gap-3 mt-4">

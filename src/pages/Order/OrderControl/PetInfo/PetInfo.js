@@ -15,12 +15,12 @@ const PetInfo = ({ dataPet }) => {
             Tên: <span className="fw-bold">{dataPet.name}</span>
           </div>
           <div>
-            <div>Triệu chứng</div>
-            <div className="fw-bold">
+            Triệu chứng:{" "}
+            <span className="fw-bold">
               {dataPet.description.reduce(
                 (result, current) => result.value + ", " + current.value
               )}
-            </div>
+            </span>
           </div>
           <div>
             <div>Chú thích</div>

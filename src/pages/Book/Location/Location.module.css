@@ -26,3 +26,10 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.location-page .error {
+  height: 20px;
+  padding: 2px;
+  color: red;
+  display: none;
+}

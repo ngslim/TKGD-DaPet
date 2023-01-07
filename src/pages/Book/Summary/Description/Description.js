@@ -7,9 +7,11 @@ const Description = ({ info }) => {
     if (length === 1) {
       return info.symptom[length - 1][0].value;
     }
-    return info.symptom[length - 1].reduce((result, current) => {
-      return result.value + ", " + current.value;
-    });
+    if (info.symptom) {
+      return info.symptom[length - 1].reduce((result, current) => {
+        return result.value + ", " + current.value;
+      });
+    }
   };
   return (
     <div className="bg-white p-3 rounded flex-fill">

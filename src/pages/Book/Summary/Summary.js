@@ -14,7 +14,7 @@ import { medicalApp } from "../../../mock/medical-application/medical-applicatio
 function Summary({ formInformation }) {
   const navigate = useNavigate();
 
-  const gotoBookHandler = () => {
+  const saveData = () => {
     const dataSave = {
       id: medicalApp.length + 2,
       name: formInformation.name,
@@ -29,7 +29,10 @@ function Summary({ formInformation }) {
     medicalApp.push(dataSave);
     navigate("/");
   };
-  console.log(formInformation);
+
+  const gotoBookHandler = () => {
+    navigate("/book");
+  };
 
   const onClickBreadcrumbHandler = (index) => {
     switch (index) {
@@ -69,15 +72,6 @@ function Summary({ formInformation }) {
         >
           <div className="row">
             <div className="d-flex gap-3 px-3 pb-3">
-              {/* <div
-                className={`${classes["summary-profile"]} bg-white p-3 rounded`}
-              >
-                <div className={`${classes["img-profile"]} mx-auto mb-4 mt-4`}>
-                  <img src="/images/profile.jpg" className="img-fluid" alt="" />
-                </div>
-
-                <ProfileBook />
-              </div> */}
               {formInformation && <Description info={formInformation} />}
             </div>
           </div>
@@ -90,7 +84,7 @@ function Summary({ formInformation }) {
             </button>
             <button
               className={`${classes["btn-confirm"]} rounded fs-5 fw-semibold`}
-              onClick={gotoBookHandler}
+              onClick={saveData}
             >
               Xác nhận
             </button>

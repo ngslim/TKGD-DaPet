@@ -28,9 +28,23 @@ function Location({ formInformation, onSubmitForm }) {
     libraries: ["places"],
   });
 
+  const checkValidationInput = (value) => {
+    let message = document.getElementById("messageLocation");
+
+    if (value === "") {
+      message.style.display = "block";
+      message.innerHTML = `Please enter name clinic`;
+      document.getElementById("nameClinic").focus();
+      return false;
+    }
+    return true;
+  };
+
   const handleOnClickSubmit = () => {
-    onSubmitForm(newValueForm);
-    navigate("/book/summary");
+    if (checkValidationInput(clinicName.current.value)) {
+      onSubmitForm(newValueForm);
+      navigate("/book/summary");
+    }
   };
 
   const handleOnClickCancel = () => {
@@ -81,9 +95,10 @@ function Location({ formInformation, onSubmitForm }) {
             />
           }
         >
+          <span className={classes["error"]} id="messageLocation"></span>
           <>
             <Autocomplete>
-              <InputBook label="Phòng khám" ref={clinicName} />
+              <InputBook label="Phòng khám" ref={clinicName} id="nameClinic" />
             </Autocomplete>
             <ClinicAround onClickClinic={onSelectClinicHandler} />
 

@@ -13,13 +13,7 @@ function OrderFlow() {
   };
 
   if (!status) {
-    return (
-      <OrderControl
-        dataUser={dataUser}
-        dataPet={dataPet}
-        onClick={handleOnclick}
-      />
-    );
+    return <OrderControl onClick={handleOnclick} />;
   }
 
   return <DoneOrder dataPet={dataPet} dataUser={dataUser} />;

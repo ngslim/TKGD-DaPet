@@ -1,6 +1,6 @@
 .evaluation-item {
   box-sizing: content-box;
-  min-height: 400px;
+  min-height: 400px !important;
   color: #fff;
 }
 

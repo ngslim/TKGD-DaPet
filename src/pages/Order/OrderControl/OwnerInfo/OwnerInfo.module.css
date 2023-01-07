@@ -1,7 +1,12 @@
 .owner-info {
-  background-color: var(--primary-color-light);
+  background-color: var(--primary-color);
 }
 
 .btn-contact {
   width: 120px;
+}
+
+.btn-contact:hover {
+  color: var(--white-color) !important;
+  background-color: var(--primary-color) !important;
 }

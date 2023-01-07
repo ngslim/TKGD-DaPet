@@ -22,4 +22,9 @@
 
 .btn-confirm {
   width: 120px;
+  background-color: var(--primary-color) !important;
+}
+
+.btn-confirm:hover {
+  background-color: var(--primary-color-hover) !important;
 }
