@@ -1,17 +1,13 @@
 import classes from "./Header.module.css";
-import { useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import HeaderLogout from "./StatusHeader/HeaderLogout/HeaderLogout";
 import HeaderLogin from "./StatusHeader/HeaderLogin/HeaderLogin";
 import { useNavigate } from "react-router-dom";
+import { useAuthState } from "../../context/authentication";
 
 function Header() {
-  const [status, setStatus] = useState(true);
+  const authState = useAuthState();
   const navigate = useNavigate();
-
-  const changeStatusHandler = () => {
-    setStatus((prev) => !prev);
-  };
 
   const gotoHomePageHandler = () => {
     navigate("/");
@@ -20,8 +16,6 @@ function Header() {
   const gotoPageNotFoundHandler = () => {
     navigate("/page-not-found");
   };
-
-  console.log("Header", changeStatusHandler);
 
   return (
     <div
@@ -61,7 +55,7 @@ function Header() {
         />
         <BsSearch color="#A0A0A0" />
       </div>
-      {status ? <HeaderLogin /> : <HeaderLogout />}
+      {authState.state ? <HeaderLogin /> : <HeaderLogout />}
     </div>
   );
 }

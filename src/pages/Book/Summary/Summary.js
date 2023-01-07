@@ -9,13 +9,27 @@ import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb/Breadcrumb";
 // import ProfileBook from "./ProfileBook/ProfileBook";
 import Description from "./Description/Description";
 import { breadSummary } from "../../../mock/breadcrumb-data";
+import { medicalApp } from "../../../mock/medical-application/medical-application";
 
-function Summary() {
+function Summary({ formInformation }) {
   const navigate = useNavigate();
 
   const gotoBookHandler = () => {
-    navigate("/book");
+    const dataSave = {
+      id: medicalApp.length + 2,
+      name: formInformation.name,
+      owner: formInformation.owner,
+      type: formInformation.type,
+      phone: formInformation.phone,
+      address: formInformation.address,
+      description: formInformation.symptom[formInformation.symptom.length - 1],
+      comment: formInformation.other,
+      clinic: formInformation.clinic,
+    };
+    medicalApp.push(dataSave);
+    navigate("/");
   };
+  console.log(formInformation);
 
   const onClickBreadcrumbHandler = (index) => {
     switch (index) {
@@ -64,7 +78,7 @@ function Summary() {
 
                 <ProfileBook />
               </div> */}
-              <Description />
+              {formInformation && <Description info={formInformation} />}
             </div>
           </div>
           <div className="d-flex justify-content-end p-3">

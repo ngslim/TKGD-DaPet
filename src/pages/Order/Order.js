@@ -18,7 +18,6 @@ const Order = () => {
           <OrderFlow />
         ) : (
           <section className={classes["home"]}>
-            <div className={classes["text"]}>PET CARE</div>
             <div className={classes["content"]}>
               <MedicalCard />
               <Pagination />

@@ -2,7 +2,7 @@ import classes from "./InputBook.module.css";
 import React from "react";
 
 const InputBook = React.forwardRef(
-  ({ label, small, medium, children }, ref) => {
+  ({ label, small, medium, value, onChange, children }, ref) => {
     return (
       <div className="mt-3">
         <div className="fs-5">{label}</div>
@@ -11,6 +11,8 @@ const InputBook = React.forwardRef(
           type="text"
           placeholder=""
           ref={ref}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
         />
         {children}
       </div>

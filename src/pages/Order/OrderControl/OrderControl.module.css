@@ -13,7 +13,7 @@
 }
 
 .btn-status {
-  background-color: var(--dark-doctor-color) !important;
+  background-color: var(--primary-color) !important;
 }
 
 .btn-status:hover {

@@ -1,30 +1,33 @@
 // import classes from "./Description.module.css";
-import { dataDescription } from "../../../../mock/book-data";
 import DescriptionItem from "../DescriptionItem/DescriptionItem";
 
-const Description = () => {
+const Description = ({ info }) => {
+  const getSymptom = () => {
+    const length = info.symptom.length;
+    if (length === 1) {
+      return info.symptom[length - 1][0].value;
+    }
+    return info.symptom[length - 1].reduce((result, current) => {
+      return result.value + ", " + current.value;
+    });
+  };
   return (
     <div className="bg-white p-3 rounded flex-fill">
-      <DescriptionItem title="Vật nuôi" description={dataDescription.typePet} />
-      <DescriptionItem
-        title="Triệu chứng"
-        description={dataDescription.description.reduce(
-          (result, current) => result.value + ", " + current.value
-        )}
-      />
-      <DescriptionItem
-        title="Phòng khám"
-        description={dataDescription.clinic}
-      />
-      <DescriptionItem title="Bác sĩ" description={dataDescription.doctor} />
+      {info.type && (
+        <DescriptionItem title="Vật nuôi" description={info.type} />
+      )}
+      {info.symptom && (
+        <DescriptionItem title="Triệu chứng">{getSymptom()}</DescriptionItem>
+      )}
+      <DescriptionItem title="Phòng khám" description={info.clinic.name} />
+      <DescriptionItem title="Địa chỉ" description={info.clinic.address} />
       <DescriptionItem
         title="Thời gian"
-        description={dataDescription.date + " at " + dataDescription.time}
+        description={info.clinic.date + " at " + info.clinic.timeline}
       />
-      <DescriptionItem
-        title="Chú thích"
-        description={dataDescription.comment}
-      />
+      {info.other && (
+        <DescriptionItem title="Chú thích" description={info.other} />
+      )}
     </div>
   );
 };

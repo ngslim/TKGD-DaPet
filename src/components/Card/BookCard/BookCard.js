@@ -4,7 +4,9 @@ const BookCard = ({ item, onClick }) => {
   return (
     <div
       className={`${classes["content-card"]} rounded p-3`}
-      onClick={(event) => onClick({ name: item.name, address: item.address })}
+      onClick={(event) => {
+        onClick({ name: item.name, address: item.address }, item);
+      }}
     >
       <div className="d-flex gap-5 px-3">
         <div>

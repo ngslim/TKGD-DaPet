@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import constant from "../../config/constant";
 import Header from "../../components/Header/Header";
 // import Footer from "../../components/Footer/Footer";
@@ -9,13 +9,14 @@ import Breadcrumb from "../../components/Breadcrumb/Breadcrumb/Breadcrumb";
 import InputBook from "../../components/Input/InputBook/InputBook";
 import FormBook from "../../components/Form/FormBook/FormBook";
 import ButtonBook from "../../components/Button/ButtonBook/ButtonBook";
-import { Autocomplete, useJsApiLoader } from "@react-google-maps/api";
+import { useJsApiLoader } from "@react-google-maps/api";
 import Loading from "../Loading/Loading";
 import AsyncSelect from "react-select";
 import { breadBook } from "../../mock/breadcrumb-data";
 import { dataSickness } from "../../mock/book-data";
 import { dataTypePet } from "../../mock/pet-data";
 import CreatableSelect from "react-select/creatable";
+import { medicalApp } from "../../mock/medical-application/medical-application";
 
 const filterSickness = (inputValue) => {
   return dataSickness.filter((item) =>
@@ -30,16 +31,74 @@ const promiseOptions = (inputValue) =>
     }, 1000);
   });
 
-function Book() {
+function Book({ onSubmitForm }) {
+  const [name, setName] = useState("");
+  const [type, setType] = useState("");
+  const [owner, setOwner] = useState("");
+  const [phone, setPhone] = useState("");
+  const [symptom, setSymptom] = useState([]);
+  const [other, setOther] = useState("");
+  // const [image, setImage] = useState([]);
+
+  const nameRef = useRef();
+  console.log("medical app", medicalApp);
+  // useEffect(() => {
+  //   function getBase64Image(img) {
+  //     if (img) {
+  //       var canvas = document.createElement("canvas");
+  //       canvas.width = img.width;
+  //       canvas.height = img.height;
+
+  //       var ctx = canvas.getContext("2d");
+  //       ctx.drawImage(img, 0, 0);
+
+  //       var dataURL = canvas.toDataURL("image/png");
+
+  //       return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+  //     }
+  //   }
+  //   const bannerImage = document.getElementById("bannerImg");
+  //   const imgData = getBase64Image(bannerImage);
+  //   localStorage.setItem("imgData", imgData);
+  // }, []);
+
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: constant.API_KEY,
     libraries: ["places"],
   });
   const navigate = useNavigate();
 
-  const gotoBookLocation = () => {
+  const submitFormHandler = () => {
+    // setAddress(address.current.value);
+    const formInformation = {
+      name,
+      type: type.value,
+      owner,
+      phone,
+      symptom,
+      other,
+    };
+    onSubmitForm(formInformation);
+    //onFileUpload();
     navigate("/book/location");
   };
+
+  const onFileChange = (e) => {
+    // setImage(e.target.files[0]);
+  };
+
+  // const onFileUpload = () => {
+  //   // Create an object of formData
+  //   const formData = new FormData();
+
+  //   // Update the formData object
+  //   //formData.append("myFile", image, image.name);
+
+  //   // Details of the uploaded file
+
+  //   // Request made to the backend api
+  //   // Send formData object
+  // };
 
   const onClickBreadcrumbHandler = (index) => {
     switch (index) {
@@ -81,7 +140,12 @@ function Book() {
           }
         >
           <>
-            <InputBook label="Tên thú cưng" />
+            <InputBook
+              label="Tên thú cưng"
+              ref={nameRef}
+              value={name}
+              onChange={(value) => setName(value)}
+            />
 
             <div className="mt-3">
               <label className="fs-5">Loại thú cưng</label>
@@ -99,10 +163,15 @@ function Book() {
                     backgroundColor: "#f3f3f3",
                   }),
                 }}
+                onChange={(choice) => setType(choice)}
               />
             </div>
 
-            <InputBook label="Chủ thú cưng" />
+            <InputBook
+              label="Chủ thú cưng"
+              value={owner}
+              onChange={(value) => setOwner(value)}
+            />
 
             <div className="mt-3 d-flex gap-3">
               <div>
@@ -110,18 +179,9 @@ function Book() {
                 <input
                   className={`${classes["field-input"]} border-0 rounded mt-1 px-3 fs-5`}
                   type="text"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                 />
-              </div>
-
-              <div className="flex-fill">
-                <label className="fs-5">Địa chỉ</label>
-                <Autocomplete>
-                  <input
-                    className={`${classes["field-input"]} border-0 rounded mt-1 px-3 fs-5`}
-                    type="text"
-                    placeholder=""
-                  />
-                </Autocomplete>
               </div>
             </div>
 
@@ -146,14 +206,33 @@ function Book() {
                     background: "#00c288",
                   }),
                 }}
+                onChange={(choice) => setSymptom((prev) => [...prev, choice])}
               />
             </div>
 
-            <InputBook label="Khác" />
-            <ButtonBook onClick={gotoBookLocation}>Đăng ký khám</ButtonBook>
+            <InputBook
+              label="Khác"
+              value={other}
+              onChange={(value) => setOther(value)}
+            />
+            <div className="d-flex gap-3 mt-4">
+              <div className="mt-1 fs-5">Hình ảnh</div>
+
+              <input
+                title=""
+                type="file"
+                // multiple
+                // accept="images/*"
+                id="bannerImg"
+                className={`${classes["btn-add-img"]} btn btn-secondary`}
+                onChange={onFileChange}
+              />
+            </div>
+            <ButtonBook onClick={submitFormHandler}>Đăng ký khám</ButtonBook>
           </>
         </FormBook>
       </div>
+
       {/* <Footer /> */}
     </div>
   );

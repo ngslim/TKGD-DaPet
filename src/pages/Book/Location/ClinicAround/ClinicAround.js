@@ -15,8 +15,12 @@ const ClinicAround = ({ onClickClinic }) => {
       <div
         className={`${classes["grid-clinic"]} px-4 row justify-content-around`}
       >
-        {dataClinics.map((item) => {
-          return <BookCard key={item.id} item={item} onClick={onClickClinic} />;
+        {dataClinics.map((item, index) => {
+          if (index < 4)
+            return (
+              <BookCard key={item.id} item={item} onClick={onClickClinic} />
+            );
+          return null;
         })}
       </div>
     </div>

@@ -31,3 +31,10 @@
   border: none !important;
   background-color: var(--bg-grey-color) !important;
 }
+
+.btn-add-img {
+  background-color: rgb(175, 171, 171);
+  border: none;
+  color: var(--black-color);
+  width: 104px;
+}

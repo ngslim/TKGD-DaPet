@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Header from "../../../components/Header/Header";
 // import Footer from "../../../components/Footer/Footer";
 import Menu from "../../../components/Menu/Menu";
@@ -16,24 +16,11 @@ import { Space } from "antd";
 import Loading from "../../Loading/Loading";
 import constant from "../../../config/constant";
 import { breadLocation } from "../../../mock/breadcrumb-data";
-// import { dataDoctor } from "../../../mock/book-data";
 
-// const filterDoctor = (inputValue) => {
-//   return dataDoctor.filter((item) =>
-//     item.label.toLowerCase().includes(inputValue.toLowerCase())
-//   );
-// };
-
-// const promiseOptions = (inputValue) =>
-//   new Promise((resolve) => {
-//     setTimeout(() => {
-//       resolve(filterDoctor(inputValue));
-//     }, 1000);
-//   });
-
-function Location() {
+function Location({ formInformation, onSubmitForm }) {
   // const [date, setDate] = useState("");
   // const [time, setTime] = useState("");
+  const [newValueForm, setNewValueForm] = useState(null);
   const clinicName = useRef();
   const navigate = useNavigate();
   const { isLoaded } = useJsApiLoader({
@@ -42,6 +29,7 @@ function Location() {
   });
 
   const handleOnClickSubmit = () => {
+    onSubmitForm(newValueForm);
     navigate("/book/summary");
   };
 
@@ -69,8 +57,9 @@ function Location() {
     }
   };
 
-  const onSelectClinicHandler = (value) => {
+  const onSelectClinicHandler = (value, clinicSelected) => {
     clinicName.current.value = value.name + ", " + value.address;
+    setNewValueForm({ ...formInformation, clinic: clinicSelected });
   };
 
   if (!isLoaded) {
@@ -97,46 +86,7 @@ function Location() {
               <InputBook label="Phòng khám" ref={clinicName} />
             </Autocomplete>
             <ClinicAround onClickClinic={onSelectClinicHandler} />
-            {/* <div className="mt-3">
-              <div className="fs-5">Tên bác sĩ</div>
-              <AsyncSelect
-                cacheOptions
-                defaultOptions
-                options={dataDoctor}
-                loadOptions={promiseOptions}
-                placeholder=""
-                styles={{
-                  control: (baseStyles) => ({
-                    ...baseStyles,
-                    border: "none",
-                    background: "#f3f3f3",
-                    height: "50px",
-                  }),
-                }}
-              />
-            </div> */}
 
-            {/* <div className="mt-3">
-              <div className="fs-5">Lịch khám</div>
-              <Space direction="horizontal">
-                <DatePicker
-                  className={classes["date-picker"]}
-                  placeholder="Ngày (YYYY/mm/DD)"
-                  onChange={(date, dateString) => {
-                    setDate(dateString);
-                  }}
-                />
-                <TimePicker
-                  use12Hours
-                  format="HH:mm"
-                  placeholder="Giờ (HH:MM)"
-                  className={classes["date-picker"]}
-                  onChange={(time, timeString) => {
-                    setTime(timeString);
-                  }}
-                />
-              </Space>
-            </div> */}
             <Space direction="horizontal" className={classes["btn-container"]}>
               <ButtonBook onClick={handleOnClickCancel}>Hủy</ButtonBook>
               <ButtonBook onClick={handleOnClickSubmit}>

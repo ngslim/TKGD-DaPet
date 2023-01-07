@@ -4,7 +4,7 @@ const MedicalCardItem = ({ item, onClick }) => {
   return (
     <article
       className={`${classes["postcard"]} ${classes["dark"]} ${classes["blue"]}`}
-      onClick={onClick}
+      onClick={() => onClick(item.id)}
     >
       <button className={classes["postcard-img-link"]}>
         <img
@@ -20,17 +20,17 @@ const MedicalCardItem = ({ item, onClick }) => {
         <div className={classes["small"]}>
           <time dateTime="2020-05-25 12:00:00">
             <i className={`fas fa-calendar-alt mr-2 ${classes["icon"]}`}></i>
-            <span>{item.time + " " + item.date}</span>
+            <span>{item.clinic.timeline + " " + item.clinic.date}</span>
           </time>
         </div>
         <div
           className={`${classes["postcard-bar"]} ${classes["postcard-bar-blue"]}`}
         ></div>
-        <div className={classes["postcard-preview-txt"]}>{item.content}</div>
+        <div className={classes["postcard-preview-txt"]}>{item.comment}</div>
         <ul className={classes["postcard-tagbox"]}>
           <li className={classes["tag-item"]}>
             <i className={`fas fa-tag mr-2 ${classes["icon"]}`}></i>
-            {item.typePet}
+            {item.type}
           </li>
           {item.description.map((element, index) => {
             return (

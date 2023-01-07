@@ -9,8 +9,10 @@ import {
 import Account from "../Account/Account";
 import MenuItem from "./MenuItem/MenuItem";
 import { useNavigate } from "react-router-dom";
+import { useAuthState } from "../../context/authentication";
 
 function Menu() {
+  const authState = useAuthState();
   const navigate = useNavigate();
 
   const gotoPageNotFoundHandler = () => {
@@ -40,7 +42,7 @@ function Menu() {
         title="Hỏi đáp"
         onClick={gotoPageNotFoundHandler}
       />
-      <Account />
+      {authState.state && <Account />}
     </div>
   );
 }
