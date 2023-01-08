@@ -1,5 +1,6 @@
 .pet-item {
-  height: fit-content;
+  max-height: fit-content;
+  width: 100%;
   margin-top: 3rem;
 }
 
@@ -12,6 +13,10 @@
   cursor: pointer;
 }
 
+.description-item {
+  min-width: 60%;
+}
+
 .description-item:hover {
   cursor: pointer;
 }
@@ -20,6 +25,8 @@
   width: 100%;
   min-height: 64px;
   background-color: var(--primary-color);
+  display: flex !important;
+  justify-content: space-around !important;
 }
 
 .btn-pet-card {

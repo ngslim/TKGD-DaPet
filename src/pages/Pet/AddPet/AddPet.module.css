@@ -48,3 +48,10 @@
 .btn-add-img:hover {
   background-color: #6c757d;
 }
+
+.addpet-page .error {
+  height: 20px;
+  padding: 2px;
+  color: red;
+  display: none;
+}

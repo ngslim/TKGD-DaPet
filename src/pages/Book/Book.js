@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import constant from "../../config/constant";
 import Header from "../../components/Header/Header";
 // import Footer from "../../components/Footer/Footer";
@@ -12,10 +12,14 @@ import ButtonBook from "../../components/Button/ButtonBook/ButtonBook";
 import { useJsApiLoader } from "@react-google-maps/api";
 import Loading from "../Loading/Loading";
 import AsyncSelect from "react-select";
+import Select from "react-select";
 import { breadBook } from "../../mock/breadcrumb-data";
 import { dataSickness } from "../../mock/book-data";
 import { dataTypePet } from "../../mock/pet-data";
 import CreatableSelect from "react-select/creatable";
+import { useAuthState } from "../../context/authentication";
+import { petOptions } from "../../mock/user-pet/pets-options";
+import { userPets } from "../../mock/user-pet/user-pet";
 
 const filterSickness = (inputValue) => {
   return dataSickness.filter((item) =>
@@ -37,8 +41,10 @@ function Book({ onSubmitForm }) {
   const [phone, setPhone] = useState("");
   const [symptom, setSymptom] = useState([]);
   const [other, setOther] = useState("");
-  // const [image, setImage] = useState([]);
 
+  const [typeSelected, setTypeSelected] = useState("");
+  // const [image, setImage] = useState([]);
+  const authState = useAuthState();
   const nameRef = useRef();
   // useEffect(() => {
   //   function getBase64Image(img) {
@@ -60,6 +66,33 @@ function Book({ onSubmitForm }) {
   //   localStorage.setItem("imgData", imgData);
   // }, []);
 
+  useEffect(() => {
+    if (authState.state) {
+      setOwner("username");
+      setPhone("0123456789");
+      const listName = [];
+      for (let i = 0; i < petOptions.length; i++) {
+        listName.push(petOptions[i].value);
+      }
+      if (listName.length) {
+        for (let j = 0; j < userPets.length; j++) {
+          if (userPets[j].name === name) {
+            setTypeSelected(userPets[j].type);
+          }
+        }
+      }
+      if (typeSelected !== "" && typeSelected !== type) {
+        setType(typeSelected);
+      }
+    } else {
+      setName("");
+      setType("");
+      setTypeSelected("");
+      setOwner("");
+      setPhone("");
+    }
+  }, [authState, name, type, typeSelected]);
+
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: constant.API_KEY,
     libraries: ["places"],
@@ -78,9 +111,12 @@ function Book({ onSubmitForm }) {
       document.getElementById("name").focus();
       return false;
     }
+
     if (formInformation.type === "" || formInformation.type === undefined) {
-      subHandler("pet type");
-      return false;
+      if (!authState.state) {
+        subHandler("pet type");
+        return false;
+      }
     }
     if (formInformation.owner === "") {
       subHandler("owner");
@@ -194,13 +230,38 @@ function Book({ onSubmitForm }) {
         >
           <span className={classes["error"]} id="message"></span>
           <>
-            <InputBook
-              id="name"
-              label="Tên thú cưng"
-              ref={nameRef}
-              value={name}
-              onChange={(value) => setName(value)}
-            />
+            {authState.state ? (
+              <React.Fragment>
+                <label className="fs-5 py-2">
+                  Tên thú cưng<span style={{ color: "red" }}>*</span>
+                </label>
+                <Select
+                  options={petOptions}
+                  placeholder=""
+                  styles={{
+                    control: (baseStyles) => ({
+                      ...baseStyles,
+                      border: "none",
+                      background: "#f3f3f3",
+                      height: "50px",
+                    }),
+                    multiValue: (baseStyles) => ({
+                      ...baseStyles,
+                      background: "#00c288",
+                    }),
+                  }}
+                  onChange={(choice) => setName(choice.value)}
+                />
+              </React.Fragment>
+            ) : (
+              <InputBook
+                id="name"
+                label="Tên thú cưng"
+                ref={nameRef}
+                value={name}
+                onChange={(value) => setName(value)}
+              />
+            )}
 
             <div className="mt-3">
               <label className="fs-5">
@@ -211,6 +272,9 @@ function Book({ onSubmitForm }) {
                 id="type"
                 options={dataTypePet}
                 placeholder=""
+                value={dataTypePet.filter(function (option) {
+                  return option.value === typeSelected;
+                })}
                 styles={{
                   control: (baseStyle) => ({
                     ...baseStyle,

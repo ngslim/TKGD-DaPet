@@ -1,29 +1,42 @@
 import { useNavigate } from "react-router-dom";
+import { useAuthState } from "../../context/authentication";
 import SpecialItem from "./SpecialItem/SpecialItem";
 import classes from "./Whyus.module.css";
 
 const Whyus = () => {
+  const authState = useAuthState();
+
   const bockAppointment =
     "Không cần mất nhiều thời gian để tìm kiếm địa chỉ phòng khám thú cưng từ nhiều nguồn khác nhau vì đã có DaPet đề xuất và đánh giá.";
 
   const navigate = useNavigate();
 
   const reciveOrder =
-  "Đơn khám sẽ được gửi ngay đến phòng khám và được lên lịch hẹn cho người dùng một cách nhanh chóng"
+    "Đơn khám sẽ được gửi ngay đến phòng khám và được lên lịch hẹn cho người dùng một cách nhanh chóng";
 
   const petManager =
-  "Thú cưng sẽ được lập hồ sơ riêng để người dùng thuận tiện theo dõi"
+    "Thú cưng sẽ được lập hồ sơ riêng để người dùng thuận tiện theo dõi";
 
   const gotoBookHandler = () => {
     navigate("/book");
   };
 
   const gotoOrderHandler = () => {
-    navigate("/order");
+    if (!authState.state) {
+      alert("Bạn cần đăng nhập để dùng tính năng này!");
+      return;
+    } else {
+      navigate("/order");
+    }
   };
 
   const gotoPetHandler = () => {
-    navigate("/pet");
+    if (!authState.state) {
+      alert("Bạn cần đăng nhập để dùng tính năng này!");
+      return;
+    } else {
+      navigate("/pet");
+    }
   };
 
   return (

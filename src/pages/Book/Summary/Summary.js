@@ -16,7 +16,7 @@ function Summary({ formInformation }) {
 
   const saveData = () => {
     const dataSave = {
-      id: medicalApp.length + 2,
+      id: medicalApp.length + 1,
       name: formInformation.name,
       owner: formInformation.owner,
       type: formInformation.type,

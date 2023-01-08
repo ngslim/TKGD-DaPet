@@ -5,7 +5,7 @@ import Menu from "../../components/Menu/Menu";
 import { useNavigate } from "react-router-dom";
 import classes from "./Pet.module.css";
 import PetList from "./PetList/PetList";
-import PetPagination from "./PetPagination/PetPagination";
+// import PetPagination from "./PetPagination/PetPagination";
 import HeaderContentPet from "./HeaderContentPet/HeaderContentPet";
 
 function Pet() {
@@ -33,7 +33,7 @@ function Pet() {
             <div className={`${classes["main-pet-page"]} rounded-bottom px-5`}>
               <PetList />
 
-              <PetPagination />
+              {/* <PetPagination /> */}
             </div>
           </div>
         </div>

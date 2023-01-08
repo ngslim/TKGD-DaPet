@@ -32,12 +32,22 @@
   background-color: var(--bg-grey-color) !important;
 }
 
-/* .btn-add-img {
+.btn-add-img {
   background-color: rgb(175, 171, 171);
   border: none;
   color: var(--black-color);
-  width: 104px;
-} */
+  width: 100px;
+}
+
+.btn-add-img::before {
+  content: "Thêm";
+  margin-right: 50px;
+  padding: 10px;
+}
+
+.btn-add-img:hover {
+  background-color: #6c757d;
+}
 
 .danger-noti {
   border: 1px solid red;

@@ -13,6 +13,8 @@ import CreatableSelect from "react-select/creatable";
 import AsyncSelect from "react-select";
 import { breadAddPet } from "../../../mock/breadcrumb-data";
 import { dataHealth, dataTypePet } from "../../../mock/pet-data";
+import { userPets } from "../../../mock/user-pet/user-pet";
+import { petOptions } from "../../../mock/user-pet/pets-options";
 
 const filterHealth = (inputValue) => {
   return dataHealth.filter((item) =>
@@ -27,8 +29,70 @@ const promiseOptions = (inputValue) =>
     }, 1000);
   });
 function AddPet() {
-  const [images, setImages] = useState([]);
+  const [name, setName] = useState("");
+  const [type, setType] = useState("");
+  const [favorite, setFavorite] = useState("");
+  const [symptom, setSymptom] = useState([]);
+  const [image, setImage] = useState([]);
   const navigate = useNavigate();
+
+  const checkValidation = (formInformation) => {
+    let message = document.getElementById("message");
+    const subHandler = (field) => {
+      message.style.display = "block";
+      message.innerHTML = `Please enter your ${field}`;
+    };
+
+    if (formInformation.name === "") {
+      subHandler("pet name");
+      document.getElementById("name").focus();
+      return false;
+    }
+    if (formInformation.type === "" || formInformation.type === undefined) {
+      subHandler("pet type");
+      return false;
+    }
+
+    if (formInformation.description.length === 0) {
+      subHandler("symptoms");
+      return false;
+    } else if (
+      formInformation.description[formInformation.description.length - 1]
+        .length === 0
+    ) {
+      subHandler("symptoms");
+      return false;
+    }
+    if (formInformation.image.length === 0) {
+      formInformation.image = "https://picsum.photos/1000/1000";
+    }
+
+    return true;
+  };
+
+  const submitFormHandler = () => {
+    const formInformation = {
+      name,
+      type: type.value,
+      favorite,
+      description: symptom,
+      image,
+    };
+    if (checkValidation(formInformation)) {
+      formInformation.id = userPets.length + 1;
+      formInformation.description =
+        formInformation.description[formInformation.description.length - 1];
+
+      const petOps = {
+        id: formInformation.id,
+        value: formInformation.name,
+        label: formInformation.name,
+      };
+      userPets.push(formInformation);
+      petOptions.push(petOps);
+      gotoPetHandler();
+    }
+  };
 
   const gotoPageNotFoundHandler = () => {
     navigate("/page-not-found");
@@ -52,8 +116,6 @@ function AddPet() {
     }
   };
 
-  console.log("images", images);
-
   return (
     <div className={classes["addpet-page"]}>
       <Header />
@@ -75,13 +137,21 @@ function AddPet() {
               labelButton="Theo dõi hàng ngày"
               onClickButton={gotoPageNotFoundHandler}
             />
+            <span className={classes["error"]} id="message"></span>
             <div
               className={`${classes["input-group-addpet"]} rounded-bottom px-5 py-2`}
             >
-              <InputBook label="Tên thú cưng" />
+              <InputBook
+                label="Tên thú cưng"
+                id="name"
+                value={name}
+                onChange={(value) => setName(value)}
+              />
 
               <div className="mt-3">
-                <label className="fs-5">Loại thú cưng</label>
+                <label className="fs-5">
+                  Loại thú cưng<span style={{ color: "red" }}>*</span>
+                </label>
                 <CreatableSelect
                   isClearable
                   options={dataTypePet}
@@ -99,14 +169,20 @@ function AddPet() {
                       background: "#00c288",
                     }),
                   }}
+                  onChange={(choice) => setType(choice)}
                 />
               </div>
 
-              <FieldTextArea title="Sở thích" />
-              <FieldTextArea title="Dinh dưỡng" />
+              <FieldTextArea
+                title="Sở thích"
+                value={favorite}
+                onChange={(value) => setFavorite(value)}
+              />
 
               <div className="mt-3">
-                <label className="fs-5 py-2">Tình trạng sức khỏe</label>
+                <label className="fs-5 py-2">
+                  Tình trạng sức khỏe<span style={{ color: "red" }}>*</span>
+                </label>
                 <AsyncSelect
                   isMulti
                   options={dataHealth}
@@ -126,6 +202,7 @@ function AddPet() {
                       background: "#00c288",
                     }),
                   }}
+                  onChange={(choice) => setSymptom((prev) => [...prev, choice])}
                 />
               </div>
 
@@ -139,11 +216,11 @@ function AddPet() {
                     // multiple
                     // accept="images/*"
                     className={`${classes["btn-add-img"]} btn btn-secondary`}
-                    onChange={(event) => setImages(event.target.value)}
+                    onChange={(event) => setImage(event.target.value)}
                   />
                 </div>
                 <div className="d-flex gap-3">
-                  <ButtonBook onClick={gotoPetHandler}>Xác nhận</ButtonBook>
+                  <ButtonBook onClick={submitFormHandler}>Xác nhận</ButtonBook>
                   <ButtonBook onClick={gotoPetHandler}>Hủy</ButtonBook>
                 </div>
               </div>
