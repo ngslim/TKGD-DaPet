@@ -84,12 +84,6 @@ function Book({ onSubmitForm }) {
       if (typeSelected !== "" && typeSelected !== type) {
         setType(typeSelected);
       }
-    } else {
-      setName("");
-      setType("");
-      setTypeSelected("");
-      setOwner("");
-      setPhone("");
     }
   }, [authState, name, type, typeSelected]);
 
@@ -267,26 +261,46 @@ function Book({ onSubmitForm }) {
               <label className="fs-5">
                 Loại thú cưng<span style={{ color: "red" }}>*</span>
               </label>
-              <CreatableSelect
-                isClearable
-                id="type"
-                options={dataTypePet}
-                placeholder=""
-                value={dataTypePet.filter(function (option) {
-                  return option.value === typeSelected;
-                })}
-                styles={{
-                  control: (baseStyle) => ({
-                    ...baseStyle,
-                    width: "200px",
-                    height: "50px",
-                    outline: "none",
-                    border: "none",
-                    backgroundColor: "#f3f3f3",
-                  }),
-                }}
-                onChange={(choice) => setType(choice)}
-              />
+              {authState.state ? (
+                <CreatableSelect
+                  isClearable
+                  id="type"
+                  options={dataTypePet}
+                  placeholder=""
+                  value={dataTypePet.filter(function (option) {
+                    return option.value === typeSelected;
+                  })}
+                  styles={{
+                    control: (baseStyle) => ({
+                      ...baseStyle,
+                      width: "200px",
+                      height: "50px",
+                      outline: "none",
+                      border: "none",
+                      backgroundColor: "#f3f3f3",
+                    }),
+                  }}
+                  onChange={(choice) => setType(choice)}
+                />
+              ) : (
+                <CreatableSelect
+                  isClearable
+                  id="type"
+                  options={dataTypePet}
+                  placeholder=""
+                  styles={{
+                    control: (baseStyle) => ({
+                      ...baseStyle,
+                      width: "200px",
+                      height: "50px",
+                      outline: "none",
+                      border: "none",
+                      backgroundColor: "#f3f3f3",
+                    }),
+                  }}
+                  onChange={(choice) => setType(choice)}
+                />
+              )}
             </div>
 
             <InputBook
