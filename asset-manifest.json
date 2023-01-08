@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/TKGD-DaPet/static/css/main.e56aa9a3.css",
-    "main.js": "/TKGD-DaPet/static/js/main.635e5904.js",
-    "static/js/787.28cb0dcd.chunk.js": "/TKGD-DaPet/static/js/787.28cb0dcd.chunk.js",
-    "static/media/back.jpg": "/TKGD-DaPet/static/media/back.3f7c813384af05fd0d55.jpg",
-    "static/media/events-bg.jpg": "/TKGD-DaPet/static/media/events-bg.4e897feef52234f6dc0b.jpg",
-    "static/media/back-up.jpg": "/TKGD-DaPet/static/media/back-up.551e055c0582eec0a37e.jpg",
-    "index.html": "/TKGD-DaPet/index.html",
-    "main.e56aa9a3.css.map": "/TKGD-DaPet/static/css/main.e56aa9a3.css.map",
-    "main.635e5904.js.map": "/TKGD-DaPet/static/js/main.635e5904.js.map",
-    "787.28cb0dcd.chunk.js.map": "/TKGD-DaPet/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/deploy-dapet/static/css/main.ba124977.css",
+    "main.js": "/deploy-dapet/static/js/main.9c8f1437.js",
+    "static/js/787.28cb0dcd.chunk.js": "/deploy-dapet/static/js/787.28cb0dcd.chunk.js",
+    "static/media/back.jpg": "/deploy-dapet/static/media/back.3f7c813384af05fd0d55.jpg",
+    "static/media/events-bg.jpg": "/deploy-dapet/static/media/events-bg.4e897feef52234f6dc0b.jpg",
+    "static/media/back-up.jpg": "/deploy-dapet/static/media/back-up.551e055c0582eec0a37e.jpg",
+    "index.html": "/deploy-dapet/index.html",
+    "main.ba124977.css.map": "/deploy-dapet/static/css/main.ba124977.css.map",
+    "main.9c8f1437.js.map": "/deploy-dapet/static/js/main.9c8f1437.js.map",
+    "787.28cb0dcd.chunk.js.map": "/deploy-dapet/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e56aa9a3.css",
-    "static/js/main.635e5904.js"
+    "static/css/main.ba124977.css",
+    "static/js/main.9c8f1437.js"
   ]
 }
