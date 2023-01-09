@@ -53,6 +53,14 @@ function Header() {
           Phòng khám
         </div>
       )}
+      {!authState.state && authState.role !== "doctor" && (
+        <div
+          className={`${classes["item"]} px-3 fw-light`}
+          onClick={gotoClinicPageHandler}
+        >
+          Phòng khám
+        </div>
+      )}
       <div
         className={`${classes["item"]} px-3 fw-light`}
         onClick={gotoPetPageHandler}
