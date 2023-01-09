@@ -70,14 +70,23 @@ const Whyus = () => {
               onClick={gotoOrderHandler}
             />
           )}
-          {authState.role === "doctor" ? (
+          {authState.role === "doctor" && (
             <SpecialItem
               number={3}
               title="Quản Lý Thú Cưng"
               text={petManager}
               onClick={gotoPetHandler}
             />
-          ) : (
+          )}
+          {!authState.state && (
+            <SpecialItem
+              number={3}
+              title="Quản Lý Thú Cưng"
+              text={petManager}
+              onClick={gotoPetHandler}
+            />
+          )}
+          {authState.state && authState.role !== "doctor" && (
             <SpecialItem
               number={2}
               title="Quản Lý Thú Cưng"
