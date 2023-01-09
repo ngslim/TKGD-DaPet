@@ -45,12 +45,14 @@ function Header() {
       >
         Trang chủ
       </div>
-      <div
-        className={`${classes["item"]} px-3 fw-light`}
-        onClick={gotoClinicPageHandler}
-      >
-        Phòng khám
-      </div>
+      {authState.role === "doctor" && (
+        <div
+          className={`${classes["item"]} px-3 fw-light`}
+          onClick={gotoClinicPageHandler}
+        >
+          Phòng khám
+        </div>
+      )}
       <div
         className={`${classes["item"]} px-3 fw-light`}
         onClick={gotoPetPageHandler}

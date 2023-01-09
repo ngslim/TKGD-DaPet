@@ -54,18 +54,29 @@ const Whyus = () => {
             text={bockAppointment}
             onClick={gotoBookHandler}
           />
-          <SpecialItem
-            number={2}
-            title="Nhận Đơn Khám"
-            text={reciveOrder}
-            onClick={gotoOrderHandler}
-          />
-          <SpecialItem
-            number={3}
-            title="Quản Lý Thú Cưng"
-            text={petManager}
-            onClick={gotoPetHandler}
-          />
+          {authState.role === "doctor" && (
+            <SpecialItem
+              number={2}
+              title="Nhận Đơn Khám"
+              text={reciveOrder}
+              onClick={gotoOrderHandler}
+            />
+          )}
+          {authState.role === "doctor" ? (
+            <SpecialItem
+              number={3}
+              title="Quản Lý Thú Cưng"
+              text={petManager}
+              onClick={gotoPetHandler}
+            />
+          ) : (
+            <SpecialItem
+              number={2}
+              title="Quản Lý Thú Cưng"
+              text={petManager}
+              onClick={gotoPetHandler}
+            />
+          )}
         </div>
       </div>
     </section>

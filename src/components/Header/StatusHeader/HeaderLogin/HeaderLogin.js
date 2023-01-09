@@ -7,10 +7,18 @@ function HeaderLogin() {
   return (
     <div
       className={`${classes["hover"]} d-flex px-3 align-items-center ms-auto`}
-      onClick={authState.handler}
     >
-      <span className={classes["login-header"]}></span>
-      <div className="ms-2 flex-grow-1">Username</div>
+      <span
+        className={classes["login-header"]}
+        onClick={authState.handler}
+      ></span>
+      <div className="ms-2 flex-grow-1" onClick={authState.onChangeRole}>
+        {authState.role === "doctor" ? (
+          <span>Doctor</span>
+        ) : (
+          <span>username</span>
+        )}
+      </div>
     </div>
   );
 }

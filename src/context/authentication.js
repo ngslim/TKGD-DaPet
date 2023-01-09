@@ -14,13 +14,30 @@ export function useAuthState() {
 
 export const AuthProvider = ({ children }) => {
   const [isLogin, setIsLogin] = useState(false);
+  const [role, setRole] = useState("");
   const onChangeState = () => {
     setIsLogin(!isLogin);
+  };
+  const onChangeRole = () => {
+    if (!isLogin) {
+      setRole("");
+    } else {
+      if (role === "doctor") {
+        setRole("user");
+      } else {
+        setRole("doctor");
+      }
+    }
   };
 
   return (
     <AuthStateContext.Provider
-      value={{ state: isLogin, handler: onChangeState }}
+      value={{
+        state: isLogin,
+        handler: onChangeState,
+        role: role,
+        onChangeRole: onChangeRole,
+      }}
     >
       {children}
     </AuthStateContext.Provider>
