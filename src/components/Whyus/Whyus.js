@@ -43,7 +43,7 @@ const Whyus = () => {
     <section className={classes["why-us"]}>
       <div className="container">
         <div className={classes["section-title"]}>
-          <h2>Why Us</h2>
+          <h2>Nổi bật</h2>
           <p>Vì sao nên sử dụng DaPet</p>
         </div>
 

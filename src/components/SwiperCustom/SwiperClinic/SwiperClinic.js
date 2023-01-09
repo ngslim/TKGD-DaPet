@@ -39,7 +39,7 @@ const SwiperClinic = ({ data }) => {
     <section className={`${classes["swiper-custom"]}`}>
       <div className={`${classes["swiper-container"]} container`}>
         <div className={classes["section-title"]}>
-          <h2>Clinics</h2>
+          <h2>Phòng khám</h2>
           <p>Trung tâm và phòng khám uy tín</p>
         </div>
         <Swiper

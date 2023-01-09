@@ -97,23 +97,23 @@ function Book({ onSubmitForm }) {
     let message = document.getElementById("message");
     const subHandler = (field) => {
       message.style.display = "block";
-      message.innerHTML = `Please enter your ${field}`;
+      message.innerHTML = `${field}`;
     };
 
     if (formInformation.name === "") {
-      subHandler("pet name");
+      subHandler('Vui lòng nhập "Tên thú cưng"');
       document.getElementById("name").focus();
       return false;
     }
 
     if (formInformation.type === "" || formInformation.type === undefined) {
       if (!authState.state) {
-        subHandler("pet type");
+        subHandler('Vui lòng chọn "Loại thú cưng"');
         return false;
       }
     }
     if (formInformation.owner === "") {
-      subHandler("owner");
+      subHandler('Vui lòng nhập "Chủ thú cưng"');
       document.getElementById("owner").focus();
       return false;
     }
@@ -121,27 +121,27 @@ function Book({ onSubmitForm }) {
     var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
     if (!re.test(formInformation.phone)) {
       message.style.display = "block";
-      message.innerHTML = `Please enter your valid phone number (10 numbers)`;
+      message.innerHTML = `Vui lòng nhập số điện thoại hợp lệ (10 chữ số)`;
       document.getElementById("phone").focus();
       return false;
     }
     if (formInformation.phone === "") {
-      subHandler("telephone");
+      subHandler("Vui lòng nhập số điện thoại hợp lệ (10 chữ số)");
       document.getElementById("phone").focus();
       return false;
     }
 
     if (formInformation.symptom.length === 0) {
-      subHandler("symptoms");
+      subHandler('Vui lòng chọn "Triệu chứng"');
       return false;
     } else if (
       formInformation.symptom[formInformation.symptom.length - 1].length === 0
     ) {
-      subHandler("symptoms");
+      subHandler('Vui lòng chọn "Triệu chứng"');
       return false;
     }
     if (formInformation.other === "") {
-      subHandler("details");
+      subHandler('Vui lòng mô tả "Chi tiết triệu chứng"');
       document.getElementById("other").focus();
       return false;
     }

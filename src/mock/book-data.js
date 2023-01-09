@@ -1,13 +1,13 @@
 export const dataSickness = [
-  { id: 1, value: "Nôn mửa", label: "Non mua" },
-  { id: 2, value: "Tiêu chảy", label: "Tieu chay" },
-  { id: 3, value: "Chảy máu", label: "Chay mau" },
-  { id: 4, value: "Da nhăn nheo", label: "Da nhan nheo" },
-  { id: 5, value: "Hạ thân nhiệt", label: "Ha than nhiet" },
-  { id: 6, value: "Thở khó khăn", label: "Tho kho khan" },
-  { id: 7, value: "Tiếng khò khè", label: "Tieng kho khe" },
-  { id: 8, value: "Rụng lông", label: "Rung long" },
-  { id: 9, value: "Khó ăn", label: "Kho an" },
+  { id: 1, value: "Nôn mửa", label: "Nôn mửa" },
+  { id: 2, value: "Tiêu chảy", label: "Tiêu chảy" },
+  { id: 3, value: "Chảy máu", label: "Chảy máu" },
+  { id: 4, value: "Da nhăn nheo", label: "Da nhăn nheo" },
+  { id: 5, value: "Hạ thân nhiệt", label: "Hạ thân nhiệt" },
+  { id: 6, value: "Thở khó khăn", label: "Thở khó khăn" },
+  { id: 7, value: "Tiếng khò khè", label: "Tiếng khò khè" },
+  { id: 8, value: "Rụng lông", label: "Rụng lông" },
+  { id: 9, value: "Khó ăn", label: "Khó ăn" },
 ];
 
 export const dataCustomer = [

@@ -24,7 +24,7 @@ const ProfileCard = () => {
           <span className={classes["clinic"]}>Clinic</span>
         </div>
         <div className={classes["technique"]}>
-          <TechniqueItem title="Experience" text="275" />
+          <TechniqueItem title="Kinh nghiệm" text="3 năm" />
           <TechniqueItem title="Liked" text="250" />
         </div>
         <div className={classes["buttons"]}>

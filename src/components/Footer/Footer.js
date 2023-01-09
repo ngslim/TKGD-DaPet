@@ -44,23 +44,23 @@ function Footer() {
             </div>
 
             <div className={`col-lg-2 col-md-6 ${classes["footer-links"]}`}>
-              <h4>Useful Links</h4>
+              <h4>Liên kết</h4>
               <ul>
                 <li onClick={(event) => navigate("/")}>
                   <i className="fa-solid fa-chevron-right"></i>{" "}
-                  <button>Home</button>
+                  <button>Trang chủ</button>
                 </li>
                 <li onClick={(event) => navigate("/order")}>
                   <i className="fa-solid fa-chevron-right"></i>{" "}
-                  <button>Order</button>
+                  <button>Phòng khám</button>
                 </li>
                 <li onClick={(event) => navigate("/book")}>
                   <i className="fa-solid fa-chevron-right"></i>{" "}
-                  <button>Book</button>
+                  <button>Đặt lịch</button>
                 </li>
                 <li onClick={(event) => navigate("/pet")}>
                   <i className="fa-solid fa-chevron-right"></i>{" "}
-                  <button>Pet</button>
+                  <button>Thú cưng</button>
                 </li>
               </ul>
             </div>
@@ -68,8 +68,8 @@ function Footer() {
             <div
               className={`col-lg-4 col-md-6 offset-lg-3 offset-md-6 ${classes["footer-newsletter"]}`}
             >
-              <h4>Our Newsletter</h4>
-              <p>Connect with our email!</p>
+              <h4>Thông báo</h4>
+              <p>Kết nối với email của chúng tôi</p>
               <form action="" method="post">
                 <input type="email" name="email" />
                 <input type="submit" value="Send" />

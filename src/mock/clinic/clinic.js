@@ -15,7 +15,7 @@ export const dataClinics = [
     id: "2",
     name: "Bệnh viện thú y TPHCM Petcare – Petcare Vietnam",
     description:
-      "Để hỗ trợ quý khách trong việc chăm sóc vật nuôi, chúng tôi cung cấp dịch vụ khám chữa bệnh tại nhà và vận chuyển thú cưng từ nhà quý khách đến PetCare và ngược lại.",
+      "Để hỗ trợ quý khách trong việc chăm sóc vật nuôi, chúng tôi cung cấp dịch vụ khám chữa bệnh tại nhà và vận chuyển thú cưng từ nhà quý khách đến PetCare.",
     image: "/images/clinic/clinic-2.jpg",
     address: "124A Xuân Thủy Phường Thảo Điền, Quận 2, TP. Hồ Chí Minh",
     email: "info@petcare.vn",

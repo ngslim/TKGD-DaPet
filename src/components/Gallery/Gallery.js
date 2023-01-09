@@ -32,7 +32,7 @@ const Gallery = () => {
     <section>
       <div className="container">
         <div className={classes["section-title"]}>
-          <h2>Gallery</h2>
+          <h2>Thư viện ảnh</h2>
           <p>Một số hình ảnh thú cưng: </p>
         </div>
       </div>

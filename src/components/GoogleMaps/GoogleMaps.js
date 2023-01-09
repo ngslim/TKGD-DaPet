@@ -75,7 +75,7 @@ const GoogleMaps = () => {
       <div className="container">
         <div className={classes["section-title"]}>
           <h2>Maps</h2>
-          <p>Find way</p>
+          <p>Chỉ đường</p>
         </div>
 
         <div className="row justify-content-around">
@@ -103,13 +103,13 @@ const GoogleMaps = () => {
               <div className={`${classes["info"]} row`}>
                 <div className={classes["distance"]}>
                   <i className="fa-solid fa-location-pin"></i>
-                  <h4>Distance:</h4>
+                  <h4>Khoảng cách:</h4>
                   <p>{distance}</p>
                 </div>
 
                 <div className={classes["duration"]}>
                   <i className="fa-solid fa-clock"></i>
-                  <h4>Duration:</h4>
+                  <h4>Thời gian:</h4>
                   <p>{duration}</p>
                 </div>
 
@@ -128,7 +128,7 @@ const GoogleMaps = () => {
                       name="name"
                       className="form-control"
                       id="name"
-                      placeholder="Origin"
+                      placeholder="Xuất phát"
                       ref={originRef}
                     />
                   </Autocomplete>
@@ -144,7 +144,7 @@ const GoogleMaps = () => {
                       className="form-control"
                       name="email"
                       id="email"
-                      placeholder="Destination"
+                      placeholder="Đích đến"
                       ref={destiantionRef}
                     />
                   </Autocomplete>
@@ -162,7 +162,7 @@ const GoogleMaps = () => {
                     className="btn btn-primary"
                     onClick={calculateRoute}
                   >
-                    Direct
+                    Chỉ dẫn
                   </button>
                 </div>
               </div>

@@ -13,8 +13,20 @@ function Header() {
     navigate("/");
   };
 
-  const gotoPageNotFoundHandler = () => {
-    navigate("/page-not-found");
+  const gotoClinicPageHandler = () => {
+    if (!authState.state) {
+      alert("Bạn phải đăng nhập để dùng tính năng này");
+    } else {
+      navigate("/order");
+    }
+  };
+
+  const gotoPetPageHandler = () => {
+    if (!authState.state) {
+      alert("Bạn phải đăng nhập để dùng tính năng này");
+    } else {
+      navigate("/pet");
+    }
   };
 
   return (
@@ -31,19 +43,19 @@ function Header() {
         className={`${classes["item"]} px-3 fw-light`}
         onClick={gotoHomePageHandler}
       >
-        Home
+        Trang chủ
       </div>
       <div
         className={`${classes["item"]} px-3 fw-light`}
-        onClick={gotoPageNotFoundHandler}
+        onClick={gotoClinicPageHandler}
       >
-        Clinics
+        Phòng khám
       </div>
       <div
         className={`${classes["item"]} px-3 fw-light`}
-        onClick={gotoPageNotFoundHandler}
+        onClick={gotoPetPageHandler}
       >
-        Questions
+        Thú cưng
       </div>
       <div
         className={`${classes["search-header"]} border border-0 rounded fs-6 py-2 d-flex align-items-center justify-content-between px-4 me-3 ms-5`}

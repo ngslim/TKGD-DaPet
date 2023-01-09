@@ -29,7 +29,7 @@ const SwiperEvaluation = ({ data }) => {
     <section className={`${classes["swiper-custom"]} ${classes["section-bg"]}`}>
       <div className={`${classes["swiper-container"]} container`}>
         <div className={classes["section-title"]}>
-          <h2>Evaluations</h2>
+          <h2>Đánh giá</h2>
           <p>Một số trải nghiệm từ khách hàng của DaPet</p>
         </div>
         <Swiper

@@ -9,7 +9,9 @@ const ScheduleInfo = ({ dataSchedule }) => {
       <div className="d-flex gap-3 align-items-center">
         <div className="fs-4 fw-bolder">Lịch trình vừa nhận</div>
         <button className="btn btn-light fw-bold">
-          {dataSchedule.clinic.timeline + " " + dataSchedule.clinic.date}
+          {dataSchedule.clinic.timeline +
+            " vào ngày " +
+            dataSchedule.clinic.date}
         </button>
       </div>
       <div className="fw-light d-flex gap-5">

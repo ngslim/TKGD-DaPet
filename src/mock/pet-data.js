@@ -28,23 +28,23 @@ export const dataPetList = [
 ];
 
 export const dataTypePet = [
-  { id: 1, value: "Meo", label: "Meo" },
-  { id: 2, value: "Cho", label: "Cho" },
+  { id: 1, value: "Mèo", label: "Mèo" },
+  { id: 2, value: "Chó", label: "Chó" },
   { id: 3, value: "Chim", label: "Chim" },
-  { id: 4, value: "Ca", label: "Ca" },
+  { id: 4, value: "Cá", label: "Cá" },
 ];
 
 export const dataHealth = [
-  { id: 1, value: "Tốt", label: "Tot" },
-  { id: 2, value: "Bình thường", label: "Binh thuong" },
-  { id: 3, value: "Đã tiem vacxin", label: "Da tiem vacxin" },
-  { id: 4, value: "Béo phì", label: "Beo phi" },
-  { id: 5, value: "Tiêu chảy", label: "Tieu chay" },
-  { id: 6, value: "Chảy máu", label: "Chay mau" },
-  { id: 7, value: "Da nhăn nheo", label: "Da nhan nheo" },
-  { id: 8, value: "Hạ thân nhiệt", label: "Ha than nhiet" },
-  { id: 9, value: "Thở khó khăn", label: "Tho kho khan" },
-  { id: 10, value: "Tiếng khò khè", label: "Tieng kho khe" },
-  { id: 11, value: "Rụng lông", label: "Rung long" },
-  { id: 12, value: "Khó ăn", label: "Kho an" },
+  { id: 1, value: "Tốt", label: "Tốt" },
+  { id: 2, value: "Bình thường", label: "Bình thường" },
+  { id: 3, value: "Đã tiem vacxin", label: "Đã tiêm vacxin" },
+  { id: 4, value: "Béo phì", label: "Béo phì" },
+  { id: 5, value: "Tiêu chảy", label: "Tiêu chảy" },
+  { id: 6, value: "Chảy máu", label: "Chảy máu" },
+  { id: 7, value: "Da nhăn nheo", label: "Da nhăn nheo" },
+  { id: 8, value: "Hạ thân nhiệt", label: "Hạ thân nhiệt" },
+  { id: 9, value: "Thở khó khăn", label: "Thở khó khăn" },
+  { id: 10, value: "Tiếng khò khè", label: "Tiếng khò khè" },
+  { id: 11, value: "Rụng lông", label: "Rụng lông" },
+  { id: 12, value: "Khó ăn", label: "Khó ăn" },
 ];

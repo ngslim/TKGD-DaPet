@@ -40,27 +40,27 @@ function AddPet() {
     let message = document.getElementById("message");
     const subHandler = (field) => {
       message.style.display = "block";
-      message.innerHTML = `Please enter your ${field}`;
+      message.innerHTML = `${field}`;
     };
 
     if (formInformation.name === "") {
-      subHandler("pet name");
+      subHandler('Vui lòng nhập "Tên thú cưng"');
       document.getElementById("name").focus();
       return false;
     }
     if (formInformation.type === "" || formInformation.type === undefined) {
-      subHandler("pet type");
+      subHandler('Vui lòng chọn "Loại thú cưng"');
       return false;
     }
 
     if (formInformation.description.length === 0) {
-      subHandler("symptoms");
+      subHandler('Vui lòng chọn "Tình trạng sức khỏe"');
       return false;
     } else if (
       formInformation.description[formInformation.description.length - 1]
         .length === 0
     ) {
-      subHandler("symptoms");
+      subHandler('Vui lòng chọn "Tình trạng sức khỏe"');
       return false;
     }
     if (formInformation.image.length === 0) {
